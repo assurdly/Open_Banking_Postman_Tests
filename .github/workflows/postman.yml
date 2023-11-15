@@ -22,7 +22,7 @@ jobs:
         run: npm install -g newman newman-reporter-html
 
       - name: Run Postman Tests
-        run: newman run newman run Open_Banking_QA.postman_collection.json -r html --reporter-html-export index.html
+        run: newman run Open_Banking_QA.postman_collection.json -r html --reporter-html-export index.html
 
       - name: Publish HTML Report
         uses: peaceiris/actions-gh-pages@v3
