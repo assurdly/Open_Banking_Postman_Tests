@@ -18,8 +18,8 @@ jobs:
         with:
           node-version: 16
 
-      - name: Install Newman (Postman CLI)
-        run: npm install -g newman
+      - name: Install Newman (Postman CLI) and Newman Reporter HTML
+        run: npm install -g newman newman-reporter-html
 
       - name: Run Postman Tests
         run: newman run https://github.com/assurdly/Open_Banking_Postman_Tests/blob/main/Open_Banking_QA.postman_collection.json -r html --reporter-html-export https://github.com/assurdly/Open_Banking_Postman_Tests/blob/main/index.html
@@ -28,4 +28,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./path/to/your/report
+          publish_dir: https://assurdly.github.io/Open_Banking_Postman_Tests/
