@@ -21,11 +21,14 @@ jobs:
       - name: Install Newman (Postman CLI) and Newman Reporter HTML
         run: npm install -g newman newman-reporter-html
 
+      - name: Make Script Executable
+        run: chmod +x run_postman_tests.sh
+
       - name: Run Postman Tests
-        run: newman run Open_Banking_QA.postman_collection.json -r html --reporter-html-export index.html
+        run: ./run_postman_tests.sh
 
       - name: Publish HTML Report
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: index.html
+          publish_dir: .
