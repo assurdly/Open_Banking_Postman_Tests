@@ -17,11 +17,13 @@ jobs:
       run: |
         docker run -t -v "$(pwd):/etc/newman" postman/newman run /etc/newman/Open_Banking_QA.postman_collection.json --reporters cli,junit --reporter-junit-export /etc/newman/test-results.xml
 
-    - name: Install Allure
+    - name: Download and Install Allure
       run: |
-        sudo apt-add-repository -y ppa:qameta/allure
-        sudo apt-get update
-        sudo apt-get install -y allure
+        sudo apt-get install -y unzip
+        sudo curl -o /usr/bin/allure https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/2.16.0/allure-commandline-2.16.0.zip
+        sudo unzip /usr/bin/allure -d /usr/bin/
+        sudo chmod +x /usr/bin/allure
+        allure --version
 
     - name: Create Allure report directory
       run: mkdir -p ./allure-report
