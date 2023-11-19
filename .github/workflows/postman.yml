@@ -15,7 +15,7 @@ jobs:
 
     - name: Run Postman tests
       run: |
-        docker run -t postman/newman run Open_Banking_QA.postman_collection.json --environment your_environment_file.postman_environment.json --reporters cli,junit --reporter-junit-export test-results.xml
+        docker run -t postman/newman run Open_Banking_QA.postman_collection.json --reporters cli,junit --reporter-junit-export test-results.xml
 
     - name: Install Allure
       run: |
