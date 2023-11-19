@@ -30,7 +30,7 @@ jobs:
 
     - name: Generate Allure report
       run: |
-        /path/to/allure generate /etc/newman/allure-results --clean -o ./allure-report
+        allure generate /etc/newman/allure-results --clean -o ./allure-report
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
