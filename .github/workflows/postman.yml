@@ -51,8 +51,10 @@ jobs:
     # - name: Generate Allure report
     #   run: /usr/local/bin/allure generate ./allure-results --clean -o ./allure-report
 
-    - name: Deploy to GitHub Pages
+    - name: Deploy Allure report to GitHub Pages # Step to deploy Allure report to GitHub Pages
+      if: always() # Execute even if previous steps fail
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./allure-report
+          github_token: ${{ secrets.GITHUB_TOKEN }} # Provide the GitHub token for authentication
+          publish_branch: main # Specify the branch to publish the report to
+          publish_dir: allure-history # Specify the directory containing the report
