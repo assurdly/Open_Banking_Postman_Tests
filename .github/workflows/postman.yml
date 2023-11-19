@@ -25,8 +25,8 @@ jobs:
     #   run: |
     #     ls -l /usr/bin/allure
 
-    - name: Create Allure report directory
-      run: mkdir -p ./allure-report
+    # - name: Create Allure report directory
+    #   run: mkdir -p ./allure-report
 
     - name: Generate Allure report
       run: |
