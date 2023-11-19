@@ -4,7 +4,7 @@
   "description": "Your project description",
   "main": "index.js",
   "scripts": {
-    "test": "echo 'Error: no test specified' && exit 1"
+    "test": "newman run Open_Banking_QA.postman_collection.json -r cli,junit --reporter-junit-export test-results.xml"
   },
   "author": "Your Name",
   "license": "MIT"
