@@ -1,4 +1,4 @@
-name: Run Postman Tests and Publish Report
+name: Postman Test and Allure Report
 
 on:
   push:
@@ -6,29 +6,32 @@ on:
       - main
 
 jobs:
-  postman:
+  run_tests:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
+    - name: Run Postman tests
+      uses: postmanlabs/newman-action@v2
+      with:
+        collection: Open_Banking_QA.postman_collection.json
+        reporters: cli,junit
+        reporter-junit-export: test-results.xml
 
-      - name: Install Newman (Postman CLI) and Newman Reporter HTML
-        run: npm install -g newman newman-reporter-html
+    - name: Install Allure
+      run: |
+        sudo apt-add-repository -y ppa:qameta/allure
+        sudo apt-get update
+        sudo apt-get install -y allure
 
-      - name: Make Script Executable
-        run: chmod +x run_postman_tests.sh
+    - name: Generate Allure report
+      run: |
+        allure generate allure-results --clean
 
-      - name: Run Postman Tests
-        run: ./run_postman_tests.sh
-
-      - name: Publish HTML Report
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./allure-report
