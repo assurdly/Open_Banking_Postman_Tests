@@ -1,44 +1,38 @@
-
-name: Run Postman tests with Allure
+name: Postman Test and Allure Report
 
 on:
   push:
     branches:
-      - main  # Update this with your main branch name
+      - main
 
 jobs:
-  test:
+  run_tests:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 14
+    - name: Run Postman tests
+      run: |
+        docker run -t -v "$(pwd):/etc/newman" postman/newman run /etc/newman/Open_Banking_QA.postman_collection.json --reporters cli,junit --reporter-junit-export /etc/newman/test-results.xml
 
-      - name: Install dependencies
-        run: npm install
+    - name: Download and Install Allure
+      run: |
+        sudo apt-get install -y allure
 
-      - name: Run Postman tests with Newman
-        run: npm test
+    # - name: Find Allure binary
+    #   run: |
+    #     ls -l /usr/bin/allure
 
-      - name: Install Allure
-        run: |
-          sudo apt-get install -y allure
-          export PATH="/usr/bin/allure:$PATH"
-          allure --version
+    - name: Create Allure report directory
+      run: mkdir -p ./allure-report
 
-      - name: Create Allure report directory
-        run: mkdir -p ./allure-report
+    - name: Generate Allure report
+      run: allure generate ./allure-results --clean -o ./allure-report
 
-      - name: Generate Allure report
-        run: allure generate ./allure-results --clean -o ./allure-report
-
-      - name: Publish Allure report
-        uses: actions/upload-artifact@v2
-        with:
-          name: allure-report
-          path: ./allure-report
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./allure-report
