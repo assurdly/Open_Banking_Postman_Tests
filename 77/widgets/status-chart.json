@@ -1,0 +1,1 @@
+[{"uid":"a9853b723f8c739d","name":"Sign Up","time":{"start":1700520290665,"stop":1700520291170,"duration":505},"status":"passed","severity":"normal"},{"uid":"353f001bef4aa882","name":"Sign Up - Duplicate account Copy","time":{"start":1700520291173,"stop":1700520291239,"duration":66},"status":"passed","severity":"normal"}]
