@@ -17,7 +17,7 @@ jobs:
       run: mkdir -p ./allure-results
 
     - name: Set ALLURE_RESULTS_PATH
-      run: echo "ALLURE_RESULTS_PATH=./allure-results" >> $GITHUB_ENV
+      run: echo "ALLURE_RESULTS_PATH=allure-results" >> $GITHUB_ENV
 
     - name: Run Postman tests
       run: |
