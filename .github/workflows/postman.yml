@@ -42,11 +42,11 @@ jobs:
       - name: Wait for Allure report to be generated
         run: sleep 10
 
-      - name: Find latest folder and update Allure Report Title
-        run: |
-          latest_folder=$(find allure-report -type d -name '[0-9]*' | sort -n | tail -n 1)
-          echo "Latest Folder: $latest_folder"
-          sed -i 's/<title>Allure Report<\/title>/<title>[Open Banking] - API Quality Readiness<\/title>/' "$latest_folder/index.html"
+      # - name: Find latest folder and update Allure Report Title
+      #   run: |
+      #     latest_folder=$(find allure-report -type d -name '[0-9]*' | sort -n | tail -n 1)
+      #     echo "Latest Folder: $latest_folder"
+      #     sed -i 's/<title>Allure Report<\/title>/<title>[Open Banking] - API Quality Readiness<\/title>/' "$latest_folder/index.html"
 
       - name: Deploy report to GitHub Pages
         if: always()
@@ -59,4 +59,5 @@ jobs:
       - name: Find latest folder and update Allure Report Title
         run: |
           latest_folder=$(find allure-report -type d -name '[0-9]*' | sort -n | tail -n 1)
+          echo "Latest Folder: $latest_folder"
           sed -i 's/<title>Allure Report<\/title>/<title>[Open Banking] - API Quality Readiness<\/title>/' "$latest_folder/index.html"
