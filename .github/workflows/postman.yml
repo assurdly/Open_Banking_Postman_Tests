@@ -58,8 +58,8 @@ jobs:
 
       - name: Update Allure Report Title
         run: |
-          # Find the latest folder in the gh-pages branch
-          latest_folder=$(find gh-pages -mindepth 1 -maxdepth 1 -type d | sort -n | tail -n 1)
+          # Find the latest folder with numerical values in the gh-pages branch
+          latest_folder=$(find gh-pages -mindepth 1 -maxdepth 1 -type d -name '[0-9]*' | sort -n | tail -n 1)
           
           echo "Latest Folder: $latest_folder"
       
