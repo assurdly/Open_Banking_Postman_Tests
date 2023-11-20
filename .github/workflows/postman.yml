@@ -30,6 +30,7 @@ jobs:
       with:
           ref: gh-pages
           path: gh-pages
+    - name: Echo Allure history retrieved
       run: |
         echo "Allure history retrieved."
 
@@ -43,5 +44,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: allure-history
+          
+    - name: Echo report deployed to GitHub Pages
       run: |
         echo "Allure report deployed to GitHub Pages."
