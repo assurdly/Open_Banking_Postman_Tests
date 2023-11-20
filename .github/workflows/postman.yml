@@ -21,12 +21,13 @@ jobs:
 
     - name: Run Postman tests
       run: |
-        docker run -t -v "$(pwd):/etc/newman" postman/newman run /etc/newman/Open_Banking_QA.postman_collection.json --reporters cli,junit --reporter-junit-export ${{ vars.ALLURE_RESULTS_PATH }}
+         docker run -t -v "$(pwd):/etc/newman" postman/newman run /etc/newman/Open_Banking_QA.postman_collection.json --reporters cli,junit --reporter-junit-export allure-history
+        
     - name: Download and Install Allure
       run: |
         sudo apt-get install -y allure
-    - name: Prepare Allure history # Step to prepare Allure history directory
-      run:  mkdir -p ${{ vars.ALLURE_RESULTS_PATH }}
+    # - name: Prepare Allure history # Step to prepare Allure history directory
+    #   run:  mkdir -p ${{ vars.ALLURE_RESULTS_PATH }}
 
     - name: Get Allure history # Step to retrieve Allure history
       uses: actions/checkout@v3
