@@ -45,7 +45,7 @@ jobs:
       - name: Find latest folder and update Allure Report Title
         run: |
           latest_folder=$(find allure-report -type d -name '[0-9]*' | sort -n | tail -n 1)
-          sed -i 's/<title>Allure Report<\/title>/<title>[Open Banking] - API Quality Readiness<\/title>/' "$latest_folder/allure-report/index.html"
+          sed -i 's/<title>Allure Report<\/title>/<title>[Open Banking] - API Quality Readiness<\/title>/' "$latest_folder/index.html"
 
       - name: Deploy report to GitHub Pages
         if: always()
