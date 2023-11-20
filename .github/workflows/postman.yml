@@ -10,40 +10,39 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Install newman and newman-reporter-allure
-      run: |
-        npm install -g newman newman-reporter-allure
-        echo "Newman and newman-reporter-allure installed."
+      - name: Install newman and newman-reporter-allure
+        run: |
+          npm install -g newman newman-reporter-allure
+          echo "Newman and newman-reporter-allure installed."
 
-    - name: Run Postman tests
-      run: |
-         docker run -t -v "$(pwd):/etc/newman" postman/newman run /etc/newman/Open_Banking_QA.postman_collection.json --reporters cli,allure
-         echo "Postman tests run."
+      - name: Run Postman tests
+        run: |
+           newman run Open_Banking_QA.postman_collection.json --reporters cli,allure
+           echo "Postman tests run."
 
-    - name: Get Allure history
-      uses: actions/checkout@v3
-      if: always()
-      continue-on-error: true
-      with:
+      - name: Get Allure history
+        uses: actions/checkout@v2
+        if: always()
+        continue-on-error: true
+        with:
           ref: gh-pages
           path: gh-pages
-      
-    - name: Allure report action
-      uses: simple-elf/allure-report-action@v1.7
-      if: always()
-      with:
+    
+      - name: Allure report action
+        uses: simple-elf/allure-report-action@master
+        with:
           allure_results: allure-results
           gh_pages: gh-pages
           allure_report: allure-report
           allure_history: allure-history
-      
-    - name: Deploy Allure report to GitHub Pages
-      if: always()
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: allure-history
+
+      - name: Deploy report to GitHub Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v2
+        env:
+          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: allure-history
