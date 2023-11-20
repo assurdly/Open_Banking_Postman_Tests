@@ -56,8 +56,16 @@ jobs:
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: allure-history
 
-      - name: Find latest folder and update Allure Report Title
+      - name: Update Allure Report Title
         run: |
-          latest_folder=$(find allure-report -type d -name '[0-9]*' | sort -n | tail -n 1)
+          # Find the latest folder in the gh-pages branch
+          latest_folder=$(find gh-pages -mindepth 1 -maxdepth 1 -type d | sort -n | tail -n 1)
+          
           echo "Latest Folder: $latest_folder"
-          sed -i 's/<title>Allure Report<\/title>/<title>[Open Banking] - API Quality Readiness<\/title>/' "$latest_folder/index.html"
+      
+          # Check if index.html exists in the latest folder and update the title
+          if [[ -e "$latest_folder/index.html" ]]; then
+            sed -i 's/<title>Allure Report<\/title>/<title>[Open Banking] - API Quality Readiness<\/title>/' "$latest_folder/index.html"
+          else
+            echo "Error: index.html not found in the latest folder."
+          fi
