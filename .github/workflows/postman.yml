@@ -40,9 +40,12 @@ jobs:
       uses: simple-elf/allure-report-action@master
       if: always() # Execute even if previous steps fail
       with:
-          allure_results: ${{ vars.ALLURE_RESULTS_PATH }} # Specify the directory containing Allure results
+          # allure_results: ${{ vars.ALLURE_RESULTS_PATH }} # Specify the directory containing Allure results
           allure_history: allure-history # Specify the directory to store Allure history
           keep_reports: 5 # Specify the number of previous reports to keep  
+          allure_results: allure-results
+          gh_pages: gh-pages
+          allure_report: allure-report
 
     # - name: Find Allure binary
     #   run: |
