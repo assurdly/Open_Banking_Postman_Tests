@@ -13,37 +13,36 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Set ALLURE_RESULTS_PATH
-      run: echo "ALLURE_RESULTS_PATH=allure-results" >> $GITHUB_ENV
+    # - name: Set ALLURE_RESULTS_PATH
+    #   run: echo "ALLURE_RESULTS_PATH=allure-results" >> $GITHUB_ENV
 
-    - name: Create ALLURE_RESULTS_PATH directory
-      run: mkdir -p $ALLURE_RESULTS_PATH
+    # - name: Create ALLURE_RESULTS_PATH directory
+    #   run: mkdir -p $ALLURE_RESULTS_PATH
 
     - name: Run Postman tests
       run: |
-        docker run -t -v "$(pwd):/etc/newman" postman/newman run /etc/newman/Open_Banking_QA.postman_collection.json --reporters cli,junit --reporter-junit-export $ALLURE_RESULTS_PATH
-
+        docker run -t -v "$(pwd):/etc/newman" postman/newman run /etc/newman/Open_Banking_QA.postman_collection.json --reporters cli,junit --reporter-junit-export ${{ vars.ALLURE_RESULTS_PATH }}
     - name: Download and Install Allure
       run: |
         sudo apt-get install -y allure
-    # - name: Prepare Allure history # Step to prepare Allure history directory
-    #   run: |
-    #       cd ..
-    #       mkdir -p ${{ vars.ALLURE_RESULTS_PATH }}
+    - name: Prepare Allure history # Step to prepare Allure history directory
+      run: |
+          cd ..
+          mkdir -p ${{ vars.ALLURE_RESULTS_PATH }}
 
-    # - name: Get Allure history # Step to retrieve Allure history
-    #   uses: actions/checkout@v3
-    #   if: always() # Execute even if previous steps fail
-    #   continue-on-error: true # Continue execution even if the step fails
-    #   with:
-    #       ref: gh-pages # Specify the branch to retrieve Allure history from
-    #       path: gh-pages # Set the destination path for Allure history
+    - name: Get Allure history # Step to retrieve Allure history
+      uses: actions/checkout@v3
+      if: always() # Execute even if previous steps fail
+      continue-on-error: true # Continue execution even if the step fails
+      with:
+          ref: gh-pages # Specify the branch to retrieve Allure history from
+          path: gh-pages # Set the destination path for Allure history
 
     - name: Allure report action # Step to generate Allure report
       uses: simple-elf/allure-report-action@master
       if: always() # Execute even if previous steps fail
       with:
-          allure_results: $ALLURE_RESULTS_PATH # Specify the directory containing Allure results
+          allure_results: ${{ vars.ALLURE_RESULTS_PATH }} # Specify the directory containing Allure results
           allure_history: allure-history # Specify the directory to store Allure history
           keep_reports: 5 # Specify the number of previous reports to keep  
 
