@@ -25,13 +25,13 @@ jobs:
     #       cd ..
     #       mkdir -p ${{ vars.ALLURE_RESULTS_PATH }}
 
-    - name: Get Allure history # Step to retrieve Allure history
-      uses: actions/checkout@v3
-      if: always() # Execute even if previous steps fail
-      continue-on-error: true # Continue execution even if the step fails
-      with:
-          ref: gh-pages # Specify the branch to retrieve Allure history from
-          path: gh-pages # Set the destination path for Allure history
+    # - name: Get Allure history # Step to retrieve Allure history
+    #   uses: actions/checkout@v3
+    #   if: always() # Execute even if previous steps fail
+    #   continue-on-error: true # Continue execution even if the step fails
+    #   with:
+    #       ref: gh-pages # Specify the branch to retrieve Allure history from
+    #       path: gh-pages # Set the destination path for Allure history
 
     - name: Allure report action # Step to generate Allure report
       uses: simple-elf/allure-report-action@master
@@ -39,7 +39,7 @@ jobs:
       with:
           allure_results: ${{ vars.ALLURE_RESULTS_PATH }} # Specify the directory containing Allure results
           allure_history: allure-history # Specify the directory to store Allure history
-          keep_reports: 5 # Specify the number of previous reports to keep  
+          keep_reports: 0 # Specify the number of previous reports to keep  
 
     # - name: Find Allure binary
     #   run: |
