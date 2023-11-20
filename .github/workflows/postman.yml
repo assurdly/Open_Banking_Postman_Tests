@@ -21,7 +21,7 @@ jobs:
 
     - name: Run Postman tests
       run: |
-         docker run -t -v "$(pwd):/etc/newman" postman/newman run /etc/newman/Open_Banking_QA.postman_collection.json --reporters cli,junit --reporter-junit-export allure-history
+         docker run -t -v "$(pwd):/etc/newman" postman/newman run /etc/newman/Open_Banking_QA.postman_collection.json --reporters cli,junit --reporter-junit-export allure-historyy
         
     - name: Download and Install Allure
       run: |
@@ -42,7 +42,7 @@ jobs:
       if: always() # Execute even if previous steps fail
       with:
           # allure_results: ${{ vars.ALLURE_RESULTS_PATH }} # Specify the directory containing Allure results
-          allure_history: allure-history # Specify the directory to store Allure history
+          allure_history: allure-historyy # Specify the directory to store Allure history
           keep_reports: 5 # Specify the number of previous reports to keep  
           allure_results: allure-results
           gh_pages: gh-pages
