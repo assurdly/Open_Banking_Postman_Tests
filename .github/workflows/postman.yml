@@ -13,11 +13,11 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Create Allure report directory
-      run: mkdir -p ./allure-results
-
     - name: Set ALLURE_RESULTS_PATH
       run: echo "ALLURE_RESULTS_PATH=allure-results" >> $GITHUB_ENV
+
+    - name: Create ALLURE_RESULTS_PATH directory
+      run: mkdir -p $ALLURE_RESULTS_PATH
 
     - name: Run Postman tests
       run: |
