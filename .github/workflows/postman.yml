@@ -52,9 +52,6 @@ jobs:
       - name: Update Allure Report Widget Title
         if: steps.build.outcome == 'success'
         run: |
-          ls
-          ls gh-pages
-          ls allure-history
           # Find the latest folder with numerical values in the allure-history directory
           latest_folder=$(find allure-history -mindepth 1 -maxdepth 1 -type d -name '[0-9]*' | sort -n | tail -n 1)
 
@@ -69,7 +66,7 @@ jobs:
             cat "$summary_path"  # Print content before
 
             # Use sed to update the content within the <h2> element
-            sed -i 's/Allure Report/OBN Report/' "$summary_path"
+            sudo sed -i 's/Allure Report/OBN Report/' "$summary_path"
 
             cat "$summary_path"  # Print content after
           else
