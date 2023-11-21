@@ -63,18 +63,18 @@ jobs:
           
           echo "Latest Folder: $latest_folder"
           
-          # Check if index.html exists in the latest folder
-          index_html_path="$latest_folder/index.html"
-          echo "Index HTML Path: $index_html_path"
+          # Check if summary.json exists in the latest folder
+          summary_path="$latest_folder/widgets/summary.json"
+          echo "Index HTML Path: $summary_path"
           
-          if [[ -e "$index_html_path" ]]; then
+          if [[ -e "$summary_path" ]]; then
             # Debug output to check the content before and after the sed command
-            cat "$index_html_path"  # Print content before
+            cat "$summary_path"  # Print content before
             
             # Use sed to update the content within the <h2> element
-            sed -i 's/<h2 class="widget__title">.*<\/h2>/<h2 class="widget__title">[New Content]<\/h2>/' "$index_html_path"
+            sed -i 's/Allure Report/<h2 class="widget__title">OBN Report<\/h2>/' "$summary_path"
             
-            cat "$index_html_path"  # Print content after
+            cat "$summary_path"  # Print content after
           else
-            echo "Error: index.html not found in the latest folder."
+            echo "Error: summary.json not found in the latest folder."
           fi
