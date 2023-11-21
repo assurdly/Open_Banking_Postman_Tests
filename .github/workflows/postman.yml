@@ -52,22 +52,25 @@ jobs:
       - name: Update Allure Report Widget Title
         if: steps.build.outcome == 'success'
         run: |
-          # Find the latest folder with numerical values in the gh-pages branch
-          latest_folder=$(find gh-pages -mindepth 1 -maxdepth 1 -type d -name '[0-9]*' | sort -n | tail -n 1)
-          
+          ls
+          ls gh-pages
+          ls allure-history
+          # Find the latest folder with numerical values in the allure-history directory
+          latest_folder=$(find allure-history -mindepth 1 -maxdepth 1 -type d -name '[0-9]*' | sort -n | tail -n 1)
+
           echo "Latest Folder: $latest_folder"
-          
+
           # Check if summary.json exists in the latest folder
           summary_path="$latest_folder/widgets/summary.json"
-          echo "Index HTML Path: $summary_path"
-          
+          echo "Summary Path: $summary_path"
+
           if [[ -e "$summary_path" ]]; then
             # Debug output to check the content before and after the sed command
             cat "$summary_path"  # Print content before
-            
+
             # Use sed to update the content within the <h2> element
             sed -i 's/Allure Report/OBN Report/' "$summary_path"
-            
+
             cat "$summary_path"  # Print content after
           else
             echo "Error: summary.json not found in the latest folder."
