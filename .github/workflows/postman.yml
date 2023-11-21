@@ -66,7 +66,7 @@ jobs:
             cat "$summary_path"  # Print content before
 
             # Use sed to update the content within the <h2> element
-            sudo sed -i 's/Allure Report/OBN Report/' "$summary_path"
+            sudo sed -i 's/Allure Report/[Open Banking] - API Quality Readiness/' "$summary_path"
 
             cat "$summary_path"  # Print content after
           else
