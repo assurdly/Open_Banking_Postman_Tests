@@ -32,6 +32,7 @@ jobs:
           path: gh-pages
     
       - name: Allure report action
+        id: build
         uses: simple-elf/allure-report-action@master
         with:
           allure_results: allure-results
@@ -48,15 +49,8 @@ jobs:
       #     echo "Latest Folder: $latest_folder"
       #     sed -i 's/<title>Allure Report<\/title>/<title>[Open Banking] - API Quality Readiness<\/title>/' "$latest_folder/index.html"
 
-      - name: Deploy report to GitHub Pages
-        if: always()
-        uses: peaceiris/actions-gh-pages@v2
-        env:
-          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: allure-history
-
       - name: Update Allure Report Widget Title
+        if: steps.build.outcome == 'success'
         run: |
           # Find the latest folder with numerical values in the gh-pages branch
           latest_folder=$(find gh-pages -mindepth 1 -maxdepth 1 -type d -name '[0-9]*' | sort -n | tail -n 1)
@@ -72,9 +66,18 @@ jobs:
             cat "$summary_path"  # Print content before
             
             # Use sed to update the content within the <h2> element
-            sed -i 's/Allure Report/<h2 class="widget__title">OBN Report<\/h2>/' "$summary_path"
+            sed -i 's/Allure Report/OBN Report/' "$summary_path"
             
             cat "$summary_path"  # Print content after
           else
             echo "Error: summary.json not found in the latest folder."
           fi
+
+      - name: Deploy report to GitHub Pages
+        id: deploy
+        if: always()
+        uses: peaceiris/actions-gh-pages@v2
+        env:
+          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: allure-history
