@@ -24723,25 +24723,40 @@
 											"script": {
 												"id": "2b7be076-b65d-4bed-82a8-31eefe36ec73",
 												"exec": [
-													"pm.test(\"Status code is 200\", function () {\r",
-													"    pm.response.to.have.status(200);\r",
+													"pm.test(\"Status code is 400\", function () {\r",
+													"    pm.response.to.have.status(400);\r",
 													"});\r",
 													"\r",
-													"pm.test(\"Status code response is OK\", function () {\r",
-													"    pm.response.to.have.status('OK');\r",
+													"pm.test(\"Status code response is Bad Request\", function () {\r",
+													"    pm.response.to.have.status('Bad Request');\r",
 													"});\r",
 													"\r",
 													"var jsonData = pm.response.json();\r",
 													"\r",
 													"pm.test(\"Response body property\", function () {\r",
 													"    pm.expect(jsonData).to.be.an('object');\r",
-													"    pm.expect(jsonData.status).to.be.a('string');\r",
+													"    pm.expect(jsonData.timestamp).to.be.a('string');\r",
+													"    pm.expect(jsonData.status).to.be.a('number');\r",
+													"    pm.expect(jsonData.success).to.be.a('boolean');\r",
 													"    pm.expect(jsonData.message).to.be.a('string');\r",
 													"    pm.expect(jsonData.data).to.be.an('object');\r",
+													"    pm.expect(jsonData.stack).to.be.a('string');\r",
 													"});\r",
 													"\r",
 													"pm.test(\"Status is success\", function () {\r",
-													"    pm.expect(jsonData.status).to.eql('success');\r",
+													"    pm.expect(jsonData.status).to.eql(400);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Success is false\", function () {\r",
+													"    pm.expect(jsonData.success).to.eql(false);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Message is present\", function () {\r",
+													"    pm.expect(jsonData.message).to.eql('Validation Error.');\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Data is present\", function () {\r",
+													"    pm.expect(jsonData.data.name).to.eql('name should not be empty');\r",
 													"});"
 												],
 												"type": "text/javascript"
@@ -24763,7 +24778,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"get-transaction1\",\n    \"enabled\": false,\n    \"url\": \"https://httpbin.org:443/json\",\n    \"route\": {\n        \"paths\": [\n            \"/transaction1\"\n        ],\n        \"methods\": [\n            \"GET\"\n        ]\n    }\n}",
+											"raw": "{\n    \"name\": \"get-transaction1\",\n    \"enabled\": false,\n    \"url\": \"https://httpbin.org:443/json\",\n    \"route\": {\n        \"paths\": [\n            \"\"\n        ],\n        \"methods\": [\n            \"GET\"\n        ]\n    }\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -25580,18 +25595,18 @@
 	],
 	"variable": [
 		{
-			"id": "e23d899a-bd6e-4efa-905c-30012f625d71",
+			"id": "008e4673-f7a5-4cca-9951-86e38b8f73be",
 			"key": "Base_url",
 			"value": "3.134.253.153:4000"
 		},
 		{
-			"id": "60ec1f1c-6c39-493b-88cf-8bfdc27307d3",
+			"id": "20295923-92ca-4f07-b91f-06dc4b9e40f8",
 			"key": "Token",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "d389916e-ab57-435a-be73-751984e12972",
+			"id": "407f905d-18a8-4a0a-a6de-0291ffec14cc",
 			"key": "email",
 			"value": ""
 		}
