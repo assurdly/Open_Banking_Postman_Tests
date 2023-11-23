@@ -24720,7 +24720,7 @@
 							"description": "ID: Id of an endpoint"
 						},
 						{
-							"name": "New Folder",
+							"name": "View all API enpoints",
 							"item": [],
 							"id": "4eaa3ce3-b432-4894-9bb0-63592a7d3bb9"
 						},
@@ -25107,18 +25107,18 @@
 	],
 	"variable": [
 		{
-			"id": "fd49ecfe-fc13-4c8c-87f2-a5f313ca9077",
+			"id": "711a4dee-8ec8-49b3-a190-ebbe0660ac6b",
 			"key": "Base_url",
 			"value": "3.134.253.153:4000"
 		},
 		{
-			"id": "67db3a01-c613-49c6-8270-40fa455780ce",
+			"id": "f04bc52a-ad67-4961-8da4-9439408d7fed",
 			"key": "Token",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "b790f2ba-187a-4257-ae29-8b11093197b2",
+			"id": "a5ff23e0-7347-4282-b58a-feec5727d6a6",
 			"key": "email",
 			"value": ""
 		}
