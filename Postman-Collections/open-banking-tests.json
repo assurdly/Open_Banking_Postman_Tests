@@ -25473,6 +25473,37 @@
 						},
 						{
 							"name": "View API Endpoint",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "73ec0ae5-dd70-420e-b7a4-ebab85f6e6ad",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Status code response is OK\", function () {\r",
+											"    pm.response.to.have.status('OK');\r",
+											"});\r",
+											"\r",
+											"var jsonData = pm.response.json();\r",
+											"\r",
+											"pm.test(\"Response body property\", function () {\r",
+											"    pm.expect(jsonData).to.be.an('object');\r",
+											"    pm.expect(jsonData.status).to.be.a('string');\r",
+											"    pm.expect(jsonData.message).to.be.a('string');\r",
+											"    pm.expect(jsonData.data).to.be.an('object');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Status is success\", function () {\r",
+											"    pm.expect(jsonData.status).to.eql('success');\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "15b22928-38de-4996-90d8-34e818150a23",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -25757,18 +25788,18 @@
 	],
 	"variable": [
 		{
-			"id": "a0d3d7d7-4a06-4245-8ba3-16c92efa4b12",
+			"id": "b24c12cd-9743-4217-b7e4-9673e994adf2",
 			"key": "Base_url",
 			"value": "3.134.253.153:4000"
 		},
 		{
-			"id": "b45f5556-d46f-48b4-979e-ec0005f59aba",
+			"id": "0d8525eb-202d-4f9d-97fb-73791b456398",
 			"key": "Token",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "0a65d7dc-68bb-4ad1-ba1b-bceecf98b76d",
+			"id": "feb272f7-22aa-41fe-9dc0-af73dcfc3156",
 			"key": "email",
 			"value": ""
 		}
