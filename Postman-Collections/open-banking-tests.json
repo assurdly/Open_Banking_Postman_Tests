@@ -24876,6 +24876,168 @@
 											"body": "{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": {\n        \"id\": \"c11209c2-da51-4212-8782-df1e911fa861\",\n        \"name\": \"get-accounts\",\n        \"enabled\": false,\n        \"host\": \"httpbin.org\",\n        \"protocol\": \"https\",\n        \"port\": 443,\n        \"path\": \"/json\",\n        \"url\": \"https://httpbin.org:443/json\",\n        \"route\": {\n            \"paths\": [\n                \"/accounts\"\n            ],\n            \"methods\": [\n                \"GET\"\n            ]\n        }\n    }\n}"
 										}
 									]
+								},
+								{
+									"name": "Update API Endpoint - Blank Url",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "2b7be076-b65d-4bed-82a8-31eefe36ec73",
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {\r",
+													"    pm.response.to.have.status(400);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status code response is Bad Request\", function () {\r",
+													"    pm.response.to.have.status('Bad Request');\r",
+													"});\r",
+													"\r",
+													"var jsonData = pm.response.json();\r",
+													"\r",
+													"pm.test(\"Response body property\", function () {\r",
+													"    pm.expect(jsonData).to.be.an('object');\r",
+													"    pm.expect(jsonData.timestamp).to.be.a('string');\r",
+													"    pm.expect(jsonData.status).to.be.a('number');\r",
+													"    pm.expect(jsonData.success).to.be.a('boolean');\r",
+													"    pm.expect(jsonData.message).to.be.a('string');\r",
+													"    pm.expect(jsonData.data).to.be.an('object');\r",
+													"    pm.expect(jsonData.stack).to.be.a('string');\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status is success\", function () {\r",
+													"    pm.expect(jsonData.status).to.eql(400);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Success is false\", function () {\r",
+													"    pm.expect(jsonData.success).to.eql(false);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Message is present\", function () {\r",
+													"    pm.expect(jsonData.message).to.eql('Validation Error.');\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Data is present\", function () {\r",
+													"    pm.expect(jsonData.data.name).to.eql('name should not be empty');\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "744d84dc-1ceb-49be-88bc-119638186ecd",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{accesstoken_AP}}"
+											}
+										},
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"\",\n    \"enabled\": false,\n    \"url\": \"https://httpbin.org:443/json\",\n    \"route\": {\n        \"paths\": [\n            \"/transaction1\"\n        ],\n        \"methods\": [\n            \"GET\"\n        ]\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{Base_Url}}/collections/apis/:id",
+											"host": [
+												"{{Base_Url}}"
+											],
+											"path": [
+												"collections",
+												"apis",
+												":id"
+											],
+											"variable": [
+												{
+													"id": "4091be8a-52b9-4776-b2fa-a9961bf2d164",
+													"key": "id",
+													"value": "6cf82442-a3aa-4417-9400-5ed25a49d593"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "0011ec00-2964-499a-bd5c-3516e6a830ec",
+											"name": "Update API Endpoint",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"name\": \"get-accounts\",\n    \"enabled\": false,\n    \"url\": \"https://httpbin.org:443/json\",\n    \"route\": {\n        \"paths\": [\n            \"/accounts\"\n        ],\n        \"methods\": [\n            \"GET\"\n        ]\n    }\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{Base_url}}/collections/apis/:id",
+													"host": [
+														"{{Base_url}}"
+													],
+													"path": [
+														"collections",
+														"apis",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "c11209c2-da51-4212-8782-df1e911fa861"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "X-Powered-By",
+													"value": "Express"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "277"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"115-dOu+spKBMuZX7iFmUNd7hpf9XnI\""
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 15 Nov 2023 10:46:07 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=5"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": {\n        \"id\": \"c11209c2-da51-4212-8782-df1e911fa861\",\n        \"name\": \"get-accounts\",\n        \"enabled\": false,\n        \"host\": \"httpbin.org\",\n        \"protocol\": \"https\",\n        \"port\": 443,\n        \"path\": \"/json\",\n        \"url\": \"https://httpbin.org:443/json\",\n        \"route\": {\n            \"paths\": [\n                \"/accounts\"\n            ],\n            \"methods\": [\n                \"GET\"\n            ]\n        }\n    }\n}"
+										}
+									]
 								}
 							],
 							"id": "44273d14-2273-4b1e-a332-44eee7c80343",
@@ -25271,18 +25433,18 @@
 	],
 	"variable": [
 		{
-			"id": "e2a3c47e-15b7-4ff1-8535-dc30080c8203",
+			"id": "6c44cdf6-3675-4594-94ea-6851299da471",
 			"key": "Base_url",
 			"value": "3.134.253.153:4000"
 		},
 		{
-			"id": "27e18fc7-5d66-4f26-9f7d-0e8aba07cce2",
+			"id": "771cea3d-58ac-4c82-8bb2-a7ab0e0c4b15",
 			"key": "Token",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "bf26f9be-e035-4bdc-b8c7-df5d9ce93bf7",
+			"id": "056166a0-1da8-4387-8c01-0cc23da1f51c",
 			"key": "email",
 			"value": ""
 		}
