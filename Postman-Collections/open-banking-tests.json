@@ -24722,7 +24722,8 @@
 						{
 							"name": "View all API enpoints",
 							"item": [],
-							"id": "4eaa3ce3-b432-4894-9bb0-63592a7d3bb9"
+							"id": "4eaa3ce3-b432-4894-9bb0-63592a7d3bb9",
+							"description": "This endpoint shows all API enpoint in a collection\n\nID: Collection Id"
 						},
 						{
 							"name": "View all API Endpoints",
@@ -25107,18 +25108,18 @@
 	],
 	"variable": [
 		{
-			"id": "711a4dee-8ec8-49b3-a190-ebbe0660ac6b",
+			"id": "8aa10af1-f241-4188-9cd1-e8a40e6b76b2",
 			"key": "Base_url",
 			"value": "3.134.253.153:4000"
 		},
 		{
-			"id": "f04bc52a-ad67-4961-8da4-9439408d7fed",
+			"id": "f884b568-90f2-4afb-b1e3-da7f20bd69d1",
 			"key": "Token",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "a5ff23e0-7347-4282-b58a-feec5727d6a6",
+			"id": "e75928e0-3141-4f0d-93e7-124a21af00ef",
 			"key": "email",
 			"value": ""
 		}
