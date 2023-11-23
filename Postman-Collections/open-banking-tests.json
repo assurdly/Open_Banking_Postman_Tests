@@ -12794,6 +12794,42 @@
 					"item": [
 						{
 							"name": "Get Audit Trail",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "d15381b1-688a-4162-9992-d705833bb26d",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Status code response is OK\", function () {\r",
+											"    pm.response.to.have.status('OK');\r",
+											"});\r",
+											"\r",
+											"var jsonData = pm.response.json();\r",
+											"\r",
+											"pm.test(\"Response body property\", function () {\r",
+											"    pm.expect(jsonData).to.be.an('object');\r",
+											"    pm.expect(jsonData.status).to.be.a('string');\r",
+											"    pm.expect(jsonData.message).to.be.a('string');\r",
+											"    pm.expect(jsonData.data).to.be.an('array');\r",
+											"    pm.expect(jsonData._meta).to.be.an('object');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Status is success\", function () {\r",
+											"    pm.expect(jsonData.status).to.eql('success');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Message is present\", function () {\r",
+											"    pm.expect(jsonData.message).to.eql('Audit trail fetched successfully.');\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "ff85a5f6-12c6-4f11-ae8b-9707fa51ebf4",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -12802,15 +12838,15 @@
 								"auth": {
 									"type": "bearer",
 									"bearer": {
-										"token": "{{access_token}}"
+										"token": "{{accesstoken}}"
 									}
 								},
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{base_url}}/audit-trail?page=1&limit=2",
+									"raw": "{{Base_Url}}/audit-trail?page=1&limit=2",
 									"host": [
-										"{{base_url}}"
+										"{{Base_Url}}"
 									],
 									"path": [
 										"audit-trail"
@@ -12826,7 +12862,7 @@
 										},
 										{
 											"key": "filter[event]",
-											"value": "auth.signup",
+											"value": "auth.login",
 											"disabled": true
 										},
 										{
@@ -25873,18 +25909,18 @@
 	],
 	"variable": [
 		{
-			"id": "f476fa09-f76d-4d46-8a2a-644a12ab6940",
+			"id": "81dc5c0e-81a0-46a6-bd76-0bc0c1fbe203",
 			"key": "Base_url",
 			"value": "3.134.253.153:4000"
 		},
 		{
-			"id": "e6968f7f-acb7-44ea-825a-244c87452157",
+			"id": "ac855d53-e9d8-4fca-8a5c-60e980642ed1",
 			"key": "Token",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "40479108-a499-4c72-b822-f1c8e646ffcd",
+			"id": "26a6aac5-2fb5-4267-bb8c-cf6a67f64140",
 			"key": "email",
 			"value": ""
 		}
