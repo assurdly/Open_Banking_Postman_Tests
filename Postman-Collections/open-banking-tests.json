@@ -24918,7 +24918,7 @@
 													"});\r",
 													"\r",
 													"pm.test(\"Data is present\", function () {\r",
-													"    pm.expect(jsonData.data.name).to.eql('name should not be empty');\r",
+													"    pm.expect(jsonData.data.url).to.eql('url should not be empty');\r",
 													"});"
 												],
 												"type": "text/javascript"
@@ -24940,7 +24940,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"\",\n    \"enabled\": false,\n    \"url\": \"https://httpbin.org:443/json\",\n    \"route\": {\n        \"paths\": [\n            \"/transaction1\"\n        ],\n        \"methods\": [\n            \"GET\"\n        ]\n    }\n}",
+											"raw": "{\n    \"name\": \"get-transaction1\",\n    \"enabled\": false,\n    \"url\": \"\",\n    \"route\": {\n        \"paths\": [\n            \"/transaction1\"\n        ],\n        \"methods\": [\n            \"GET\"\n        ]\n    }\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -25433,18 +25433,18 @@
 	],
 	"variable": [
 		{
-			"id": "6c44cdf6-3675-4594-94ea-6851299da471",
+			"id": "a9185bee-2452-463c-9eb6-8d85992099a2",
 			"key": "Base_url",
 			"value": "3.134.253.153:4000"
 		},
 		{
-			"id": "771cea3d-58ac-4c82-8bb2-a7ab0e0c4b15",
+			"id": "bf51f549-d89c-42ab-b5e1-0a4108515081",
 			"key": "Token",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "056166a0-1da8-4387-8c01-0cc23da1f51c",
+			"id": "7fcbacf9-28d1-446e-bd51-e10b55d7a924",
 			"key": "email",
 			"value": ""
 		}
