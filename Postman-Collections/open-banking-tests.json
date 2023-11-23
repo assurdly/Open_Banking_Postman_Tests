@@ -25472,6 +25472,11 @@
 							"description": "This endpoint shows all API enpoint in a collection\n\nID: Collection Id"
 						},
 						{
+							"name": "New Folder",
+							"item": [],
+							"id": "92a8fa2c-0d9d-4564-a99d-38a4ed4db7a3"
+						},
+						{
 							"name": "View API Endpoint",
 							"event": [
 								{
@@ -25788,18 +25793,18 @@
 	],
 	"variable": [
 		{
-			"id": "b24c12cd-9743-4217-b7e4-9673e994adf2",
+			"id": "1f94b7cd-e6d6-4068-8367-a003a82b7acc",
 			"key": "Base_url",
 			"value": "3.134.253.153:4000"
 		},
 		{
-			"id": "0d8525eb-202d-4f9d-97fb-73791b456398",
+			"id": "faefe44a-b121-48f7-8479-07f8c49b8b70",
 			"key": "Token",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "feb272f7-22aa-41fe-9dc0-af73dcfc3156",
+			"id": "a811a485-098b-4272-a565-6be7374dc678",
 			"key": "email",
 			"value": ""
 		}
