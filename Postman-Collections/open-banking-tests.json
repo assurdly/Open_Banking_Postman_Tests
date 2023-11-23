@@ -24716,7 +24716,7 @@
 									]
 								},
 								{
-									"name": "Update API Endpoint Copy",
+									"name": "Update API Endpoint - Invalid Method",
 									"event": [
 										{
 											"listen": "test",
@@ -25957,18 +25957,18 @@
 	],
 	"variable": [
 		{
-			"id": "404dc7d0-23f4-4f73-8456-d2dedaca3f2c",
+			"id": "5657705c-1b35-474b-b92d-9e47d7ffa0cd",
 			"key": "Base_url",
 			"value": "3.134.253.153:4000"
 		},
 		{
-			"id": "cf847960-383d-4876-9732-99befe5b3b58",
+			"id": "2cf369dc-e21f-450c-94be-847345e4f974",
 			"key": "Token",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "8887bdab-447a-4217-8c72-8745e08ec91c",
+			"id": "29a64948-80dc-4c10-a75c-2b222f668a82",
 			"key": "email",
 			"value": ""
 		}
