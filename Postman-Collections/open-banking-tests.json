@@ -24716,6 +24716,153 @@
 									]
 								},
 								{
+									"name": "Update API Endpoint - Blank method",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "2b7be076-b65d-4bed-82a8-31eefe36ec73",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status code response is OK\", function () {\r",
+													"    pm.response.to.have.status('OK');\r",
+													"});\r",
+													"\r",
+													"var jsonData = pm.response.json();\r",
+													"\r",
+													"pm.test(\"Response body property\", function () {\r",
+													"    pm.expect(jsonData).to.be.an('object');\r",
+													"    pm.expect(jsonData.status).to.be.a('string');\r",
+													"    pm.expect(jsonData.message).to.be.a('string');\r",
+													"    pm.expect(jsonData.data).to.be.an('object');\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status is success\", function () {\r",
+													"    pm.expect(jsonData.status).to.eql('success');\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "2a280da1-24b3-428a-b400-4ef42875eefb",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{accesstoken_AP}}"
+											}
+										},
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"get-transaction1\",\n    \"enabled\": false,\n    \"url\": \"https://httpbin.org:443/json\",\n    \"route\": {\n        \"paths\": [\n            \"/transaction1\"\n        ],\n        \"methods\": [\n            \"GET\"\n        ]\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{Base_Url}}/collections/apis/:id",
+											"host": [
+												"{{Base_Url}}"
+											],
+											"path": [
+												"collections",
+												"apis",
+												":id"
+											],
+											"variable": [
+												{
+													"id": "89e07359-6c5b-4f03-a154-1ae478c80dec",
+													"key": "id",
+													"value": "6cf82442-a3aa-4417-9400-5ed25a49d593"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "f07fdf82-b9ea-4b3e-b1e5-2417957fe232",
+											"name": "Update API Endpoint",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"name\": \"get-accounts\",\n    \"enabled\": false,\n    \"url\": \"https://httpbin.org:443/json\",\n    \"route\": {\n        \"paths\": [\n            \"/accounts\"\n        ],\n        \"methods\": [\n            \"GET\"\n        ]\n    }\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{Base_url}}/collections/apis/:id",
+													"host": [
+														"{{Base_url}}"
+													],
+													"path": [
+														"collections",
+														"apis",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "c11209c2-da51-4212-8782-df1e911fa861"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "X-Powered-By",
+													"value": "Express"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "277"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"115-dOu+spKBMuZX7iFmUNd7hpf9XnI\""
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 15 Nov 2023 10:46:07 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=5"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": {\n        \"id\": \"c11209c2-da51-4212-8782-df1e911fa861\",\n        \"name\": \"get-accounts\",\n        \"enabled\": false,\n        \"host\": \"httpbin.org\",\n        \"protocol\": \"https\",\n        \"port\": 443,\n        \"path\": \"/json\",\n        \"url\": \"https://httpbin.org:443/json\",\n        \"route\": {\n            \"paths\": [\n                \"/accounts\"\n            ],\n            \"methods\": [\n                \"GET\"\n            ]\n        }\n    }\n}"
+										}
+									]
+								},
+								{
 									"name": "Update API Endpoint - Blank paths",
 									"event": [
 										{
@@ -25595,18 +25742,18 @@
 	],
 	"variable": [
 		{
-			"id": "008e4673-f7a5-4cca-9951-86e38b8f73be",
+			"id": "306918f1-e534-44f4-ac0a-c868786a53d2",
 			"key": "Base_url",
 			"value": "3.134.253.153:4000"
 		},
 		{
-			"id": "20295923-92ca-4f07-b91f-06dc4b9e40f8",
+			"id": "8b8077da-f55c-436a-b286-05ca7fe602a6",
 			"key": "Token",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "407f905d-18a8-4a0a-a6de-0291ffec14cc",
+			"id": "c5f4a59c-e6e4-4b9a-8af1-4ee46b499059",
 			"key": "email",
 			"value": ""
 		}
