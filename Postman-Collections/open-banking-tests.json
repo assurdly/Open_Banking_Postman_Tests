@@ -24720,6 +24720,11 @@
 							"description": "ID: Id of an endpoint"
 						},
 						{
+							"name": "New Folder",
+							"item": [],
+							"id": "4eaa3ce3-b432-4894-9bb0-63592a7d3bb9"
+						},
+						{
 							"name": "View all API Endpoints",
 							"id": "f2cfa745-89de-4982-b020-a11f2d544b27",
 							"protocolProfileBehavior": {
@@ -25102,18 +25107,18 @@
 	],
 	"variable": [
 		{
-			"id": "57f242ad-22c3-40e9-a301-6df38a6666fc",
+			"id": "fd49ecfe-fc13-4c8c-87f2-a5f313ca9077",
 			"key": "Base_url",
 			"value": "3.134.253.153:4000"
 		},
 		{
-			"id": "f05f1b94-f634-4783-aed1-5df5b3ef9cca",
+			"id": "67db3a01-c613-49c6-8270-40fa455780ce",
 			"key": "Token",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "38cefde6-5aca-490b-9c90-540ac53bf1ed",
+			"id": "b790f2ba-187a-4257-ae29-8b11093197b2",
 			"key": "email",
 			"value": ""
 		}
