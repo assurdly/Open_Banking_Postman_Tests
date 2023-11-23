@@ -24756,7 +24756,7 @@
 													"});\r",
 													"\r",
 													"pm.test(\"Data is present\", function () {\r",
-													"    pm.expect(jsonData.data.description).to.eql('description should not be empty');\r",
+													"    pm.expect(jsonData.data.name).to.eql('name should not be empty');\r",
 													"});"
 												],
 												"type": "text/javascript"
@@ -25271,18 +25271,18 @@
 	],
 	"variable": [
 		{
-			"id": "e98b4dd2-20c5-42dd-af22-81186501b20c",
+			"id": "e2a3c47e-15b7-4ff1-8535-dc30080c8203",
 			"key": "Base_url",
 			"value": "3.134.253.153:4000"
 		},
 		{
-			"id": "bed33545-9e2b-4ddb-8532-f652c14690ad",
+			"id": "27e18fc7-5d66-4f26-9f7d-0e8aba07cce2",
 			"key": "Token",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "af6be7f8-5c42-435e-be86-b787f7ed8b87",
+			"id": "bf26f9be-e035-4bdc-b8c7-df5d9ce93bf7",
 			"key": "email",
 			"value": ""
 		}
