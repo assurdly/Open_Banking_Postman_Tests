@@ -12850,90 +12850,6 @@
 							"response": []
 						},
 						{
-							"name": "Get Audit Trail",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "4f7d3ef7-1a47-468e-8fc9-366105535da0",
-										"exec": [
-											"pm.test(\"Status code is 200\", function () {\r",
-											"    pm.response.to.have.status(200);\r",
-											"});\r",
-											"\r",
-											"pm.test(\"Status code response is OK\", function () {\r",
-											"    pm.response.to.have.status('OK');\r",
-											"});\r",
-											"\r",
-											"var jsonData = pm.response.json();\r",
-											"\r",
-											"pm.test(\"Response body property\", function () {\r",
-											"    pm.expect(jsonData).to.be.an('object');\r",
-											"    pm.expect(jsonData.status).to.be.a('string');\r",
-											"    pm.expect(jsonData.message).to.be.a('string');\r",
-											"    pm.expect(jsonData.data).to.be.an('array');\r",
-											"    pm.expect(jsonData._meta).to.be.an('object');\r",
-											"});\r",
-											"\r",
-											"pm.test(\"Status is success\", function () {\r",
-											"    pm.expect(jsonData.status).to.eql('success');\r",
-											"});\r",
-											"\r",
-											"pm.test(\"Message is present\", function () {\r",
-											"    pm.expect(jsonData.message).to.eql('Audit trail fetched successfully.');\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "6415f666-3c28-49e6-b0fd-27050c2f0537",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{accesstoken}}"
-									}
-								},
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{Base_Url}}/audit-trail?page=1",
-									"host": [
-										"{{Base_Url}}"
-									],
-									"path": [
-										"audit-trail"
-									],
-									"query": [
-										{
-											"key": "page",
-											"value": "1"
-										},
-										{
-											"key": "limit",
-											"value": "2",
-											"disabled": true
-										},
-										{
-											"key": "event",
-											"value": "auth.signup",
-											"disabled": true
-										},
-										{
-											"key": "createdAt-gt",
-											"value": "2023-11-11T17:20:57.737Z",
-											"disabled": true
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
 							"name": "Get Audit Log",
 							"event": [
 								{
@@ -25957,18 +25873,18 @@
 	],
 	"variable": [
 		{
-			"id": "5657705c-1b35-474b-b92d-9e47d7ffa0cd",
+			"id": "6c1274e1-05d5-406a-84b1-2461dd12c47c",
 			"key": "Base_url",
 			"value": "3.134.253.153:4000"
 		},
 		{
-			"id": "2cf369dc-e21f-450c-94be-847345e4f974",
+			"id": "35f51ff2-a65d-410d-9946-3a9d0cc560c3",
 			"key": "Token",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "29a64948-80dc-4c10-a75c-2b222f668a82",
+			"id": "29c3d788-baed-40ab-a9cf-ea36dac9c1a7",
 			"key": "email",
 			"value": ""
 		}
