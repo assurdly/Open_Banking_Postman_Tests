@@ -22072,12 +22072,12 @@
 					"name": "Audit Trail",
 					"item": [
 						{
-							"name": "Get Audit Trail",
+							"name": "Get Audit Trail Copy",
 							"event": [
 								{
 									"listen": "test",
 									"script": {
-										"id": "4f7d3ef7-1a47-468e-8fc9-366105535da0",
+										"id": "d15381b1-688a-4162-9992-d705833bb26d",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {\r",
 											"    pm.response.to.have.status(200);\r",
@@ -22109,7 +22109,7 @@
 									}
 								}
 							],
-							"id": "a47ac40b-7075-4307-9586-fd9a18316ba4",
+							"id": "d06a766e-3b35-4ee6-88a8-3c6b7f2f8cee",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -22117,13 +22117,13 @@
 								"auth": {
 									"type": "bearer",
 									"bearer": {
-										"token": "{{accesstoken_AP}}"
+										"token": "{{accesstoken}}"
 									}
 								},
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{Base_Url}}/audit-trail?page=1",
+									"raw": "{{Base_Url}}/audit-trail?page=1&limit=2",
 									"host": [
 										"{{Base_Url}}"
 									],
@@ -22137,17 +22137,26 @@
 										},
 										{
 											"key": "limit",
-											"value": "2",
+											"value": "2"
+										},
+										{
+											"key": "filter[event]",
+											"value": "auth.login",
 											"disabled": true
 										},
 										{
-											"key": "event",
-											"value": "auth.signup",
-											"disabled": true
-										},
-										{
-											"key": "createdAt-gt",
+											"key": "filter[createdAt][gt]",
 											"value": "2023-11-11T17:20:57.737Z",
+											"disabled": true
+										},
+										{
+											"key": "filter[createdAt][l]",
+											"value": "2023-11-11T17:20:57.737Z",
+											"disabled": true
+										},
+										{
+											"key": "filter[name]",
+											"value": "john",
 											"disabled": true
 										}
 									]
@@ -25909,18 +25918,18 @@
 	],
 	"variable": [
 		{
-			"id": "81dc5c0e-81a0-46a6-bd76-0bc0c1fbe203",
+			"id": "692a1076-275b-471a-b11c-5913bf910541",
 			"key": "Base_url",
 			"value": "3.134.253.153:4000"
 		},
 		{
-			"id": "ac855d53-e9d8-4fca-8a5c-60e980642ed1",
+			"id": "ee7d9bd7-1efe-49b7-ab3b-189d0b88bb1f",
 			"key": "Token",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "26a6aac5-2fb5-4267-bb8c-cf6a67f64140",
+			"id": "9dad858b-85ad-40c2-afed-bb9e8e631dcc",
 			"key": "email",
 			"value": ""
 		}
