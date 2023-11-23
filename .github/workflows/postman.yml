@@ -34,6 +34,8 @@ jobs:
       - name: Allure report action
         id: build
         uses: simple-elf/allure-report-action@master
+        if: always()
+        continue-on-error: true
         with:
           allure_results: allure-results
           gh_pages: gh-pages
@@ -41,6 +43,8 @@ jobs:
           allure_history: allure-history
 
       - name: Wait for Allure report to be generated
+        if: always()
+        continue-on-error: true
         run: sleep 10
 
       # - name: Find latest folder and update Allure Report Title
@@ -50,6 +54,7 @@ jobs:
       #     sed -i 's/<title>Allure Report<\/title>/<title>[Open Banking] - API Quality Readiness<\/title>/' "$latest_folder/index.html"
 
       - name: Update Allure Report Widget Title
+        continue-on-error: true
         if: steps.build.outcome == 'success'
         run: |
           # Find the latest folder with numerical values in the allure-history directory
