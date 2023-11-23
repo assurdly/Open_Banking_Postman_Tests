@@ -24716,7 +24716,7 @@
 									]
 								},
 								{
-									"name": "Update API Endpoint - Duplicate",
+									"name": "Update API Endpoint - Blank paths",
 									"event": [
 										{
 											"listen": "test",
@@ -25580,18 +25580,18 @@
 	],
 	"variable": [
 		{
-			"id": "db803368-21a5-4dde-a701-b7592f6f4d74",
+			"id": "e23d899a-bd6e-4efa-905c-30012f625d71",
 			"key": "Base_url",
 			"value": "3.134.253.153:4000"
 		},
 		{
-			"id": "44a26ea9-6eb1-4f88-93d1-586596c54e7b",
+			"id": "60ec1f1c-6c39-493b-88cf-8bfdc27307d3",
 			"key": "Token",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "30a34d2b-2c44-4bfa-9fea-7f6b10bed62b",
+			"id": "d389916e-ab57-435a-be73-751984e12972",
 			"key": "email",
 			"value": ""
 		}
