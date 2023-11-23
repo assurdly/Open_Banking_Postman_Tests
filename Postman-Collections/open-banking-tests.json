@@ -22117,7 +22117,7 @@
 								"auth": {
 									"type": "bearer",
 									"bearer": {
-										"token": "{{accesstoken}}"
+										"token": "{{accesstoken_AP}}"
 									}
 								},
 								"method": "GET",
@@ -25918,18 +25918,18 @@
 	],
 	"variable": [
 		{
-			"id": "8f3c3233-30d4-4f4d-aeea-9ad9bc946cb1",
+			"id": "92106be6-4df8-41e4-bbcb-4f4dc97c334b",
 			"key": "Base_url",
 			"value": "3.134.253.153:4000"
 		},
 		{
-			"id": "b9e970a3-f101-4217-a0be-55e7f6f08d7f",
+			"id": "6db32c63-454f-4c14-9cf6-d63b95e673f8",
 			"key": "Token",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "9e6e716c-79c5-47ff-b7da-29642b641505",
+			"id": "5670aaae-0e70-4c0e-96d4-e048bf4eec5a",
 			"key": "email",
 			"value": ""
 		}
