@@ -20,7 +20,7 @@ jobs:
 
       - name: Run Postman tests
         run: |
-           newman run Open_Banking_QA.postman_collection.json --reporters cli,allure
+           newman run Postman-Collections/open-banking-tests.json --reporters cli,allure
            echo "Postman tests run."
 
       - name: Get Allure history
