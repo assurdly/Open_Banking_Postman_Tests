@@ -1,0 +1,1 @@
+{"access_token":"ory_at_ruO1i3TEmVAJ0hYEPqhGdC2g5w-UWysJ8-75xiy_xJM.2XOXWILFNde_-TTvLaK5rSwacli7hdjAg4hPczSxPeQ","expires_in":3599,"scope":"offline","token_type":"bearer"}
