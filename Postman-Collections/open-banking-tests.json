@@ -19213,7 +19213,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{accesstoken}}"
+												"token": "{{accesstoken_AP}}"
 											}
 										},
 										"method": "POST",
@@ -25776,18 +25776,18 @@
 	],
 	"variable": [
 		{
-			"id": "3b595f9b-3e6f-47df-b9be-9c0902e55c20",
+			"id": "2bd2b3e7-8858-4204-b26e-74401aa931e3",
 			"key": "Base_url",
 			"value": "3.134.253.153:4000"
 		},
 		{
-			"id": "ce3339ae-d898-4a9b-bfa5-1cb2a533947d",
+			"id": "434803ff-83bb-4bbb-a1c5-79ed937a9378",
 			"key": "Token",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "db537657-3025-4e4f-a96f-d68eceb50f59",
+			"id": "85f8f5d0-e01a-4d3b-ae02-363441668042",
 			"key": "email",
 			"value": ""
 		}
