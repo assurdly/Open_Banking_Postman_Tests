@@ -16596,14 +16596,14 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{accesstoken}}"
+												"token": "{{accesstoken_AP}}"
 											}
 										},
 										"method": "PATCH",
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"description\": \"Quality Assurances\",\n    \"status\": \"active\"\n}",
+											"raw": "{\n    \"description\": \"Super Admin\",\n    \"status\": \"inactive\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -16621,9 +16621,8 @@
 											],
 											"variable": [
 												{
-													"id": "3ff02d5a-322d-4c6f-9325-907a7b821e18",
 													"key": "id",
-													"value": "5f581591-92fd-479f-80bd-1f9c8c60859d"
+													"value": "8e358839-931b-4758-8e50-2001443b0f6b"
 												}
 											]
 										}
@@ -25918,18 +25917,18 @@
 	],
 	"variable": [
 		{
-			"id": "68d83ce8-571c-4e41-a139-b351920cdad9",
+			"id": "7eb0510a-fa88-4c5a-ac0a-2e1022c4d894",
 			"key": "Base_url",
 			"value": "3.134.253.153:4000"
 		},
 		{
-			"id": "fde25e89-2dc4-43f2-add9-44326d84c6a1",
+			"id": "24158946-ab33-4bb1-8618-be47511164de",
 			"key": "Token",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "5d9acad8-78e5-415d-8810-34ed298b9157",
+			"id": "fe6ff27c-9696-40c8-92a2-03c308958b38",
 			"key": "email",
 			"value": ""
 		}
