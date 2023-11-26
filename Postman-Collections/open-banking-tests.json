@@ -17220,7 +17220,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{accesstoken}}"
+												"token": "{{accesstoken_AP}}"
 											}
 										},
 										"method": "DELETE",
@@ -25917,18 +25917,18 @@
 	],
 	"variable": [
 		{
-			"id": "7490efd0-686e-48df-bb47-4a88e7657334",
+			"id": "9e98f15e-2f81-4eae-90a8-734e35044860",
 			"key": "Base_url",
 			"value": "3.134.253.153:4000"
 		},
 		{
-			"id": "1d46adc5-19df-43b1-92b7-4f74977c0456",
+			"id": "ac2f5f7d-490b-49ee-a32c-b519f0462562",
 			"key": "Token",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "808d0fc0-1945-40ab-b3de-8a529882cf37",
+			"id": "9cb7a421-6800-4e8a-9e68-1f7b3be1e8f6",
 			"key": "email",
 			"value": ""
 		}
