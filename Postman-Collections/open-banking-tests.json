@@ -17928,147 +17928,6 @@
 											"body": "{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": [\n        {\n            \"id\": \"316532e6-5102-4dff-9e55-07c36c50fcb9\",\n            \"roleId\": \"efdcfa14-1e5a-4b03-92fa-a0cc12e1addc\",\n            \"permissionId\": \"ea901e57-b052-4441-87c2-5a9381455679\",\n            \"createdAt\": \"2023-11-09T01:06:31.180Z\",\n            \"updatedAt\": \"2023-11-09T01:06:31.180Z\",\n            \"deletedAt\": null,\n            \"permission\": {\n                \"id\": \"ea901e57-b052-4441-87c2-5a9381455679\",\n                \"name\": \"update role\",\n                \"slug\": \"update-role\",\n                \"description\": \"\",\n                \"createdAt\": \"2023-11-08T12:31:24.874Z\",\n                \"updatedAt\": \"2023-11-08T12:31:24.874Z\",\n                \"deletedAt\": null\n            }\n        },\n        {\n            \"id\": \"9b17c0a3-1980-408d-b275-8fa168a5cd86\",\n            \"roleId\": \"efdcfa14-1e5a-4b03-92fa-a0cc12e1addc\",\n            \"permissionId\": \"f3ec6e65-b395-4707-b220-f9e5d10b8844\",\n            \"createdAt\": \"2023-11-09T01:06:04.238Z\",\n            \"updatedAt\": \"2023-11-09T01:06:04.238Z\",\n            \"deletedAt\": null,\n            \"permission\": {\n                \"id\": \"f3ec6e65-b395-4707-b220-f9e5d10b8844\",\n                \"name\": \"view system setting\",\n                \"slug\": \"view-system-setting\",\n                \"description\": \"\",\n                \"createdAt\": \"2023-11-08T12:31:24.874Z\",\n                \"updatedAt\": \"2023-11-08T12:31:24.874Z\",\n                \"deletedAt\": null\n            }\n        }\n    ]\n}"
 										}
 									]
-								},
-								{
-									"name": "List Role Permissions - Invalid id Copy",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "f9fcb7d8-57d8-4566-8c64-de8746ba858d",
-												"exec": [
-													"pm.test(\"Status code is 401\", function () {\r",
-													"    pm.response.to.have.status(401);\r",
-													"});\r",
-													"\r",
-													"pm.test(\"Status code response is Unauthorized\", function () {\r",
-													"    pm.response.to.have.status('Unauthorized');\r",
-													"});\r",
-													"\r",
-													"\r",
-													"var jsonData = pm.response.json();\r",
-													"\r",
-													"pm.test(\"Response body properties\", function () {\r",
-													"    pm.expect(jsonData).to.be.an('object');\r",
-													"    pm.expect(jsonData.timestamp).to.be.a('string');\r",
-													"    pm.expect(jsonData.status).to.be.a('number');\r",
-													"    pm.expect(jsonData.success).to.be.a('boolean');\r",
-													"    pm.expect(jsonData.message).to.be.a('string');\r",
-													"    pm.expect(jsonData.stack).to.be.an('string');\r",
-													"});\r",
-													"\r",
-													"pm.test(\"Time stamp is not empty\", function () {\r",
-													"    pm.expect(jsonData.timestamp).to.not.be.empty;\r",
-													"});\r",
-													"\r",
-													"pm.test(\"Status is 401\", function () {\r",
-													"    pm.expect(jsonData.status).to.eql(401);\r",
-													"});\r",
-													"\r",
-													"pm.test(\"Success is false\", function () {\r",
-													"    pm.expect(jsonData.success).to.eql(false);\r",
-													"});\r",
-													"\r",
-													"pm.test(\"Message is present\", function () {\r",
-													"    pm.expect(jsonData.message).to.eql(\"You must provide an access token to access this resource.\");\r",
-													"});"
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "b1ee549a-d695-47af-a215-e406a98ae31f",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "noauth"
-										},
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{Base_Url}}/roles/:id/permissions",
-											"host": [
-												"{{Base_Url}}"
-											],
-											"path": [
-												"roles",
-												":id",
-												"permissions"
-											],
-											"variable": [
-												{
-													"id": "73c4c7d6-bd02-474e-9817-6f2705ea9e56",
-													"key": "id",
-													"value": "8e358839-931b-4758-8e50-2001443b0f6b"
-												}
-											]
-										}
-									},
-									"response": [
-										{
-											"id": "4fcac964-ba7c-48fa-a716-7d451ccf00fb",
-											"name": "List Role Permissions",
-											"originalRequest": {
-												"method": "GET",
-												"header": [],
-												"url": {
-													"raw": "{{Base_url}}/roles/:id/permissions",
-													"host": [
-														"{{Base_url}}"
-													],
-													"path": [
-														"roles",
-														":id",
-														"permissions"
-													],
-													"variable": [
-														{
-															"key": "id",
-															"value": "efdcfa14-1e5a-4b03-92fa-a0cc12e1addc"
-														}
-													]
-												}
-											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "X-Powered-By",
-													"value": "Express"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json; charset=utf-8"
-												},
-												{
-													"key": "Content-Length",
-													"value": "970"
-												},
-												{
-													"key": "ETag",
-													"value": "W/\"3ca-ZOJeBuGbostvITbJYyjDhupx1js\""
-												},
-												{
-													"key": "Date",
-													"value": "Thu, 09 Nov 2023 01:07:17 GMT"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=5"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": [\n        {\n            \"id\": \"316532e6-5102-4dff-9e55-07c36c50fcb9\",\n            \"roleId\": \"efdcfa14-1e5a-4b03-92fa-a0cc12e1addc\",\n            \"permissionId\": \"ea901e57-b052-4441-87c2-5a9381455679\",\n            \"createdAt\": \"2023-11-09T01:06:31.180Z\",\n            \"updatedAt\": \"2023-11-09T01:06:31.180Z\",\n            \"deletedAt\": null,\n            \"permission\": {\n                \"id\": \"ea901e57-b052-4441-87c2-5a9381455679\",\n                \"name\": \"update role\",\n                \"slug\": \"update-role\",\n                \"description\": \"\",\n                \"createdAt\": \"2023-11-08T12:31:24.874Z\",\n                \"updatedAt\": \"2023-11-08T12:31:24.874Z\",\n                \"deletedAt\": null\n            }\n        },\n        {\n            \"id\": \"9b17c0a3-1980-408d-b275-8fa168a5cd86\",\n            \"roleId\": \"efdcfa14-1e5a-4b03-92fa-a0cc12e1addc\",\n            \"permissionId\": \"f3ec6e65-b395-4707-b220-f9e5d10b8844\",\n            \"createdAt\": \"2023-11-09T01:06:04.238Z\",\n            \"updatedAt\": \"2023-11-09T01:06:04.238Z\",\n            \"deletedAt\": null,\n            \"permission\": {\n                \"id\": \"f3ec6e65-b395-4707-b220-f9e5d10b8844\",\n                \"name\": \"view system setting\",\n                \"slug\": \"view-system-setting\",\n                \"description\": \"\",\n                \"createdAt\": \"2023-11-08T12:31:24.874Z\",\n                \"updatedAt\": \"2023-11-08T12:31:24.874Z\",\n                \"deletedAt\": null\n            }\n        }\n    ]\n}"
-										}
-									]
 								}
 							],
 							"id": "c300ce96-9afe-46e1-8d27-613f94d60663"
@@ -25917,18 +25776,18 @@
 	],
 	"variable": [
 		{
-			"id": "8aba466c-ddb3-4023-8e53-902ba30ab47a",
+			"id": "63f8d1f6-e700-4a40-ae67-c4d2dca16f37",
 			"key": "Base_url",
 			"value": "3.134.253.153:4000"
 		},
 		{
-			"id": "62742d52-5185-4eff-8fcb-5deac83aa092",
+			"id": "f4bac307-d095-47d6-82dc-38ca49884355",
 			"key": "Token",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "dda0b45e-46de-49f1-b773-3fce631a609c",
+			"id": "2e5ee2b3-5023-4a41-907c-f4ad135ea6c6",
 			"key": "email",
 			"value": ""
 		}
