@@ -23896,7 +23896,7 @@
 									]
 								},
 								{
-									"name": "Add API Endpoint - Blank name Copy",
+									"name": "Add API Endpoint - Blank method",
 									"event": [
 										{
 											"listen": "test",
