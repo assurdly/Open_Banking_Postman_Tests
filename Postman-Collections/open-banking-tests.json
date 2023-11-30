@@ -24059,7 +24059,7 @@
 													"});\r",
 													"\r",
 													"pm.test(\"Data is present\", function () {\r",
-													"    pm.expect(jsonData.data.name).to.eql('name should not be empty');\r",
+													"    pm.expect(jsonData.data.route.methods).to.eql('each value in methods should not be empty');\r",
 													"});"
 												],
 												"type": "text/javascript"
@@ -24181,6 +24181,168 @@
 									]
 								},
 								{
+									"name": "Add API Endpoint - Blank method Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "8d70a487-ff3c-4d86-bed7-1d30f3bd2a75",
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {\r",
+													"    pm.response.to.have.status(400);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status code response is Bad Request\", function () {\r",
+													"    pm.response.to.have.status('Bad Request');\r",
+													"});\r",
+													"\r",
+													"var jsonData = pm.response.json();\r",
+													"\r",
+													"pm.test(\"Response body property\", function () {\r",
+													"    pm.expect(jsonData).to.be.an('object');\r",
+													"    pm.expect(jsonData.timestamp).to.be.a('string');\r",
+													"    pm.expect(jsonData.status).to.be.a('number');\r",
+													"    pm.expect(jsonData.success).to.be.a('boolean');\r",
+													"    pm.expect(jsonData.message).to.be.a('string');\r",
+													"    pm.expect(jsonData.data).to.be.an('object');\r",
+													"    pm.expect(jsonData.stack).to.be.a('string');\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status is success\", function () {\r",
+													"    pm.expect(jsonData.status).to.eql(400);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Success is false\", function () {\r",
+													"    pm.expect(jsonData.success).to.eql(false);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Message is present\", function () {\r",
+													"    pm.expect(jsonData.message).to.eql('Validation Error.');\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Data is present\", function () {\r",
+													"    pm.expect(jsonData.data.route.methods).to.eql('each value in methods should not be empty');\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "762b57db-f8a7-4ee5-90be-cd623befc123",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{accesstoken_AP}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"Get accounts\",\n    \"enabled\": true,\n    \"url\": \"https://httpbin.org/json\",\n    \"route\": {\n        \"paths\": [\"/accounts\"],\n        \"methods\": [\"\"]\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{Base_Url}}/collections/:id/apis",
+											"host": [
+												"{{Base_Url}}"
+											],
+											"path": [
+												"collections",
+												":id",
+												"apis"
+											],
+											"variable": [
+												{
+													"id": "58f6a323-df46-4109-9fa4-b58b49149b10",
+													"key": "id",
+													"value": "4cabe6fa-a24b-4f60-b0f7-10cba7e0a0a3"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "b08f60c0-5d06-4b9a-be41-e33eb0bed5f6",
+											"name": "Add API Endpoint",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"name\": \"Get Accounts\",\n    \"enabled\": true,\n    \"url\": \"https://httpbin.org/json\",\n    \"route\": {\n        \"paths\": [\"/accounts\"],\n        \"methods\": [\"GET\"]\n    }\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{Base_url}}/collections/:id/apis",
+													"host": [
+														"{{Base_url}}"
+													],
+													"path": [
+														"collections",
+														":id",
+														"apis"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "1"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "X-Powered-By",
+													"value": "Express"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "276"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"114-aQpyDY6UaoV9b38fZJLoFqOu4BM\""
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 15 Nov 2023 10:21:09 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=5"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": {\n        \"id\": \"c11209c2-da51-4212-8782-df1e911fa861\",\n        \"name\": \"get-accounts\",\n        \"enabled\": true,\n        \"host\": \"httpbin.org\",\n        \"protocol\": \"https\",\n        \"port\": 443,\n        \"path\": \"/json\",\n        \"url\": \"https://httpbin.org:443/json\",\n        \"route\": {\n            \"paths\": [\n                \"/accounts\"\n            ],\n            \"methods\": [\n                \"GET\"\n            ]\n        }\n    }\n}"
+										}
+									]
+								},
+								{
 									"name": "Add API Endpoint - Blank path",
 									"event": [
 										{
@@ -24221,7 +24383,7 @@
 													"});\r",
 													"\r",
 													"pm.test(\"Data is present\", function () {\r",
-													"    pm.expect(jsonData.data.name).to.eql('path should not be empty');\r",
+													"    pm.expect(jsonData.data.route.paths).to.eql('each value in methods should not be empty');\r",
 													"});"
 												],
 												"type": "text/javascript"
@@ -24698,7 +24860,7 @@
 													"});\r",
 													"\r",
 													"pm.test(\"Data is present\", function () {\r",
-													"    pm.expect(jsonData.data.name).to.eql('name should not be empty');\r",
+													"    pm.expect(jsonData.data.route.methods).to.eql('each value in methods must be one of the following values: GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS, TRACE, PATCH');\r",
 													"});"
 												],
 												"type": "text/javascript"
@@ -24739,9 +24901,8 @@
 											],
 											"variable": [
 												{
-													"id": "75e7185e-6e9e-4017-b805-add7d7201345",
 													"key": "id",
-													"value": "6cf82442-a3aa-4417-9400-5ed25a49d593"
+													"value": "f017e193-c35f-4774-a172-a2832d448dc0"
 												}
 											]
 										}
