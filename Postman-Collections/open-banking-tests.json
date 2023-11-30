@@ -24181,7 +24181,7 @@
 									]
 								},
 								{
-									"name": "Add API Endpoint - Blank method Copy",
+									"name": "Add API Endpoint - Invalid method",
 									"event": [
 										{
 											"listen": "test",
@@ -24221,7 +24221,7 @@
 													"});\r",
 													"\r",
 													"pm.test(\"Data is present\", function () {\r",
-													"    pm.expect(jsonData.data.route.methods).to.eql('each value in methods should not be empty');\r",
+													"    pm.expect(jsonData.data.route.methods).to.eql('each value in methods must be one of the following values: GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS, TRACE, PATCH');\r",
 													"});"
 												],
 												"type": "text/javascript"
@@ -24243,7 +24243,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"Get accounts\",\n    \"enabled\": true,\n    \"url\": \"https://httpbin.org/json\",\n    \"route\": {\n        \"paths\": [\"/accounts\"],\n        \"methods\": [\"\"]\n    }\n}",
+											"raw": "{\n    \"name\": \"Get accounts\",\n    \"enabled\": true,\n    \"url\": \"https://httpbin.org/json\",\n    \"route\": {\n        \"paths\": [\"/accounts\"],\n        \"methods\": [\"GE\"]\n    }\n}",
 											"options": {
 												"raw": {
 													"language": "json"
