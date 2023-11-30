@@ -25017,7 +25017,7 @@
 													"});\r",
 													"\r",
 													"pm.test(\"Data is present\", function () {\r",
-													"    pm.expect(jsonData.data.name).to.eql('name should not be empty');\r",
+													"    pm.expect(jsonData.data.route.methods).to.eql('each value in methods should not be empty');\r",
 													"});"
 												],
 												"type": "text/javascript"
@@ -25058,9 +25058,8 @@
 											],
 											"variable": [
 												{
-													"id": "89e07359-6c5b-4f03-a154-1ae478c80dec",
 													"key": "id",
-													"value": "6cf82442-a3aa-4417-9400-5ed25a49d593"
+													"value": "f017e193-c35f-4774-a172-a2832d448dc0"
 												}
 											]
 										}
@@ -25179,7 +25178,7 @@
 													"});\r",
 													"\r",
 													"pm.test(\"Data is present\", function () {\r",
-													"    pm.expect(jsonData.data.name).to.eql('name should not be empty');\r",
+													"    pm.expect(jsonData.data.route.paths).to.eql('each value in paths should not be empty');\r",
 													"});"
 												],
 												"type": "text/javascript"
@@ -25220,9 +25219,8 @@
 											],
 											"variable": [
 												{
-													"id": "2d032e71-2b43-461a-95f9-b3ebb25daa91",
 													"key": "id",
-													"value": "6cf82442-a3aa-4417-9400-5ed25a49d593"
+													"value": "f017e193-c35f-4774-a172-a2832d448dc0"
 												}
 											]
 										}
