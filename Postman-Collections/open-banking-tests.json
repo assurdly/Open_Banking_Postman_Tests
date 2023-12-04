@@ -12795,7 +12795,7 @@
 							"name": "Setup 2FA",
 							"item": [
 								{
-									"name": "Setup 2FA Copy",
+									"name": "Setup 2FA",
 									"id": "dde09ceb-db8d-4649-a035-0d2a8fc1b5b2",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -12862,7 +12862,89 @@
 						},
 						{
 							"name": "Verify 2FA",
-							"item": [],
+							"item": [
+								{
+									"name": "Verify 2FA",
+									"id": "b9789a85-ced8-42dd-aba9-99716360a919",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"code\": \"631555\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{Base_url}}/profile/two-fa"
+									},
+									"response": [
+										{
+											"id": "9d8d01ba-445f-4fac-bf1a-63b589008833",
+											"name": "Verify 2FA",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"code\": \"631555\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{Base_url}}/profile/two-fa"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "X-Powered-By",
+													"value": "Express"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "57"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"39-OWjN7hH5AZVgPVlWCZZYWsdQQBE\""
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 04 Dec 2023 11:58:34 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=5"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"status\": \"success\",\n    \"message\": \"Successfully enabled 2FA\"\n}"
+										}
+									]
+								}
+							],
 							"id": "bcba4f27-fb19-46ce-8cde-66c699ff52ad"
 						}
 					],
