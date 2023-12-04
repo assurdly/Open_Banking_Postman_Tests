@@ -2876,7 +2876,7 @@
 									]
 								},
 								{
-									"name": "Sign Up  - valid Copy",
+									"name": "Sign Up  - Company Type",
 									"event": [
 										{
 											"listen": "test",
@@ -2940,7 +2940,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"email\": \"{{$randomFirstName}}-{{$randomLastName}}@test.com\",\r\n    \"password\": \"Password1#\",\r\n    \"confirmPassword\": \"Password1#\",\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Doe\",\r\n    \"country\": \"NGN\",\r\n    \"companyName\": \"NexusInc.\",\r\n    \"companyType\": \"BANK\",\r\n    \"companyRole\": \"SOFTWARE_ENGINEER\",\r\n    \"phone\": \"08123456789\"\r\n}",
+											"raw": "{\r\n    \"email\": \"{{$randomFirstName}}-{{$randomLastName}}@test.com\",\r\n    \"password\": \"Password1#\",\r\n    \"confirmPassword\": \"Password1#\",\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Doe\",\r\n    \"country\": \"NGN\",\r\n    \"companyName\": \"NexusInc.\",\r\n    \"companyType\": \"Workshop\",\r\n    \"companyRole\": \"SOFTWARE_ENGINEER\",\r\n    \"phone\": \"08123456789\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
