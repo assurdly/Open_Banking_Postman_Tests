@@ -7657,6 +7657,131 @@
 											}
 										}
 									],
+									"id": "9236c514-f848-406f-a31f-52769d3288ae",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{Base_url}}/roles?page=1&limit=20",
+											"host": [
+												"{{Base_url}}"
+											],
+											"path": [
+												"roles"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "20"
+												},
+												{
+													"key": "filter[name]",
+													"value": null,
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "filter[createdAt][gt]",
+													"value": "2023-11-19T17:20:57.737Z",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "filter[createdAt][lt]",
+													"value": "2023-11-19T17:20:57.737Z",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "9251f8cc-a6bb-4530-a072-9103e713f704",
+											"name": "List Roles",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{Base_url}}/roles"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "X-Powered-By",
+													"value": "Express"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "565"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"235-kG3bim0bFQc9jgKPYPua+lLqG08\""
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 09 Nov 2023 00:26:05 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=5"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": [\n        {\n            \"id\": \"396de57f-cc20-484d-b365-fcf126cfab66\",\n            \"name\": \"QA\",\n            \"slug\": \"qa\",\n            \"description\": \"Quality Assurance\",\n            \"status\": \"active\",\n            \"parentId\": \"167ad7c2-54fb-43de-a711-ae65a4529352\",\n            \"createdAt\": \"2023-11-09T00:25:08.246Z\",\n            \"updatedAt\": \"2023-11-09T00:25:08.246Z\",\n            \"deletedAt\": null\n        },\n        {\n            \"id\": \"efdcfa14-1e5a-4b03-92fa-a0cc12e1addc\",\n            \"name\": \"admin\",\n            \"slug\": \"admin\",\n            \"description\": \"\",\n            \"status\": \"active\",\n            \"parentId\": \"167ad7c2-54fb-43de-a711-ae65a4529352\",\n            \"createdAt\": \"2023-11-08T12:34:10.608Z\",\n            \"updatedAt\": \"2023-11-08T12:34:10.608Z\",\n            \"deletedAt\": null\n        }\n    ]\n}"
+										}
+									]
+								},
+								{
+									"name": "List Roles",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "9f62754a-87d3-40e6-81a2-08c72679f726",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status code response is OK\", function () {\r",
+													"    pm.response.to.have.status('OK');\r",
+													"});\r",
+													"\r",
+													"var jsonData = pm.response.json();\r",
+													"\r",
+													"pm.test(\"Response body property\", function () {\r",
+													"    pm.expect(jsonData).to.be.an('object');\r",
+													"    pm.expect(jsonData.status).to.be.a('string');\r",
+													"    pm.expect(jsonData.message).to.be.a('string');\r",
+													"    pm.expect(jsonData.data).to.be.an('array');\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status is success\", function () {\r",
+													"    pm.expect(jsonData.status).to.eql('success');\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
 									"id": "75da4fc0-e7e0-426f-8dd4-5c13c60f8744",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -11723,12 +11848,18 @@
 										"disableBodyPruning": true
 									},
 									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{accesstoken}}"
+											}
+										},
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{Base_url}}/users?page=1&limit=20",
+											"raw": "{{Base_Url}}/users?page=1&limit=20&filter[name]=Uniqu",
 											"host": [
-												"{{Base_url}}"
+												"{{Base_Url}}"
 											],
 											"path": [
 												"users"
@@ -11744,22 +11875,21 @@
 												},
 												{
 													"key": "filter[name]",
-													"value": null,
-													"disabled": true
+													"value": "Uniqu"
 												},
 												{
 													"key": "filter[email]",
-													"value": null,
+													"value": "eunice24@mailinator.com",
 													"disabled": true
 												},
 												{
 													"key": "filter[status]",
-													"value": null,
+													"value": "active",
 													"disabled": true
 												},
 												{
 													"key": "filter[phone]",
-													"value": null,
+													"value": "08123456789",
 													"disabled": true
 												},
 												{
