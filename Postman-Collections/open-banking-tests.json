@@ -14483,6 +14483,168 @@
 					"id": "07ae6b76-3354-4f24-8c16-d2425d120ddb"
 				},
 				{
+					"name": "Settings Copy",
+					"item": [
+						{
+							"name": "Get KYB Requirements",
+							"id": "d04d9e22-f488-4b73-83e9-fc16dd9014c7",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{access_token}}"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/settings/kyb/requirements"
+							},
+							"response": [
+								{
+									"id": "1f2c1013-dbdb-4e73-bfd6-a5fc2ccc0ac2",
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{base_url}}/settings/kyb/requirements"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "507"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1fb-xHNppl+j9IequAxB9RBRug3APzE\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 04 Dec 2023 19:02:51 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"KYB Requirements fetched successfully\",\n    \"data\": [\n        {\n            \"name\": \"taxIdentificationNumber\",\n            \"label\": \"Tax Identification Number\",\n            \"type\": \"string\",\n            \"editable\": false\n        },\n        {\n            \"name\": \"registryLicense\",\n            \"label\": \"Registry License\",\n            \"type\": \"file\",\n            \"editable\": false,\n            \"maxCount\": 1\n        },\n        {\n            \"name\": \"companyStatusReport\",\n            \"label\": \"Company Status Report\",\n            \"type\": \"file\",\n            \"editable\": true,\n            \"maxCount\": 1\n        },\n        {\n            \"name\": \"certificateOfIncorporation\",\n            \"label\": \"Certificate Of Incorporation\",\n            \"type\": \"file\",\n            \"editable\": true,\n            \"maxCount\": 1\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Update KYB Requirements",
+							"id": "1dcac36d-656c-4dbd-987f-57d849b01f5c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{access_token}}"
+									}
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"newKybRequirements\": [\r\n        {\r\n            \"name\": \"taxIdentificationNumber2\",\r\n            \"label\": \"Tax Identification Number\",\r\n            \"type\": \"string\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/settings/kyb/requirements"
+							},
+							"response": [
+								{
+									"id": "3848d7dc-dbe5-4062-99c9-8eae46ec94eb",
+									"name": "success",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"newKybRequirements\": [\r\n        {\r\n            \"name\": \"taxIdentificationNumber2\",\r\n            \"label\": \"Tax Identification Number\",\r\n            \"type\": \"string\"\r\n        }\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/settings/kyb/requirements"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "66"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"42-sG+lwISTgx/p1xB1bZ0FoVhRYIA\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 04 Dec 2023 20:35:08 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Updated KYB settings successfully\"\n}"
+								}
+							]
+						}
+					],
+					"id": "1edf3edf-5eef-46ad-899b-5cb18b5f72da"
+				},
+				{
 					"name": "Check Health",
 					"id": "0bdeb19e-e590-4f92-8813-b8ba5ab87965",
 					"protocolProfileBehavior": {
@@ -27361,6 +27523,168 @@
 						}
 					],
 					"id": "409e212b-9d19-4b4f-92d9-848db1601ec1"
+				},
+				{
+					"name": "Settings Copy 2",
+					"item": [
+						{
+							"name": "Get KYB Requirements",
+							"id": "88ac8ac3-87e5-4a72-879b-481b98e60ee9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{access_token}}"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/settings/kyb/requirements"
+							},
+							"response": [
+								{
+									"id": "2be5392f-083f-4fa1-949a-bc5cc9f0351b",
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{base_url}}/settings/kyb/requirements"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "507"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1fb-xHNppl+j9IequAxB9RBRug3APzE\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 04 Dec 2023 19:02:51 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"KYB Requirements fetched successfully\",\n    \"data\": [\n        {\n            \"name\": \"taxIdentificationNumber\",\n            \"label\": \"Tax Identification Number\",\n            \"type\": \"string\",\n            \"editable\": false\n        },\n        {\n            \"name\": \"registryLicense\",\n            \"label\": \"Registry License\",\n            \"type\": \"file\",\n            \"editable\": false,\n            \"maxCount\": 1\n        },\n        {\n            \"name\": \"companyStatusReport\",\n            \"label\": \"Company Status Report\",\n            \"type\": \"file\",\n            \"editable\": true,\n            \"maxCount\": 1\n        },\n        {\n            \"name\": \"certificateOfIncorporation\",\n            \"label\": \"Certificate Of Incorporation\",\n            \"type\": \"file\",\n            \"editable\": true,\n            \"maxCount\": 1\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Update KYB Requirements",
+							"id": "0edcb016-3a71-4808-9902-399ff679bd2d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{access_token}}"
+									}
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"newKybRequirements\": [\r\n        {\r\n            \"name\": \"taxIdentificationNumber2\",\r\n            \"label\": \"Tax Identification Number\",\r\n            \"type\": \"string\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/settings/kyb/requirements"
+							},
+							"response": [
+								{
+									"id": "40abcf65-6461-452f-ac7c-fe510a07f748",
+									"name": "success",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"newKybRequirements\": [\r\n        {\r\n            \"name\": \"taxIdentificationNumber2\",\r\n            \"label\": \"Tax Identification Number\",\r\n            \"type\": \"string\"\r\n        }\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/settings/kyb/requirements"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "66"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"42-sG+lwISTgx/p1xB1bZ0FoVhRYIA\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 04 Dec 2023 20:35:08 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Updated KYB settings successfully\"\n}"
+								}
+							]
+						}
+					],
+					"id": "92e2e1d0-0938-4567-98da-780e3a6689f8"
 				},
 				{
 					"name": "Check Health",
