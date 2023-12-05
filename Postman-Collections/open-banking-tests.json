@@ -27525,7 +27525,7 @@
 					"id": "409e212b-9d19-4b4f-92d9-848db1601ec1"
 				},
 				{
-					"name": "Settings Copy 2",
+					"name": "Settings",
 					"item": [
 						{
 							"name": "Get KYB Requirements",
@@ -27537,12 +27537,12 @@
 								"auth": {
 									"type": "bearer",
 									"bearer": {
-										"token": "{{access_token}}"
+										"token": "{{accesstoken_AP}}"
 									}
 								},
 								"method": "GET",
 								"header": [],
-								"url": "{{base_url}}/settings/kyb/requirements"
+								"url": "{{Base_Url}}/settings/kyb/requirements"
 							},
 							"response": [
 								{
