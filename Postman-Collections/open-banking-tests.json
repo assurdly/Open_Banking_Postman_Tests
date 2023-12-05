@@ -7121,9 +7121,9 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{base_url}}/company/:companyId",
+											"raw": "{{Base_Url}}/company/:companyId",
 											"host": [
-												"{{base_url}}"
+												"{{Base_Url}}"
 											],
 											"path": [
 												"company",
@@ -7215,15 +7215,15 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{access_token}}"
+												"token": "{{accesstoken}}"
 											}
 										},
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{base_url}}/company/list?page=1&limit=20",
+											"raw": "{{Base_Url}}/company/list",
 											"host": [
-												"{{base_url}}"
+												"{{Base_Url}}"
 											],
 											"path": [
 												"company",
@@ -7232,11 +7232,13 @@
 											"query": [
 												{
 													"key": "page",
-													"value": "1"
+													"value": "1",
+													"disabled": true
 												},
 												{
 													"key": "limit",
-													"value": "20"
+													"value": "20",
+													"disabled": true
 												},
 												{
 													"key": "filter[name]",
