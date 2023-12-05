@@ -4854,6 +4854,121 @@
 									]
 								},
 								{
+									"name": "Login Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "4fc83cb1-b9c4-45a2-8063-fff04b0f2bdd",
+												"exec": [
+													"pm.test(\"Status code is 201\", function () {\r",
+													"    pm.response.to.have.status(201);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status code response is Created\", function () {\r",
+													"    pm.response.to.have.status('Created');\r",
+													"});\r",
+													"\r",
+													"var jsonData = pm.response.json();\r",
+													"\r",
+													"pm.environment.set(\"accesstoken\", jsonData.data);\r",
+													"\r",
+													"pm.test(\"Response body property\", function () {\r",
+													"    pm.expect(jsonData).to.be.an('object');\r",
+													"    pm.expect(jsonData.status).to.be.a('string');\r",
+													"    pm.expect(jsonData.message).to.be.a('string');\r",
+													"    pm.expect(jsonData.data).to.be.a('string');\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status is success\", function () {\r",
+													"    pm.expect(jsonData.status).to.eql('success');\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Message is Successfully logged in\", function () {\r",
+													"    pm.expect(jsonData.message).to.eql('Successfully logged in.');\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "0fe719e0-90f9-4001-8cc2-20799a0e7537",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"Password1#\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{Base_Url}}/auth/login"
+									},
+									"response": [
+										{
+											"id": "aa4d8912-07a6-499a-b8ef-bfc2bd3ec36f",
+											"name": "success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"email\": \"test@test.com\",\r\n    \"password\": \"Password123@\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{base_url}}/auth/login"
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "X-Powered-By",
+													"value": "Express"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "253"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"fd-YfXxAwndTgLG7U4TIbHjzZ3G/P0\""
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 06 Nov 2023 08:14:23 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=5"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"status\": \"success\",\n    \"message\": \"Successfully logged in.\",\n    \"data\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNlMDUzY2Y5LWI4MGUtNGQzNC05YzkwLTY3OWUxZjRjZTA5NCIsImlhdCI6MTY5OTI1ODQ2MywiZXhwIjoxNjk5MjU5MzYzfQ.nog_Fit6ViTxtNew2wCQ6A23AJeWbW2j93ggNPwCMyg\"\n}"
+										}
+									]
+								},
+								{
 									"name": "Login - Blank email field",
 									"event": [
 										{
