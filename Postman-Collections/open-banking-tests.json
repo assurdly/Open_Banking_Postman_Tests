@@ -21761,101 +21761,6 @@
 							"name": "View all users",
 							"item": [
 								{
-									"name": "List Users",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "67d3be42-2601-4601-a62e-1f8a80d404b8",
-												"exec": [
-													"pm.test(\"Status code is 200\", function () {\r",
-													"    pm.response.to.have.status(200);\r",
-													"});\r",
-													"\r",
-													"pm.test(\"Status code response is OK\", function () {\r",
-													"    pm.response.to.have.status('OK');\r",
-													"});\r",
-													"\r",
-													"var jsonData = pm.response.json();\r",
-													"\r",
-													"pm.test(\"Response body property\", function () {\r",
-													"    pm.expect(jsonData).to.be.an('object');\r",
-													"    pm.expect(jsonData.status).to.be.a('string');\r",
-													"    pm.expect(jsonData.message).to.be.a('string');\r",
-													"});\r",
-													"\r",
-													"pm.test(\"Status is success\", function () {\r",
-													"    pm.expect(jsonData.status).to.eql('success');\r",
-													"});"
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "9f6e2cc7-41a5-42d7-9bc0-88929ab804ae",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{accesstoken_AP}}"
-											}
-										},
-										"method": "GET",
-										"header": [],
-										"url": "{{Base_Url}}/users"
-									},
-									"response": [
-										{
-											"id": "707dfb4c-5a60-4102-bd1f-fac2e1224502",
-											"name": "List Users",
-											"originalRequest": {
-												"method": "GET",
-												"header": [],
-												"url": "{{Base_url}}/users"
-											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "X-Powered-By",
-													"value": "Express"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json; charset=utf-8"
-												},
-												{
-													"key": "Content-Length",
-													"value": "1446"
-												},
-												{
-													"key": "ETag",
-													"value": "W/\"5a6-653rCt4Ht3E6W4YsWbaUlu/v3tM\""
-												},
-												{
-													"key": "Date",
-													"value": "Thu, 09 Nov 2023 14:16:27 GMT"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=5"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": [\n        {\n            \"id\": \"06de64e8-62ba-4c34-8a43-33fb4e299fd8\",\n            \"email\": \"adewunmiakinsanya@gmail.com\",\n            \"password\": \"\",\n            \"roleId\": \"efdcfa14-1e5a-4b03-92fa-a0cc12e1addc\",\n            \"companyId\": \"1dec0487-ae37-41ba-a662-a37062fc0c70\",\n            \"resetPasswordToken\": null,\n            \"resetPasswordExpires\": null,\n            \"lastPasswordChange\": null,\n            \"createdAt\": \"2023-11-09T14:15:44.331Z\",\n            \"updatedAt\": \"2023-11-09T14:15:44.331Z\",\n            \"deletedAt\": null,\n            \"profile\": {\n                \"id\": \"51cb0546-a867-4089-8077-dbbabfa64a19\",\n                \"firstName\": \"Adewunmi\",\n                \"lastName\": \"Akinsanya\",\n                \"companyRole\": \"SOFTWARE_ENGINEER\",\n                \"phone\": null,\n                \"country\": null,\n                \"userId\": \"06de64e8-62ba-4c34-8a43-33fb4e299fd8\",\n                \"createdAt\": \"2023-11-09T14:15:44.347Z\",\n                \"updatedAt\": \"2023-11-09T14:15:44.347Z\",\n                \"deletedAt\": null\n            }\n        },\n        {\n            \"id\": \"6aabbba1-347d-47c9-9319-d38ff2222182\",\n            \"email\": \"test@test.com\",\n            \"password\": \"$2b$12$GlpfINLtYyZC7IVHnt2L..Mdw7Nr0KPcjQ500qBL/wqzIjnlsTG3O\",\n            \"roleId\": \"efdcfa14-1e5a-4b03-92fa-a0cc12e1addc\",\n            \"companyId\": \"1dec0487-ae37-41ba-a662-a37062fc0c70\",\n            \"resetPasswordToken\": null,\n            \"resetPasswordExpires\": null,\n            \"lastPasswordChange\": null,\n            \"createdAt\": \"2023-11-09T00:24:26.059Z\",\n            \"updatedAt\": \"2023-11-09T00:24:26.059Z\",\n            \"deletedAt\": null,\n            \"profile\": {\n                \"id\": \"e824e3a7-f1a6-44d6-bcf4-61fbe2700754\",\n                \"firstName\": \"John\",\n                \"lastName\": \"Doe\",\n                \"companyRole\": \"SOFTWARE_ENGINEER\",\n                \"phone\": \"08123456789\",\n                \"country\": \"NGN\",\n                \"userId\": \"6aabbba1-347d-47c9-9319-d38ff2222182\",\n                \"createdAt\": \"2023-11-09T00:24:26.064Z\",\n                \"updatedAt\": \"2023-11-09T00:24:26.064Z\",\n                \"deletedAt\": null\n            }\n        }\n    ]\n}"
-										}
-									]
-								},
-								{
 									"name": "List Users - No access",
 									"event": [
 										{
@@ -21964,7 +21869,7 @@
 									]
 								},
 								{
-									"name": "List Users Copy",
+									"name": "List Users",
 									"event": [
 										{
 											"listen": "test",
