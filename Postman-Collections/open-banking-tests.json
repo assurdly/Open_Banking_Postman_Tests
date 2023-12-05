@@ -6810,6 +6810,93 @@
 								}
 							],
 							"id": "b759f2f6-636f-4ff1-accc-c554f2973d3d"
+						},
+						{
+							"name": "Login with 2FA",
+							"item": [
+								{
+									"name": "Login With 2FA Copy",
+									"id": "3e776358-8d7f-4998-ab97-95a3b53ae815",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"test@test.com\",\n    \"password\": \"Password1#\",\n    \"code\": \"175504\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{Base_url}}/auth/login/two-fa"
+									},
+									"response": [
+										{
+											"id": "46c26953-ee32-4f9c-8d70-91a9b0eb63da",
+											"name": "Login With 2FA",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"email\": \"test@test.com\",\n    \"password\": \"Password1#\",\n    \"code\": \"175504\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{Base_url}}/auth/login/two-fa"
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "X-Powered-By",
+													"value": "Express"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "281"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"119-DDFS7+zULeUawZ4qdaWy7qS6AbA\""
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 04 Dec 2023 12:01:39 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=5"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"status\": \"success\",\n    \"message\": \"Welcome back. You have been successfully signed in.\",\n    \"data\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYWJiYmExLTM0N2QtNDdjOS05MzE5LWQzOGZmMjIyMjE4MiIsImlhdCI6MTcwMTY5MTI5OSwiZXhwIjoxNzAxNjkyMTk5fQ._DnN8HsbFfxLP354N3UrwzzSiOQE550pvyG4uuTkQVE\"\n}"
+										}
+									]
+								}
+							],
+							"id": "5b7247f9-0709-4396-b0ca-6763de0d8642"
 						}
 					],
 					"id": "3e58bfe9-b556-4536-9b06-21d94f5bca15"
@@ -13038,102 +13125,87 @@
 							"id": "f6267640-884e-4cf5-8224-4ba0a3a45331"
 						},
 						{
-							"name": "Setup 2FA",
+							"name": "2FA",
 							"item": [
 								{
 									"name": "Setup 2FA",
-									"id": "dde09ceb-db8d-4649-a035-0d2a8fc1b5b2",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "POST",
-										"header": [],
-										"url": "{{Base_url}}/profile/two-fa"
-									},
-									"response": [
+									"item": [
 										{
-											"id": "5c63a78b-3e45-40d3-b95c-4d980c8beda7",
 											"name": "Setup 2FA",
-											"originalRequest": {
+											"id": "dde09ceb-db8d-4649-a035-0d2a8fc1b5b2",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
 												"method": "POST",
 												"header": [],
 												"url": "{{Base_url}}/profile/two-fa"
 											},
-											"status": "Created",
-											"code": 201,
-											"_postman_previewlanguage": "json",
-											"header": [
+											"response": [
 												{
-													"key": "X-Powered-By",
-													"value": "Express"
-												},
-												{
-													"key": "Access-Control-Allow-Origin",
-													"value": "*"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json; charset=utf-8"
-												},
-												{
-													"key": "Content-Length",
-													"value": "2372"
-												},
-												{
-													"key": "ETag",
-													"value": "W/\"944-BleqfdbRYIjLJjrosPWRtFJqQz4\""
-												},
-												{
-													"key": "Date",
-													"value": "Mon, 04 Dec 2023 11:55:42 GMT"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=5"
+													"id": "5c63a78b-3e45-40d3-b95c-4d980c8beda7",
+													"name": "Setup 2FA",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"url": "{{Base_url}}/profile/two-fa"
+													},
+													"status": "Created",
+													"code": 201,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "X-Powered-By",
+															"value": "Express"
+														},
+														{
+															"key": "Access-Control-Allow-Origin",
+															"value": "*"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json; charset=utf-8"
+														},
+														{
+															"key": "Content-Length",
+															"value": "2372"
+														},
+														{
+															"key": "ETag",
+															"value": "W/\"944-BleqfdbRYIjLJjrosPWRtFJqQz4\""
+														},
+														{
+															"key": "Date",
+															"value": "Mon, 04 Dec 2023 11:55:42 GMT"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=5"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"status\": \"success\",\n    \"message\": \"Successfully generated 2FA code\",\n    \"data\": {\n        \"otpAuthURL\": \"otpauth://totp/SecretKey?secret=IU7DSU2BIQ7CGWTPLZKESXSYK5ZGOOJR\",\n        \"qrCodeImage\": \"data:image/png;base64,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\"\n    }\n}"
 												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"status\": \"success\",\n    \"message\": \"Successfully generated 2FA code\",\n    \"data\": {\n        \"otpAuthURL\": \"otpauth://totp/SecretKey?secret=IU7DSU2BIQ7CGWTPLZKESXSYK5ZGOOJR\",\n        \"qrCodeImage\": \"data:image/png;base64,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\"\n    }\n}"
+											]
 										}
-									]
-								}
-							],
-							"id": "df16d44a-bfc2-4614-a6c2-a963d3f74384"
-						},
-						{
-							"name": "Verify 2FA",
-							"item": [
+									],
+									"id": "df16d44a-bfc2-4614-a6c2-a963d3f74384"
+								},
 								{
 									"name": "Verify 2FA",
-									"id": "b9789a85-ced8-42dd-aba9-99716360a919",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "PATCH",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"code\": \"631555\"\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{Base_url}}/profile/two-fa"
-									},
-									"response": [
+									"item": [
 										{
-											"id": "9d8d01ba-445f-4fac-bf1a-63b589008833",
 											"name": "Verify 2FA",
-											"originalRequest": {
+											"id": "b9789a85-ced8-42dd-aba9-99716360a919",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
 												"method": "PATCH",
 												"header": [],
 												"body": {
@@ -13147,51 +13219,72 @@
 												},
 												"url": "{{Base_url}}/profile/two-fa"
 											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "json",
-											"header": [
+											"response": [
 												{
-													"key": "X-Powered-By",
-													"value": "Express"
-												},
-												{
-													"key": "Access-Control-Allow-Origin",
-													"value": "*"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json; charset=utf-8"
-												},
-												{
-													"key": "Content-Length",
-													"value": "57"
-												},
-												{
-													"key": "ETag",
-													"value": "W/\"39-OWjN7hH5AZVgPVlWCZZYWsdQQBE\""
-												},
-												{
-													"key": "Date",
-													"value": "Mon, 04 Dec 2023 11:58:34 GMT"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=5"
+													"id": "9d8d01ba-445f-4fac-bf1a-63b589008833",
+													"name": "Verify 2FA",
+													"originalRequest": {
+														"method": "PATCH",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"code\": \"631555\"\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{Base_url}}/profile/two-fa"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "X-Powered-By",
+															"value": "Express"
+														},
+														{
+															"key": "Access-Control-Allow-Origin",
+															"value": "*"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json; charset=utf-8"
+														},
+														{
+															"key": "Content-Length",
+															"value": "57"
+														},
+														{
+															"key": "ETag",
+															"value": "W/\"39-OWjN7hH5AZVgPVlWCZZYWsdQQBE\""
+														},
+														{
+															"key": "Date",
+															"value": "Mon, 04 Dec 2023 11:58:34 GMT"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=5"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"status\": \"success\",\n    \"message\": \"Successfully enabled 2FA\"\n}"
 												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"status\": \"success\",\n    \"message\": \"Successfully enabled 2FA\"\n}"
+											]
 										}
-									]
+									],
+									"id": "bcba4f27-fb19-46ce-8cde-66c699ff52ad"
 								}
 							],
-							"id": "bcba4f27-fb19-46ce-8cde-66c699ff52ad"
+							"id": "97aa6036-aeb6-4233-9c4c-14142dbe6747"
 						}
 					],
 					"id": "011de4f9-9c83-47e2-bdf0-eab603d54026"
