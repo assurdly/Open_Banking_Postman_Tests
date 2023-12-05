@@ -14564,7 +14564,7 @@
 								"auth": {
 									"type": "bearer",
 									"bearer": {
-										"token": "{{access_token}}"
+										"token": "{{accesstoken}}"
 									}
 								},
 								"method": "PATCH",
@@ -14578,7 +14578,7 @@
 										}
 									}
 								},
-								"url": "{{base_url}}/settings/kyb/requirements"
+								"url": "{{Base_Url}}/settings/kyb/requirements"
 							},
 							"response": [
 								{
@@ -27606,7 +27606,7 @@
 								"auth": {
 									"type": "bearer",
 									"bearer": {
-										"token": "{{access_token}}"
+										"token": "{{accesstoken_AP}}"
 									}
 								},
 								"method": "PATCH",
@@ -27620,7 +27620,7 @@
 										}
 									}
 								},
-								"url": "{{base_url}}/settings/kyb/requirements"
+								"url": "{{Base_Url}}/settings/kyb/requirements"
 							},
 							"response": [
 								{
