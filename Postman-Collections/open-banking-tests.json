@@ -4770,7 +4770,7 @@
 													"});\r",
 													"\r",
 													"pm.test(\"Message is Successfully logged in\", function () {\r",
-													"    pm.expect(jsonData.message).to.eql('Successfully logged in.');\r",
+													"    pm.expect(jsonData.message).to.eql('Welcome back. You have been successfully signed in.');\r",
 													"});\r",
 													""
 												],
@@ -5484,6 +5484,7 @@
 													"});\r",
 													"\r",
 													"var jsonData = pm.response.json();\r",
+													"pm.environment.set(\"reset_token\", jsonData.data);\r",
 													"\r",
 													"pm.test(\"Response body property\", function () {\r",
 													"    pm.expect(jsonData).to.be.an('object');\r",
@@ -5499,13 +5500,13 @@
 													"    pm.expect(jsonData.message).to.include('An email with instructions to reset your password has been sent to');\r",
 													"});\r",
 													"\r",
-													"pm.environment.set(\"reset_token\", jsonData.data);"
+													""
 												],
 												"type": "text/javascript"
 											}
 										}
 									],
-									"id": "8c38d98a-2581-4b7c-abf6-55aa6eb13fb0",
+									"id": "4813d99a-a6dc-4de8-8d62-44b71d9ad63b",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -5525,7 +5526,7 @@
 									},
 									"response": [
 										{
-											"id": "77c297f3-0aa0-4e5a-bb58-3f520158d80d",
+											"id": "43514b31-7484-4d69-bf72-5b5c998b6a90",
 											"name": "success",
 											"originalRequest": {
 												"method": "POST",
@@ -6815,7 +6816,7 @@
 							"name": "Login with 2FA",
 							"item": [
 								{
-									"name": "Login With 2FA Copy",
+									"name": "Login With 2FA",
 									"id": "3e776358-8d7f-4998-ab97-95a3b53ae815",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -6903,6 +6904,32 @@
 							"item": [
 								{
 									"name": "Update Company Details",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "cef13e55-ada2-475a-a2db-b0b408e89f5d",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status code response is OK\", function () {\r",
+													"    pm.response.to.have.status('OK');\r",
+													"});\r",
+													"\r",
+													"var jsonData = pm.response.json();\r",
+													"\r",
+													"pm.test(\"Response body properties\", function () {\r",
+													"    pm.expect(jsonData).to.be.an('object');\r",
+													"    pm.expect(jsonData.status).to.be.an('success');\r",
+													"    pm.expect(jsonData.message).to.be.an('Successfully updated company KYB details.');\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
 									"id": "d1c74202-22e1-4e2e-aed3-97ea13a8154f",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -7779,7 +7806,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{Base_Url}}/roles?page=1&limit=20&filter[name]=Gatekeeper",
+											"raw": "{{Base_Url}}/roles?page=1&limit=20",
 											"host": [
 												"{{Base_Url}}"
 											],
@@ -7808,7 +7835,8 @@
 												},
 												{
 													"key": "filter[name]",
-													"value": "Gatekeeper"
+													"value": "Gatekeeper",
+													"disabled": true
 												},
 												{
 													"key": "filter[status]",
@@ -7922,7 +7950,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"description\": \"Quality Assurances\",\n    \"status\": \"inactive\"\n}",
+											"raw": "{\n    \"description\": \"Gate keepership\",\n    \"status\": \"active\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -7941,7 +7969,7 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "ac34603e-aa21-401b-b297-59067e470b9d"
+													"value": "0b0e485e-c851-4fbd-83f9-d59dc4e037c0"
 												}
 											]
 										}
@@ -24500,7 +24528,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"Get Account1\",\n    \"enabled\": true,\n    \"url\": \"https://httpbin.org/json\",\n    \"route\": {\n        \"paths\": [\"/account1\"],\n        \"methods\": [\"GET\"]\n    }\n}",
+											"raw": "{\n    \"name\": \"Get Account2\",\n    \"enabled\": true,\n    \"url\": \"https://httpbin.org/json\",\n    \"route\": {\n        \"paths\": [\"/account2\"],\n        \"methods\": [\"GET\"]\n    }\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -26884,7 +26912,7 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "6e0f2a75-a6f5-47c9-86ce-91f92f2c3568"
+													"value": "4708a714-c3fc-4b11-b798-e3d9fd1aa33a"
 												}
 											]
 										}
@@ -27173,29 +27201,35 @@
 											"script": {
 												"id": "8730edab-dc4a-4b4c-954f-397a66dea5e2",
 												"exec": [
-													"pm.test(\"Status code is 200\", function () {\r",
-													"    pm.response.to.have.status(200);\r",
+													"pm.test(\"Status code is 400\", function () {\r",
+													"    pm.response.to.have.status(400);\r",
 													"});\r",
 													"\r",
-													"pm.test(\"Status code response is OK\", function () {\r",
-													"    pm.response.to.have.status('OK');\r",
+													"pm.test(\"Status code response is Bad Request\", function () {\r",
+													"    pm.response.to.have.status('Bad Request');\r",
 													"});\r",
 													"\r",
 													"var jsonData = pm.response.json();\r",
 													"\r",
 													"pm.test(\"Response body property\", function () {\r",
 													"    pm.expect(jsonData).to.be.an('object');\r",
-													"    pm.expect(jsonData.status).to.be.a('string');\r",
+													"    pm.expect(jsonData.timestamp).to.be.a('string');\r",
+													"    pm.expect(jsonData.status).to.be.a('number');\r",
+													"    pm.expect(jsonData.success).to.be.a('boolean');\r",
 													"    pm.expect(jsonData.message).to.be.a('string');\r",
-													"    pm.expect(jsonData.data).to.be.null;\r",
+													"    pm.expect(jsonData.stack).to.be.a('string');\r",
 													"});\r",
 													"\r",
 													"pm.test(\"Status is success\", function () {\r",
-													"    pm.expect(jsonData.status).to.eql('success');\r",
+													"    pm.expect(jsonData.status).to.eql(400);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Success is false\", function () {\r",
+													"    pm.expect(jsonData.success).to.eql(false);\r",
 													"});\r",
 													"\r",
 													"pm.test(\"message is present\", function () {\r",
-													"    pm.expect(jsonData.message).to.eql('Successfully deleted API');\r",
+													"    pm.expect(jsonData.message).to.eql(\"API Route '4708a714-c3fc-4b11-b798-e3d9fd1aa33a' does not exist\");\r",
 													"});"
 												],
 												"type": "text/javascript"
@@ -27241,38 +27275,45 @@
 							"description": "ID: API Endpoint ID"
 						},
 						{
-							"name": "*Delete API Collection",
-							"id": "b2a4f770-c2ab-4e23-9deb-fe6dd66c1758",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{accesstoken_AP}}"
-									}
-								},
-								"method": "DELETE",
-								"header": [],
-								"url": {
-									"raw": "{{Base_Url}}/collections/:id",
-									"host": [
-										"{{Base_Url}}"
-									],
-									"path": [
-										"collections",
-										":id"
-									],
-									"variable": [
-										{
-											"key": "id",
-											"value": "858170ab-2a1c-4308-9632-ebd5de99841e"
+							"name": "Delete a collection",
+							"item": [
+								{
+									"name": "*Delete API Collection",
+									"id": "b2a4f770-c2ab-4e23-9deb-fe6dd66c1758",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{accesstoken_AP}}"
+											}
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{Base_Url}}/collections/:id",
+											"host": [
+												"{{Base_Url}}"
+											],
+											"path": [
+												"collections",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "4708a714-c3fc-4b11-b798-e3d9fd1aa33a"
+												}
+											]
 										}
-									]
+									},
+									"response": []
 								}
-							},
-							"response": []
+							],
+							"id": "a15f2b18-2399-48d6-8528-c900de49810a",
+							"description": "ID: Collection ID"
 						}
 					],
 					"id": "409e212b-9d19-4b4f-92d9-848db1601ec1"
