@@ -6817,6 +6817,41 @@
 							"item": [
 								{
 									"name": "Login With 2FA",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "46fd7fa0-f6c5-49fa-9125-1f566023061e",
+												"exec": [
+													"pm.test(\"Status code is 201\", function () {\r",
+													"    pm.response.to.have.status(201);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status code response is Created\", function () {\r",
+													"    pm.response.to.have.status('Created');\r",
+													"});\r",
+													"\r",
+													"var jsonData = pm.response.json();\r",
+													"\r",
+													"pm.test(\"Response body properties\", function () {\r",
+													"    pm.expect(jsonData).to.be.an('object');\r",
+													"    pm.expect(jsonData.status).to.be.a('string');\r",
+													"    pm.expect(jsonData.message).to.be.a('string');\r",
+													"    pm.expect(jsonData.data).to.be.a('string');\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status is success\", function () {\r",
+													"    pm.expect(jsonData.status).to.eql('success');\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Message is present\", function () {\r",
+													"    pm.expect(jsonData.message).to.eql('Welcome back. You have been successfully signed in.');\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
 									"id": "3e776358-8d7f-4998-ab97-95a3b53ae815",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -6826,7 +6861,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"email\": \"{{email}}\",\n    \"password\": \"Password1#\",\n    \"code\": \"724314\"\n}",
+											"raw": "{\n    \"email\": \"{{email}}\",\n    \"password\": \"Password1#\",\n    \"code\": \"920617\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -13697,6 +13732,41 @@
 									"item": [
 										{
 											"name": "Disable 2FA",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "44c705c3-1254-460c-a26c-de135704ba00",
+														"exec": [
+															"pm.test(\"Status code is 200\", function () {\r",
+															"    pm.response.to.have.status(200);\r",
+															"});\r",
+															"\r",
+															"pm.test(\"Status code response is OK\", function () {\r",
+															"    pm.response.to.have.status('OK');\r",
+															"});\r",
+															"\r",
+															"var jsonData = pm.response.json();\r",
+															"\r",
+															"pm.test(\"Response body properties\", function () {\r",
+															"    pm.expect(jsonData).to.be.an('object');\r",
+															"    pm.expect(jsonData.status).to.be.a('string');\r",
+															"    pm.expect(jsonData.message).to.be.a('string');\r",
+															"    pm.expect(jsonData.data).to.be.null;\r",
+															"});\r",
+															"\r",
+															"pm.test(\"Status is success\", function () {\r",
+															"    pm.expect(jsonData.status).to.eql('success');\r",
+															"});\r",
+															"\r",
+															"pm.test(\"Message is present\", function () {\r",
+															"    pm.expect(jsonData.message).to.eql('Successfully disabled 2FA');\r",
+															"});"
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
 											"id": "f0b4b482-bb8b-45d5-a40c-c28ff8e36dea",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
