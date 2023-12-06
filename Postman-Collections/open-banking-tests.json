@@ -7922,7 +7922,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"description\": \"Quality Assurances\",\n    \"status\": \"active\"\n}",
+											"raw": "{\n    \"description\": \"Quality Assurances\",\n    \"status\": \"inactive\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -7941,7 +7941,7 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "5f581591-92fd-479f-80bd-1f9c8c60859d"
+													"value": "ac34603e-aa21-401b-b297-59067e470b9d"
 												}
 											]
 										}
