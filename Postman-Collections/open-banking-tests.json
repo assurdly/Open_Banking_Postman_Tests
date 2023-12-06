@@ -13796,7 +13796,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{accesstoken_AP}}"
+												"token": "{{accesstoken}}"
 											}
 										},
 										"method": "GET",
@@ -13898,7 +13898,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{accesstoken_AP}}"
+												"token": "{{accesstoken}}"
 											}
 										},
 										"method": "GET",
@@ -13991,6 +13991,37 @@
 							"item": [
 								{
 									"name": "View all API Endpoints",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "5e8c2d97-38c9-4324-86c5-e133e8af4f6b",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status code response is OK\", function () {\r",
+													"    pm.response.to.have.status('OK');\r",
+													"});\r",
+													"\r",
+													"var jsonData = pm.response.json();\r",
+													"\r",
+													"pm.test(\"Response body property\", function () {\r",
+													"    pm.expect(jsonData).to.be.an('object');\r",
+													"    pm.expect(jsonData.status).to.be.a('string');\r",
+													"    pm.expect(jsonData.message).to.be.a('string');\r",
+													"    pm.expect(jsonData.data).to.be.an('array');\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status is success\", function () {\r",
+													"    pm.expect(jsonData.status).to.eql('success');\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
 									"id": "f2cfa745-89de-4982-b020-a11f2d544b27",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -13999,7 +14030,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{accesstoken_AP}}"
+												"token": "{{accesstoken}}"
 											}
 										},
 										"method": "GET",
@@ -14017,7 +14048,7 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "e56c5af8-2bb4-4e85-9117-92749351340d"
+													"value": "858170ab-2a1c-4308-9632-ebd5de99841e"
 												}
 											]
 										}
@@ -14089,98 +14120,6 @@
 							],
 							"id": "4eaa3ce3-b432-4894-9bb0-63592a7d3bb9",
 							"description": "This endpoint shows all API enpoint in a collection\n\nID: Collection Id"
-						},
-						{
-							"name": "View API Endpoints",
-							"id": "206bd44f-4add-4a44-91d3-a11805606ac0",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{Base_Url}}/collections/:id/apis",
-									"host": [
-										"{{Base_Url}}"
-									],
-									"path": [
-										"collections",
-										":id",
-										"apis"
-									],
-									"variable": [
-										{
-											"id": "564a8227-d4d7-4373-8d4e-3f032c6aac81",
-											"key": "id",
-											"value": "1"
-										}
-									]
-								}
-							},
-							"response": [
-								{
-									"id": "e5227d18-4ab9-4821-8672-cf3a92bc76bc",
-									"name": "View API Endpoints",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{Base_url}}/collections/:id/apis",
-											"host": [
-												"{{Base_url}}"
-											],
-											"path": [
-												"collections",
-												":id",
-												"apis"
-											],
-											"variable": [
-												{
-													"key": "id",
-													"value": "1"
-												}
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "X-Powered-By",
-											"value": "Express"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json; charset=utf-8"
-										},
-										{
-											"key": "Content-Length",
-											"value": "499"
-										},
-										{
-											"key": "ETag",
-											"value": "W/\"1f3-d8GZcl8qZqL5wcDB3QhpRIa0gbI\""
-										},
-										{
-											"key": "Date",
-											"value": "Wed, 15 Nov 2023 10:40:06 GMT"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=5"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": [\n        {\n            \"id\": \"14681a5b-c765-4f90-ac03-9848f372bb1d\",\n            \"name\": \"list-accounts\",\n            \"enabled\": true,\n            \"host\": \"httpbin.org\",\n            \"protocol\": \"https\",\n            \"port\": 443,\n            \"path\": \"/json\",\n            \"url\": \"https://httpbin.org:443/json\",\n            \"route\": {\n                \"paths\": [],\n                \"methods\": []\n            }\n        },\n        {\n            \"id\": \"c11209c2-da51-4212-8782-df1e911fa861\",\n            \"name\": \"get-accounts\",\n            \"enabled\": true,\n            \"host\": \"httpbin.org\",\n            \"protocol\": \"https\",\n            \"port\": 443,\n            \"path\": \"/json\",\n            \"url\": \"https://httpbin.org:443/json\",\n            \"route\": {\n                \"paths\": [\n                    \"/accounts\"\n                ],\n                \"methods\": [\n                    \"GET\"\n                ]\n            }\n        }\n    ]\n}"
-								}
-							]
 						}
 					],
 					"id": "07ae6b76-3354-4f24-8c16-d2425d120ddb"
