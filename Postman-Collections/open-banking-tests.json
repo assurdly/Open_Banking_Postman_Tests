@@ -4794,7 +4794,7 @@
 												}
 											}
 										},
-										"url": "{{Base_Url}}/auth/login"
+										"url": "http://3.134.253.153:4000/auth/login"
 									},
 									"response": [
 										{
@@ -4902,7 +4902,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"Password1#\"\r\n}",
+											"raw": "{\r\n    \"email\": \"banner1@mailinator.com\",\r\n    \"password\": \"Password!123\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -6825,14 +6825,14 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"email\": \"test@test.com\",\n    \"password\": \"Password1#\",\n    \"code\": \"175504\"\n}",
+											"raw": "{\n    \"email\": \"{{email}}\",\n    \"password\": \"Password1#\",\n    \"code\": \"724314\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
 												}
 											}
 										},
-										"url": "{{Base_url}}/auth/login/two-fa"
+										"url": "{{Base_Url}}/auth/login/two-fa"
 									},
 									"response": [
 										{
@@ -7046,12 +7046,12 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{access_token}}"
+												"token": "{{accesstoken}}"
 											}
 										},
 										"method": "GET",
 										"header": [],
-										"url": "{{base_url}}/company"
+										"url": "{{Base_Url}}/company"
 									},
 									"response": [
 										{
@@ -10185,7 +10185,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"email\": \"eunice18@mailinator.com\",\n    \"firstName\": \"Unique\",\n    \"lastName\": \"Okokon\",\n    \"roleId\": \"5f581591-92fd-479f-80bd-1f9c8c60859d\"\n}",
+											"raw": "{\n    \"email\": \"eunice26@mailinator.com\",\n    \"firstName\": \"Uniq\",\n    \"lastName\": \"Okok\",\n    \"roleId\": \"ac34603e-aa21-401b-b297-59067e470b9d\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -11160,7 +11160,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"firstName\": \"Unique\",\n    \"lastName\": \"Okokon\",\n    \"password\": \"Password#1\",\n    \"confirmPassword\": \"Password#1\"\n}",
+											"raw": "{\n    \"firstName\": \"Sade\",\n    \"lastName\": \"Linus\",\n    \"password\": \"Password#1\",\n    \"confirmPassword\": \"Password#1\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -11180,7 +11180,7 @@
 											"variable": [
 												{
 													"key": "token",
-													"value": "7a1d1fa243c61ac2916e2715a4e05239386c4885"
+													"value": "de74b596df01267901401173a277a0bfa1fc5926"
 												}
 											]
 										}
@@ -13506,18 +13506,24 @@
 												"disableBodyPruning": true
 											},
 											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{accesstoken}}"
+													}
+												},
 												"method": "PATCH",
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n    \"code\": \"631555\"\n}",
+													"raw": "{\n    \"code\": \"714563\"\n}",
 													"options": {
 														"raw": {
 															"language": "json"
 														}
 													}
 												},
-												"url": "{{Base_url}}/profile/two-fa"
+												"url": "{{Base_Url}}/profile/two-fa"
 											},
 											"response": [
 												{
@@ -14145,12 +14151,12 @@
 								"auth": {
 									"type": "bearer",
 									"bearer": {
-										"token": "{{access_token}}"
+										"token": "{{accesstoken}}"
 									}
 								},
 								"method": "GET",
 								"header": [],
-								"url": "{{base_url}}/settings/kyb/requirements"
+								"url": "{{Base_Url}}/settings/kyb/requirements"
 							},
 							"response": [
 								{
@@ -19786,7 +19792,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"email\": \"eunice27@mailinator.com\",\n    \"firstName\": \"Eunice\",\n    \"lastName\": \"Okokon\",\n    \"roleId\": \"f8ad138d-30b9-4c3d-bc44-9f8ed41a515e\"\n}",
+											"raw": "{\n    \"email\": \"eunice31@mailinator.com\",\n    \"firstName\": \"Thio\",\n    \"lastName\": \"Man\",\n    \"roleId\": \"7895c397-55b7-458c-83d6-75e5caf42af1\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -23535,7 +23541,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"Accounts\",\n    \"description\": \"accounts\"\n}",
+											"raw": "{\n    \"name\": \"Settings\",\n    \"description\": \"System settings\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -25377,7 +25383,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "8d70a487-ff3c-4d86-bed7-1d30f3bd2a75",
+												"id": "6ca67d80-5da0-448c-9b54-4d2950b5b2df",
 												"exec": [
 													"pm.test(\"Status code is 400\", function () {\r",
 													"    pm.response.to.have.status(400);\r",
@@ -25412,7 +25418,7 @@
 													"});\r",
 													"\r",
 													"pm.test(\"Data is present\", function () {\r",
-													"    pm.expect(jsonData.data.route.paths).to.eql('each value in methods should not be empty');\r",
+													"    pm.expect(jsonData.data.route.paths).to.eql('each value in paths should not be empty');\r",
 													"});"
 												],
 												"type": "text/javascript"
@@ -26878,7 +26884,7 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "b35f3545-ea72-4939-abb7-2c4975f41423"
+													"value": "6e0f2a75-a6f5-47c9-86ce-91f92f2c3568"
 												}
 											]
 										}
@@ -27012,9 +27018,8 @@
 									],
 									"variable": [
 										{
-											"id": "1a4a55ec-9de4-4bd9-95e0-7a5b577a8b6e",
 											"key": "id",
-											"value": ""
+											"value": "858170ab-2a1c-4308-9632-ebd5de99841e"
 										}
 									]
 								}
