@@ -27093,39 +27093,152 @@
 							"description": "This shows all endpoints in a collection\n\nID: Collection ID"
 						},
 						{
-							"name": "*Delete API Endpoint",
-							"id": "a729b813-f77a-424f-8454-64e40f209988",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{accesstoken_AP}}"
-									}
-								},
-								"method": "DELETE",
-								"header": [],
-								"url": {
-									"raw": "{{Base_Url}}/collections/apis/:id",
-									"host": [
-										"{{Base_Url}}"
-									],
-									"path": [
-										"collections",
-										"apis",
-										":id"
-									],
-									"variable": [
+							"name": "Delete an API",
+							"item": [
+								{
+									"name": "*Delete API Endpoint",
+									"event": [
 										{
-											"key": "id",
-											"value": "6e0f2a75-a6f5-47c9-86ce-91f92f2c3568"
+											"listen": "test",
+											"script": {
+												"id": "8730edab-dc4a-4b4c-954f-397a66dea5e2",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status code response is OK\", function () {\r",
+													"    pm.response.to.have.status('OK');\r",
+													"});\r",
+													"\r",
+													"var jsonData = pm.response.json();\r",
+													"\r",
+													"pm.test(\"Response body property\", function () {\r",
+													"    pm.expect(jsonData).to.be.an('object');\r",
+													"    pm.expect(jsonData.status).to.be.a('string');\r",
+													"    pm.expect(jsonData.message).to.be.a('string');\r",
+													"    pm.expect(jsonData.data).to.be.null;\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status is success\", function () {\r",
+													"    pm.expect(jsonData.status).to.eql('success');\r",
+													"});\r",
+													"\r",
+													"pm.test(\"message is present\", function () {\r",
+													"    pm.expect(jsonData.message).to.eql('Successfully deleted API');\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
 										}
-									]
+									],
+									"id": "a729b813-f77a-424f-8454-64e40f209988",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{accesstoken_AP}}"
+											}
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{Base_Url}}/collections/apis/:id",
+											"host": [
+												"{{Base_Url}}"
+											],
+											"path": [
+												"collections",
+												"apis",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "4708a714-c3fc-4b11-b798-e3d9fd1aa33a"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "*Delete API Endpoint - Already deleted",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "8730edab-dc4a-4b4c-954f-397a66dea5e2",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status code response is OK\", function () {\r",
+													"    pm.response.to.have.status('OK');\r",
+													"});\r",
+													"\r",
+													"var jsonData = pm.response.json();\r",
+													"\r",
+													"pm.test(\"Response body property\", function () {\r",
+													"    pm.expect(jsonData).to.be.an('object');\r",
+													"    pm.expect(jsonData.status).to.be.a('string');\r",
+													"    pm.expect(jsonData.message).to.be.a('string');\r",
+													"    pm.expect(jsonData.data).to.be.null;\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status is success\", function () {\r",
+													"    pm.expect(jsonData.status).to.eql('success');\r",
+													"});\r",
+													"\r",
+													"pm.test(\"message is present\", function () {\r",
+													"    pm.expect(jsonData.message).to.eql('Successfully deleted API');\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "4b21af76-5e1d-4353-9823-bc3257e1fb15",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{accesstoken_AP}}"
+											}
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{Base_Url}}/collections/apis/:id",
+											"host": [
+												"{{Base_Url}}"
+											],
+											"path": [
+												"collections",
+												"apis",
+												":id"
+											],
+											"variable": [
+												{
+													"id": "a5d92969-772c-48c9-9f7e-c4bcdebd1da1",
+													"key": "id",
+													"value": "4708a714-c3fc-4b11-b798-e3d9fd1aa33a"
+												}
+											]
+										}
+									},
+									"response": []
 								}
-							},
-							"response": []
+							],
+							"id": "d3c1f681-3a9f-4f15-9496-d8d5615a9745",
+							"description": "ID: API Endpoint ID"
 						},
 						{
 							"name": "*Delete API Collection",
