@@ -24177,7 +24177,7 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{accesstoken}}"
+														"token": "{{accesstoken_AP}}"
 													}
 												},
 												"method": "PATCH",
