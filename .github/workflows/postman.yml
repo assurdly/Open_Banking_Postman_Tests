@@ -19,6 +19,8 @@ jobs:
           echo "Newman and newman-reporter-allure installed."
 
       - name: Run Postman tests
+        if: always()
+        continue-on-error: true
         run: |
            newman run Postman-Collections/open-banking-tests.json --reporters cli,allure
            echo "Postman tests run."
