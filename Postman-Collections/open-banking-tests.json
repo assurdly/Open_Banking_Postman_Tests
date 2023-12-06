@@ -6930,6 +6930,238 @@
 											"body": "{\n    \"status\": \"success\",\n    \"message\": \"Welcome back. You have been successfully signed in.\",\n    \"data\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYWJiYmExLTM0N2QtNDdjOS05MzE5LWQzOGZmMjIyMjE4MiIsImlhdCI6MTcwMTY5MTI5OSwiZXhwIjoxNzAxNjkyMTk5fQ._DnN8HsbFfxLP354N3UrwzzSiOQE550pvyG4uuTkQVE\"\n}"
 										}
 									]
+								},
+								{
+									"name": "Login With 2FA - Invalid OTP",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "46fd7fa0-f6c5-49fa-9125-1f566023061e",
+												"exec": [
+													"pm.test(\"Status code is 201\", function () {\r",
+													"    pm.response.to.have.status(201);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status code response is Created\", function () {\r",
+													"    pm.response.to.have.status('Created');\r",
+													"});\r",
+													"\r",
+													"var jsonData = pm.response.json();\r",
+													"\r",
+													"pm.test(\"Response body properties\", function () {\r",
+													"    pm.expect(jsonData).to.be.an('object');\r",
+													"    pm.expect(jsonData.status).to.be.a('string');\r",
+													"    pm.expect(jsonData.message).to.be.a('string');\r",
+													"    pm.expect(jsonData.data).to.be.a('string');\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status is success\", function () {\r",
+													"    pm.expect(jsonData.status).to.eql('success');\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Message is present\", function () {\r",
+													"    pm.expect(jsonData.message).to.eql('Welcome back. You have been successfully signed in.');\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "2809900d-57b5-428d-abec-d6cabae0b125",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"{{email}}\",\n    \"password\": \"Password1#\",\n    \"code\": \"920617\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{Base_Url}}/auth/login/two-fa"
+									},
+									"response": [
+										{
+											"id": "8108a3a7-1316-4e1c-a7e7-39bfcaff4ccb",
+											"name": "Login With 2FA",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"email\": \"test@test.com\",\n    \"password\": \"Password1#\",\n    \"code\": \"175504\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{Base_url}}/auth/login/two-fa"
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "X-Powered-By",
+													"value": "Express"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "281"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"119-DDFS7+zULeUawZ4qdaWy7qS6AbA\""
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 04 Dec 2023 12:01:39 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=5"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"status\": \"success\",\n    \"message\": \"Welcome back. You have been successfully signed in.\",\n    \"data\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYWJiYmExLTM0N2QtNDdjOS05MzE5LWQzOGZmMjIyMjE4MiIsImlhdCI6MTcwMTY5MTI5OSwiZXhwIjoxNzAxNjkyMTk5fQ._DnN8HsbFfxLP354N3UrwzzSiOQE550pvyG4uuTkQVE\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Login With 2FA - Blank OTP field",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "46fd7fa0-f6c5-49fa-9125-1f566023061e",
+												"exec": [
+													"pm.test(\"Status code is 201\", function () {\r",
+													"    pm.response.to.have.status(201);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status code response is Created\", function () {\r",
+													"    pm.response.to.have.status('Created');\r",
+													"});\r",
+													"\r",
+													"var jsonData = pm.response.json();\r",
+													"\r",
+													"pm.test(\"Response body properties\", function () {\r",
+													"    pm.expect(jsonData).to.be.an('object');\r",
+													"    pm.expect(jsonData.status).to.be.a('string');\r",
+													"    pm.expect(jsonData.message).to.be.a('string');\r",
+													"    pm.expect(jsonData.data).to.be.a('string');\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status is success\", function () {\r",
+													"    pm.expect(jsonData.status).to.eql('success');\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Message is present\", function () {\r",
+													"    pm.expect(jsonData.message).to.eql('Welcome back. You have been successfully signed in.');\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "3a8c36ff-4d7d-4e10-8799-a2d44e257ef1",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"{{email}}\",\n    \"password\": \"Password1#\",\n    \"code\": \"\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{Base_Url}}/auth/login/two-fa"
+									},
+									"response": [
+										{
+											"id": "25267241-d851-43c7-9db6-ffd7d266f558",
+											"name": "Login With 2FA",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"email\": \"test@test.com\",\n    \"password\": \"Password1#\",\n    \"code\": \"175504\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{Base_url}}/auth/login/two-fa"
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "X-Powered-By",
+													"value": "Express"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "281"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"119-DDFS7+zULeUawZ4qdaWy7qS6AbA\""
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 04 Dec 2023 12:01:39 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=5"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"status\": \"success\",\n    \"message\": \"Welcome back. You have been successfully signed in.\",\n    \"data\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYWJiYmExLTM0N2QtNDdjOS05MzE5LWQzOGZmMjIyMjE4MiIsImlhdCI6MTcwMTY5MTI5OSwiZXhwIjoxNzAxNjkyMTk5fQ._DnN8HsbFfxLP354N3UrwzzSiOQE550pvyG4uuTkQVE\"\n}"
+										}
+									]
 								}
 							],
 							"id": "5b7247f9-0709-4396-b0ca-6763de0d8642"
@@ -7227,7 +7459,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"Secretary Assistant12\",\n    \"description\": \"Book keeping\",\n    \"status\": \"active\"\n}",
+											"raw": "{\n    \"name\": \"Gatekeeper1\",\n    \"description\": \"Gate keeping\",\n    \"status\": \"active\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
