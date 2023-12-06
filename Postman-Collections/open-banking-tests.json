@@ -7862,6 +7862,139 @@
 											"body": "{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": [\n        {\n            \"id\": \"396de57f-cc20-484d-b365-fcf126cfab66\",\n            \"name\": \"QA\",\n            \"slug\": \"qa\",\n            \"description\": \"Quality Assurance\",\n            \"status\": \"active\",\n            \"parentId\": \"167ad7c2-54fb-43de-a711-ae65a4529352\",\n            \"createdAt\": \"2023-11-09T00:25:08.246Z\",\n            \"updatedAt\": \"2023-11-09T00:25:08.246Z\",\n            \"deletedAt\": null\n        },\n        {\n            \"id\": \"efdcfa14-1e5a-4b03-92fa-a0cc12e1addc\",\n            \"name\": \"admin\",\n            \"slug\": \"admin\",\n            \"description\": \"\",\n            \"status\": \"active\",\n            \"parentId\": \"167ad7c2-54fb-43de-a711-ae65a4529352\",\n            \"createdAt\": \"2023-11-08T12:34:10.608Z\",\n            \"updatedAt\": \"2023-11-08T12:34:10.608Z\",\n            \"deletedAt\": null\n        }\n    ]\n}"
 										}
 									]
+								},
+								{
+									"name": "List Roles",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "9f62754a-87d3-40e6-81a2-08c72679f726",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status code response is OK\", function () {\r",
+													"    pm.response.to.have.status('OK');\r",
+													"});\r",
+													"\r",
+													"var jsonData = pm.response.json();\r",
+													"\r",
+													"pm.test(\"Response body property\", function () {\r",
+													"    pm.expect(jsonData).to.be.an('object');\r",
+													"    pm.expect(jsonData.status).to.be.a('string');\r",
+													"    pm.expect(jsonData.message).to.be.a('string');\r",
+													"    pm.expect(jsonData.data).to.be.an('array');\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status is success\", function () {\r",
+													"    pm.expect(jsonData.status).to.eql('success');\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "dfc3a07a-c029-45e0-9ea9-aeaa179dfd2f",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{accesstoken}}"
+											}
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{Base_Url}}/roles?page=1&limit=20&filter[name]=api consumer&filter[status]",
+											"host": [
+												"{{Base_Url}}"
+											],
+											"path": [
+												"roles"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "20"
+												},
+												{
+													"key": "filter[createdAt][gt]",
+													"value": "2023-11-19T17:20:57.737Z",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "filter[createdAt][lt]",
+													"value": "2023-11-19T17:20:57.737Z",
+													"disabled": true
+												},
+												{
+													"key": "filter[name]",
+													"value": "api consumer"
+												},
+												{
+													"key": "filter[status]",
+													"value": null
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "07df8bbe-93f1-4115-8aab-68a8ae880278",
+											"name": "List Roles",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{Base_url}}/roles"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "X-Powered-By",
+													"value": "Express"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "565"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"235-kG3bim0bFQc9jgKPYPua+lLqG08\""
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 09 Nov 2023 00:26:05 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=5"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": [\n        {\n            \"id\": \"396de57f-cc20-484d-b365-fcf126cfab66\",\n            \"name\": \"QA\",\n            \"slug\": \"qa\",\n            \"description\": \"Quality Assurance\",\n            \"status\": \"active\",\n            \"parentId\": \"167ad7c2-54fb-43de-a711-ae65a4529352\",\n            \"createdAt\": \"2023-11-09T00:25:08.246Z\",\n            \"updatedAt\": \"2023-11-09T00:25:08.246Z\",\n            \"deletedAt\": null\n        },\n        {\n            \"id\": \"efdcfa14-1e5a-4b03-92fa-a0cc12e1addc\",\n            \"name\": \"admin\",\n            \"slug\": \"admin\",\n            \"description\": \"\",\n            \"status\": \"active\",\n            \"parentId\": \"167ad7c2-54fb-43de-a711-ae65a4529352\",\n            \"createdAt\": \"2023-11-08T12:34:10.608Z\",\n            \"updatedAt\": \"2023-11-08T12:34:10.608Z\",\n            \"deletedAt\": null\n        }\n    ]\n}"
+										}
+									]
 								}
 							],
 							"id": "10956614-fe06-4423-a038-4db88410bb3a"
@@ -21465,7 +21598,7 @@
 											}
 										}
 									],
-									"id": "5441431f-e4ec-49da-b837-f34c53e6a563",
+									"id": "266a309d-2798-4b89-b494-1e3b177aab13",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -21473,13 +21606,13 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{accesstoken_AP}}"
+												"token": "{{accesstoken}}"
 											}
 										},
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{Base_Url}}/users?page=1&limit=20",
+											"raw": "{{Base_Url}}/users?page=1&limit=20&filter[email]=eunice25@mailinator.com",
 											"host": [
 												"{{Base_Url}}"
 											],
@@ -21497,22 +21630,17 @@
 												},
 												{
 													"key": "filter[name]",
-													"value": "Thio",
-													"disabled": true
-												},
-												{
-													"key": "filter[email]",
-													"value": "eunice@mailinator.com",
+													"value": "",
 													"disabled": true
 												},
 												{
 													"key": "filter[status]",
-													"value": "active",
+													"value": "",
 													"disabled": true
 												},
 												{
 													"key": "filter[phone]",
-													"value": "08123456789",
+													"value": "",
 													"disabled": true
 												},
 												{
@@ -21524,13 +21652,22 @@
 													"key": "filter[createdAt][lt]",
 													"value": "2023-11-19T17:20:57.737Z",
 													"disabled": true
+												},
+												{
+													"key": "filter[email]",
+													"value": "eunice25@mailinator.com"
+												},
+												{
+													"key": "filter[role]",
+													"value": "ac34603e-aa21-401b-b297-59067e470b9d",
+													"disabled": true
 												}
 											]
 										}
 									},
 									"response": [
 										{
-											"id": "cbfe44a1-8612-474a-8460-69d0a920ff56",
+											"id": "37d2667f-05a8-4c2b-9ef6-0dc774983616",
 											"name": "List Users",
 											"originalRequest": {
 												"method": "GET",
