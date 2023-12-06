@@ -13460,6 +13460,41 @@
 									"item": [
 										{
 											"name": "Setup 2FA",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "47366a9e-931d-4e50-86d6-75332781a28c",
+														"exec": [
+															"pm.test(\"Status code is 201\", function () {\r",
+															"    pm.response.to.have.status(201);\r",
+															"});\r",
+															"\r",
+															"pm.test(\"Status code response is Created\", function () {\r",
+															"    pm.response.to.have.status('Created');\r",
+															"});\r",
+															"\r",
+															"var jsonData = pm.response.json();\r",
+															"\r",
+															"pm.test(\"Response body properties\", function () {\r",
+															"    pm.expect(jsonData).to.be.an('object');\r",
+															"    pm.expect(jsonData.status).to.be.a('string');\r",
+															"    pm.expect(jsonData.message).to.be.a('string');\r",
+															"    pm.expect(jsonData.data).to.be.an('object');\r",
+															"});\r",
+															"\r",
+															"pm.test(\"Status is success\", function () {\r",
+															"    pm.expect(jsonData.status).to.eql('success');\r",
+															"});\r",
+															"\r",
+															"pm.test(\"Message is present\", function () {\r",
+															"    pm.expect(jsonData.message).to.eql('Successfully generated 2FA code');\r",
+															"});"
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
 											"id": "dde09ceb-db8d-4649-a035-0d2a8fc1b5b2",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -13535,6 +13570,40 @@
 									"item": [
 										{
 											"name": "Verify 2FA",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "602a8527-cddc-4b1b-bc75-fc6831c8eb5c",
+														"exec": [
+															"pm.test(\"Status code is 200\", function () {\r",
+															"    pm.response.to.have.status(200);\r",
+															"});\r",
+															"\r",
+															"pm.test(\"Status code response is OK\", function () {\r",
+															"    pm.response.to.have.status('OK');\r",
+															"});\r",
+															"\r",
+															"var jsonData = pm.response.json();\r",
+															"\r",
+															"pm.test(\"Response body properties\", function () {\r",
+															"    pm.expect(jsonData).to.be.an('object');\r",
+															"    pm.expect(jsonData.status).to.be.a('string');\r",
+															"    pm.expect(jsonData.message).to.be.a('string');\r",
+															"});\r",
+															"\r",
+															"pm.test(\"Status is success\", function () {\r",
+															"    pm.expect(jsonData.status).to.eql('success');\r",
+															"});\r",
+															"\r",
+															"pm.test(\"Message is present\", function () {\r",
+															"    pm.expect(jsonData.message).to.eql('Successfully enabled 2FA');\r",
+															"});"
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
 											"id": "b9789a85-ced8-42dd-aba9-99716360a919",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -13550,7 +13619,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n    \"code\": \"714563\"\n}",
+													"raw": "{\n    \"code\": \"087371\"\n}",
 													"options": {
 														"raw": {
 															"language": "json"
