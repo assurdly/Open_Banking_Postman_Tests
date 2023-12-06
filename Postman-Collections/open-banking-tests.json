@@ -13465,9 +13465,15 @@
 												"disableBodyPruning": true
 											},
 											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{accesstoken}}"
+													}
+												},
 												"method": "POST",
 												"header": [],
-												"url": "{{Base_url}}/profile/two-fa"
+												"url": "{{Base_Url}}/profile/two-fa"
 											},
 											"response": [
 												{
@@ -13616,6 +13622,81 @@
 										}
 									],
 									"id": "bcba4f27-fb19-46ce-8cde-66c699ff52ad"
+								},
+								{
+									"name": "Disable 2FA",
+									"item": [
+										{
+											"name": "Disable 2FA",
+											"id": "f0b4b482-bb8b-45d5-a40c-c28ff8e36dea",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{accesstoken}}"
+													}
+												},
+												"method": "PATCH",
+												"header": [],
+												"url": "{{Base_Url}}/profile/two-fa/disable"
+											},
+											"response": [
+												{
+													"id": "c92199f2-a669-41ec-a187-253b4fb66f38",
+													"name": "Disable 2FA",
+													"originalRequest": {
+														"method": "PATCH",
+														"header": [],
+														"url": "{{Base_url}}/profile/two-fa/disable"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "X-Powered-By",
+															"value": "Express"
+														},
+														{
+															"key": "Access-Control-Allow-Origin",
+															"value": "*"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json; charset=utf-8"
+														},
+														{
+															"key": "Content-Length",
+															"value": "70"
+														},
+														{
+															"key": "ETag",
+															"value": "W/\"46-Wx+Jo/qXgfEiZpQns8yezEXtqg8\""
+														},
+														{
+															"key": "Date",
+															"value": "Tue, 05 Dec 2023 09:20:54 GMT"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=5"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"status\": \"success\",\n    \"message\": \"Successfully disabled 2FA\",\n    \"data\": null\n}"
+												}
+											]
+										}
+									],
+									"id": "fd2a3404-4657-4b57-bed1-246aa4b72927"
 								}
 							],
 							"id": "97aa6036-aeb6-4233-9c4c-14142dbe6747"
