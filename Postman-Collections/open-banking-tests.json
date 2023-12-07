@@ -7612,7 +7612,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{accesstoken}}"
+												"token": "{{accesstoken2FA}}"
 											}
 										},
 										"method": "POST",
@@ -7741,7 +7741,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{accesstoken}}"
+												"token": "{{accesstoken2FA}}"
 											}
 										},
 										"method": "POST",
@@ -7870,7 +7870,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{accesstoken}}"
+												"token": "{{accesstoken2FA}}"
 											}
 										},
 										"method": "POST",
@@ -8098,7 +8098,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{accesstoken}}"
+												"token": "{{accesstoken2FA}}"
 											}
 										},
 										"method": "GET",
@@ -8241,7 +8241,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{accesstoken}}"
+												"token": "{{accesstoken2FA}}"
 											}
 										},
 										"method": "PATCH",
@@ -8400,7 +8400,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{accesstoken}}"
+												"token": "{{accesstoken2FA}}"
 											}
 										},
 										"method": "PATCH",
@@ -8565,7 +8565,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{accesstoken}}"
+												"token": "{{accesstoken2FA}}"
 											}
 										},
 										"method": "PATCH",
