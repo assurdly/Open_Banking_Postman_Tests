@@ -2898,7 +2898,6 @@
 												"id": "dc5da0c0-8618-45db-acc3-0ae8d69cb637",
 												"exec": [
 													"var jsonData = pm.response.json();\r",
-													"pm.environment.set(\"email\", jsonData.data.email);\r",
 													"\r",
 													"\r",
 													"pm.test(\"Status code is 201\", function () {\r",
