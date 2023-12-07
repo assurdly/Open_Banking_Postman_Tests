@@ -6824,7 +6824,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"password\": \"Password1##\",\r\n    \"confirmPassword\": \"Password1##\"\r\n}",
+											"raw": "{\r\n    \"password\": \"Password1#\",\r\n    \"confirmPassword\": \"Password1#\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
