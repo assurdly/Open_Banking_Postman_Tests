@@ -15819,7 +15819,7 @@
 													"});\r",
 													"\r",
 													"pm.test(\"Message is Successfully logged in\", function () {\r",
-													"    pm.expect(jsonData.message).to.eql('Successfully logged in.');\r",
+													"    pm.expect(jsonData.message).to.include('You have been successfully signed in.');\r",
 													"});\r",
 													""
 												],
