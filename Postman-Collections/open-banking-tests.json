@@ -17976,7 +17976,7 @@
 										},
 										"method": "GET",
 										"header": [],
-										"url": "{{Base_Url}}/company"
+										"url": "{{Base_Url}}/company/me"
 									},
 									"response": [
 										{
@@ -18046,12 +18046,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{Base_Url}}/company/:companyId",
+											"raw": "{{Base_Url}}/companies/:companyId",
 											"host": [
 												"{{Base_Url}}"
 											],
 											"path": [
-												"company",
+												"companies",
 												":companyId"
 											],
 											"variable": [
