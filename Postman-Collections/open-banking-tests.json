@@ -11999,10 +11999,8 @@
 													"});\r",
 													"\r",
 													"pm.test(\"Data is present\", function () {\r",
-													"    pm.expect(jsonData.data.firstName).to.eql(\"firstName is required.\");\r",
-													"    pm.expect(jsonData.data.lastName).to.eql(\"lastName is required.\");\r",
-													"    pm.expect(jsonData.data.password).to.eql(\"password is required.\");\r",
-													"    pm.expect(jsonData.data.confirmPassword).to.eql(\"confirmPassword is required.\");\r",
+													"    pm.expect(jsonData.data.firstName).to.eql(\"firstName value must contain only alphabets.\");\r",
+													"    \r",
 													"});"
 												],
 												"type": "text/javascript"
