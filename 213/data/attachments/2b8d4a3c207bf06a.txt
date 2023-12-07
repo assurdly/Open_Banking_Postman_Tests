@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully fetched APIs","data":[{"id":"875c046b-4df3-4a8e-a25a-157851623576","name":"Get Account1","enabled":true,"url":null,"route":{"paths":["/account1"],"methods":["GET"]}}],"_meta":{"totalNumberOfRecords":1,"totalNumberOfPages":1,"pageNumber":1,"pageSize":20}}

@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully updated profile","data":{"id":"bd350503-fcc8-40ff-a08f-b81b688ef63f","firstName":"Adew","lastName":"Wunmi","companyRole":"SOFTWARE_ENGINEER","phone":null,"country":null,"userId":"b05801c7-9437-4eaf-8ea8-f4c75cffe107","createdAt":"2023-11-10T15:55:55.448Z","updatedAt":"2023-12-07T14:05:06.000Z","deletedAt":null}}
