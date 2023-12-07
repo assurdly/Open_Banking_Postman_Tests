@@ -7236,7 +7236,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{accesstoken}}"
+												"token": "{{accesstoken2FA}}"
 											}
 										},
 										"method": "PATCH",
