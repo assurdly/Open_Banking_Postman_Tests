@@ -2760,6 +2760,10 @@
 													"    pm.response.to.have.status(201);\r",
 													"});\r",
 													"\r",
+													"pm.test(\"Status code is 201\", function () {\r",
+													"    pm.response.to.have.status(201);\r",
+													"});\r",
+													"\r",
 													"pm.test(\"Status code response is Created\", function () {\r",
 													"    pm.response.to.have.status('Created');\r",
 													"});\r",
@@ -2795,6 +2799,16 @@
 													"pm.test(\"ID should not be empty\", function () {\r",
 													"    pm.expect(jsonData.data.id).to.not.be.empty;\r",
 													"});"
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "e12882b5-2b2d-4bdb-9bdb-7aa0071ae7ca",
+												"exec": [
+													"pm.environment.set(\"Base_Url\", \"http://3.134.253.153:4000\")"
 												],
 												"type": "text/javascript"
 											}
