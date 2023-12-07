@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully updated collection","data":{"id":"e56c5af8-2bb4-4e85-9117-92749351340d","name":"Accounts","slug":"accounts","description":"Accounting","createdAt":"2023-11-22T08:56:04.806Z","updatedAt":"2023-11-22T09:06:52.000Z","deletedAt":null}}

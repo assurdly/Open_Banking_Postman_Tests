@@ -1,0 +1,1 @@
+{"status":"success","message":"An email with instructions to reset your password has been sent to thelma-reichert@test.com","data":"a37eaf6f57d9b538a62b58fde855f5846c030e6e"}
