@@ -1,0 +1,1 @@
+{"status":"success","message":"Welcome. You have been successfully signed in.","data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImVhNTc1NDQ4LTZhMWEtNDJlYy04NGJkLTllNjg2ZmZhMzA5ZSIsImlhdCI6MTcwMTk1ODg3MiwiZXhwIjoxNzAxOTU5NzcyfQ.MH0DKj5da5u6ZYnL3zqN-aPw0qK5LtLuM1EZ2J_JoiY"}
