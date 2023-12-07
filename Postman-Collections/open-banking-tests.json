@@ -6847,6 +6847,8 @@
 													"\r",
 													"var jsonData = pm.response.json();\r",
 													"pm.environment.set(\"accesstoken2FA\", jsonData.data);\r",
+													"pm.environment.set(\"accesstoken\", jsonData.data);\r",
+													"\r",
 													"\r",
 													"pm.test(\"Response body properties\", function () {\r",
 													"    pm.expect(jsonData).to.be.an('object');\r",
@@ -6876,7 +6878,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"email\": \"{{email}}\",\n    \"password\": \"Password1#\",\n    \"code\": \"258377\"\n}",
+											"raw": "{\n    \"email\": \"{{email}}\",\n    \"password\": \"Password1##\",\n    \"code\": \"258377\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -7483,14 +7485,14 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{accesstoken}}"
+												"token": "{{accesstoken2FA}}"
 											}
 										},
 										"method": "POST",
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"Gatekeeper1\",\n    \"description\": \"Gate keeping\",\n    \"status\": \"active\"\n}",
+											"raw": "{\n    \"name\": \"{{$randomWord}}\",\n    \"description\": \"Gate keeping\",\n    \"status\": \"active\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -10600,7 +10602,7 @@
 													"    pm.expect(jsonData.timestamp).to.be.a('string');\r",
 													"    pm.expect(jsonData.status).to.be.a('number');\r",
 													"    pm.expect(jsonData.success).to.be.a('boolean');\r",
-													"    pm.expect(jsonData.message).to.be.an('array');\r",
+													"    pm.expect(jsonData.message).to.be.an('string');\r",
 													"});\r",
 													"\r",
 													"pm.test(\"Status is 400\", function () {\r",
@@ -10612,7 +10614,7 @@
 													"});\r",
 													"\r",
 													"pm.test(\"Message is present\", function () {\r",
-													"    pm.expect(jsonData.message[0]).to.eql(\"firstName should not be empty\");\r",
+													"    pm.expect(jsonData.data.firstName).to.eql(\"firstName value should have at least 2 characters.\");\r",
 													"});"
 												],
 												"type": "text/javascript"
@@ -10627,7 +10629,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{accesstoken}}"
+												"token": "{{accesstoken2FA}}"
 											}
 										},
 										"method": "POST",
@@ -10723,7 +10725,7 @@
 													"    pm.expect(jsonData.timestamp).to.be.a('string');\r",
 													"    pm.expect(jsonData.status).to.be.a('number');\r",
 													"    pm.expect(jsonData.success).to.be.a('boolean');\r",
-													"    pm.expect(jsonData.message).to.be.an('array');\r",
+													"    pm.expect(jsonData.message).to.be.an('string');\r",
 													"});\r",
 													"\r",
 													"pm.test(\"Status is 400\", function () {\r",
@@ -10735,7 +10737,7 @@
 													"});\r",
 													"\r",
 													"pm.test(\"Message is present\", function () {\r",
-													"    pm.expect(jsonData.message[0]).to.eql(\"lastName should not be empty\");\r",
+													"    pm.expect(jsonData.data.lastName).to.eql(\"lastName value should have at least 2 characters.\");\r",
 													"});"
 												],
 												"type": "text/javascript"
@@ -10846,7 +10848,7 @@
 													"    pm.expect(jsonData.timestamp).to.be.a('string');\r",
 													"    pm.expect(jsonData.status).to.be.a('number');\r",
 													"    pm.expect(jsonData.success).to.be.a('boolean');\r",
-													"    pm.expect(jsonData.message).to.be.an('array');\r",
+													"    pm.expect(jsonData.message).to.be.an('string');\r",
 													"});\r",
 													"\r",
 													"pm.test(\"Status is 400\", function () {\r",
@@ -10857,8 +10859,9 @@
 													"    pm.expect(jsonData.success).to.eql(false);\r",
 													"});\r",
 													"\r",
+													"\r",
 													"pm.test(\"Message is present\", function () {\r",
-													"    pm.expect(jsonData.message[0]).to.eql(\"roleId should not be empty\");\r",
+													"    pm.expect(jsonData.data.roleId).to.eql(\"roleId should not be empty\");\r",
 													"});"
 												],
 												"type": "text/javascript"
