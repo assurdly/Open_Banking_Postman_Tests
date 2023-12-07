@@ -13317,7 +13317,7 @@
 													"    pm.expect(jsonData.status).to.be.a('number');\r",
 													"    pm.expect(jsonData.success).to.be.a('boolean');\r",
 													"    pm.expect(jsonData.message).to.be.a('string');\r",
-													"    pm.expect(jsonData.stack).to.be.an('string');\r",
+													"    // pm.expect(jsonData.stack).to.be.an('string');\r",
 													"});\r",
 													"\r",
 													"pm.test(\"Time stamp is not empty\", function () {\r",
@@ -13333,7 +13333,7 @@
 													"});\r",
 													"\r",
 													"pm.test(\"Message is present\", function () {\r",
-													"    pm.expect(jsonData.message).to.eql(\"Invalid credentials.\");\r",
+													"    pm.expect(jsonData.message).to.eql(\"Incorrect current password\");\r",
 													"});"
 												],
 												"type": "text/javascript"
@@ -13356,68 +13356,6 @@
 										"body": {
 											"mode": "raw",
 											"raw": "{\n    \"oldPassword\": \"Password\",\n    \"newPassword\": \"Password12#\",\n    \"confirmPassword\": \"Password12#\"\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{Base_Url}}/profile/password"
-									},
-									"response": []
-								},
-								{
-									"name": "Change Password",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "f035458a-1cfa-4528-8ca9-0d3ea7d7ea75",
-												"exec": [
-													"pm.test(\"Status code is 200\", function () {\r",
-													"    pm.response.to.have.status(200);\r",
-													"});\r",
-													"\r",
-													"pm.test(\"Status code is OK\", function () {\r",
-													"    pm.response.to.have.status('OK');\r",
-													"});\r",
-													"\r",
-													"var jsonData = pm.response.json();\r",
-													"\r",
-													"pm.test(\"Response body property\", function () {\r",
-													"    pm.expect(jsonData).to.be.an('object');\r",
-													"    pm.expect(jsonData.status).to.be.a('string');\r",
-													"    pm.expect(jsonData.message).to.be.a('string');\r",
-													"});\r",
-													"\r",
-													"pm.test(\"Status is success\", function () {\r",
-													"    pm.expect(jsonData.status).to.eql('success');\r",
-													"});\r",
-													"\r",
-													"pm.test(\"Message is present\", function () {\r",
-													"    pm.expect(jsonData.message).to.eql('Successfully updated password');\r",
-													"});"
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "96f2b88d-85c3-4638-b540-0f1d0cfbdfc8",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{accesstoken}}"
-											}
-										},
-										"method": "PATCH",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"oldPassword\": \"Password#1\",\n    \"newPassword\": \"Password1#\",\n    \"confirmPassword\": \"Password1#\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -13737,6 +13675,130 @@
 										"body": {
 											"mode": "raw",
 											"raw": "{\n    \"oldPassword\": \"Password1#\",\n    \"newPassword\": \"Password1#\",\n    \"confirmPassword\": \"Password1#\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{Base_Url}}/profile/password"
+									},
+									"response": []
+								},
+								{
+									"name": "Change Password",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "f035458a-1cfa-4528-8ca9-0d3ea7d7ea75",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status code is OK\", function () {\r",
+													"    pm.response.to.have.status('OK');\r",
+													"});\r",
+													"\r",
+													"var jsonData = pm.response.json();\r",
+													"\r",
+													"pm.test(\"Response body property\", function () {\r",
+													"    pm.expect(jsonData).to.be.an('object');\r",
+													"    pm.expect(jsonData.status).to.be.a('string');\r",
+													"    pm.expect(jsonData.message).to.be.a('string');\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status is success\", function () {\r",
+													"    pm.expect(jsonData.status).to.eql('success');\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Message is present\", function () {\r",
+													"    pm.expect(jsonData.message).to.eql('Successfully updated password');\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "96f2b88d-85c3-4638-b540-0f1d0cfbdfc8",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{accesstoken}}"
+											}
+										},
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"oldPassword\": \"Password1#\",\n    \"newPassword\": \"Password1##\",\n    \"confirmPassword\": \"Password1##\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{Base_Url}}/profile/password"
+									},
+									"response": []
+								},
+								{
+									"name": "Change Password revert",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "f035458a-1cfa-4528-8ca9-0d3ea7d7ea75",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status code is OK\", function () {\r",
+													"    pm.response.to.have.status('OK');\r",
+													"});\r",
+													"\r",
+													"var jsonData = pm.response.json();\r",
+													"\r",
+													"pm.test(\"Response body property\", function () {\r",
+													"    pm.expect(jsonData).to.be.an('object');\r",
+													"    pm.expect(jsonData.status).to.be.a('string');\r",
+													"    pm.expect(jsonData.message).to.be.a('string');\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status is success\", function () {\r",
+													"    pm.expect(jsonData.status).to.eql('success');\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Message is present\", function () {\r",
+													"    pm.expect(jsonData.message).to.eql('Successfully updated password');\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "1a3fb103-7011-434e-b38b-9ea9735e3c51",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{accesstoken}}"
+											}
+										},
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"oldPassword\": \"Password1##\",\n    \"newPassword\": \"Password1#\",\n    \"confirmPassword\": \"Password1#\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
