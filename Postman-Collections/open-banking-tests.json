@@ -6821,7 +6821,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "46fd7fa0-f6c5-49fa-9125-1f566023061e",
+												"id": "0ad3319e-3f4a-4ada-8786-e824f2270c59",
 												"exec": [
 													"pm.test(\"Status code is 201\", function () {\r",
 													"    pm.response.to.have.status(201);\r",
@@ -6832,6 +6832,7 @@
 													"});\r",
 													"\r",
 													"var jsonData = pm.response.json();\r",
+													"pm.environment.set(\"accesstoken2FA\", jsonData.data);\r",
 													"\r",
 													"pm.test(\"Response body properties\", function () {\r",
 													"    pm.expect(jsonData).to.be.an('object');\r",
@@ -6861,7 +6862,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"email\": \"{{email}}\",\n    \"password\": \"Password1#\",\n    \"code\": \"920617\"\n}",
+											"raw": "{\n    \"email\": \"{{email}}\",\n    \"password\": \"Password1#\",\n    \"code\": \"258377\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -10497,7 +10498,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"email\": \"eunice26@mailinator.com\",\n    \"firstName\": \"Uniq\",\n    \"lastName\": \"Okok\",\n    \"roleId\": \"ac34603e-aa21-401b-b297-59067e470b9d\"\n}",
+											"raw": "{\n    \"email\": \"eunice301@mailinator.com\",\n    \"firstName\": \"Uniq\",\n    \"lastName\": \"Okok\",\n    \"roleId\": \"15a6745c-f485-4857-9f9b-2e66ac4bce9c\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -20646,7 +20647,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"email\": \"eunice31@mailinator.com\",\n    \"firstName\": \"Thio\",\n    \"lastName\": \"Man\",\n    \"roleId\": \"7895c397-55b7-458c-83d6-75e5caf42af1\"\n}",
+											"raw": "{\n    \"email\": \"eunice35@mailinator.com\",\n    \"firstName\": \"Thio\",\n    \"lastName\": \"Man\",\n    \"roleId\": \"7895c397-55b7-458c-83d6-75e5caf42af1\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -22365,7 +22366,7 @@
 												},
 												{
 													"key": "filter[status]",
-													"value": "",
+													"value": "active",
 													"disabled": true
 												},
 												{
@@ -24662,7 +24663,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{Base_Url}}/audit-trail?page=1&limit=2",
+									"raw": "{{Base_Url}}/audit-trail?page=1&limit=20",
 									"host": [
 										"{{Base_Url}}"
 									],
@@ -24676,7 +24677,7 @@
 										},
 										{
 											"key": "limit",
-											"value": "2"
+											"value": "20"
 										},
 										{
 											"key": "filter[event]",
@@ -24685,7 +24686,7 @@
 										},
 										{
 											"key": "filter[createdAt][gt]",
-											"value": "2023-11-11T17:20:57.737Z",
+											"value": "2023-12-07T07:35:22.077Z",
 											"disabled": true
 										},
 										{
@@ -24932,7 +24933,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"Settings\",\n    \"description\": \"System settings\"\n}",
+											"raw": "{\n    \"name\": \"Settings Reloaded\",\n    \"description\": \"System settings\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -25911,7 +25912,7 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "e56c5af8-2bb4-4e85-9117-92749351340d"
+													"value": "7fa6c0e7-ecde-4490-ba24-617eb38ee541"
 												}
 											]
 										}
@@ -28667,7 +28668,7 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "4708a714-c3fc-4b11-b798-e3d9fd1aa33a"
+													"value": "7fa6c0e7-ecde-4490-ba24-617eb38ee541"
 												}
 											]
 										}
