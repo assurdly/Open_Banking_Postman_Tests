@@ -2890,6 +2890,151 @@
 									]
 								},
 								{
+									"name": "Sign Up  - Company role",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "dc5da0c0-8618-45db-acc3-0ae8d69cb637",
+												"exec": [
+													"var jsonData = pm.response.json();\r",
+													"pm.environment.set(\"email\", jsonData.data.email);\r",
+													"\r",
+													"\r",
+													"pm.test(\"Status code is 201\", function () {\r",
+													"    pm.response.to.have.status(201);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status code is 201\", function () {\r",
+													"    pm.response.to.have.status(201);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status code response is Created\", function () {\r",
+													"    pm.response.to.have.status('Created');\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Response body properties\", function () {\r",
+													"    pm.expect(jsonData).to.be.an('object');\r",
+													"    pm.expect(jsonData.status).to.be.a('string');\r",
+													"    pm.expect(jsonData.message).to.be.a('string');\r",
+													"    pm.expect(jsonData.data).to.be.an('object');\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Your test name\", function () {\r",
+													"    pm.expect(jsonData.status).to.eql('success');\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Email is in a valid format\", function () {\r",
+													"    pm.expect(jsonData.data.email).to.match(/^[\\w-]+(\\.[\\w-]+)*@([\\w-]+\\.)+[a-zA-Z]{2,7}$/);\r",
+													"});\r",
+													"\r",
+													"\r",
+													"pm.test(\"Phone number has a valid length\", function () {\r",
+													"    pm.expect(jsonData.data.profile.phone).to.have.lengthOf.at.least(10);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Phone number has a valid length\", function () {\r",
+													"    pm.expect(jsonData.data.profile.phone).to.have.lengthOf.at.most(11);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"roleID should not be empty\", function () {\r",
+													"    pm.expect(jsonData.data.roleId).to.not.be.empty;\r",
+													"});\r",
+													"\r",
+													"pm.test(\"ID should not be empty\", function () {\r",
+													"    pm.expect(jsonData.data.id).to.not.be.empty;\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "e12882b5-2b2d-4bdb-9bdb-7aa0071ae7ca",
+												"exec": [
+													"pm.environment.set(\"Base_Url\", \"http://3.134.253.153:4000\")"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "f815d8ec-4c61-49be-9d5a-8d6ee23fecf1",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"{{$randomFirstName}}-{{$randomLastName}}@test.com\",\r\n    \"password\": \"Password1#\",\r\n    \"confirmPassword\": \"Password1#\",\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Doe\",\r\n    \"country\": \"NGN\",\r\n    \"companyName\": \"NexusInc.\",\r\n    \"companyType\": \"BANK\",\r\n    \"companyRole\": \"SOFTWARE_ENGINEER\",\r\n    \"phone\": \"08123456789\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{Base_Url}}/auth/signup"
+									},
+									"response": [
+										{
+											"id": "75061878-ea5c-4303-a853-5d56dd52be4a",
+											"name": "success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"email\": \"test@test.com\",\r\n    \"password\": \"Password1#\",\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Doe\",\r\n    \"country\": \"NGN\",\r\n    \"companyName\": \"NexusInc.\",\r\n    \"companyType\": \"BANK\",\r\n    \"companyRole\": \"SOFTWARE_ENGINEER\",\r\n    \"phone\": \"08123456789\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{base_url}}/auth/signup"
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "X-Powered-By",
+													"value": "Express"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "290"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"122-0P2tqtdlFL3zj8z0eKVQh8ZISc0\""
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 05 Nov 2023 23:57:24 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=5"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": {\n        \"email\": \"test@test.com\",\n        \"companyId\": \"8d66b6f4-6578-4af8-becb-795cb6671e2a\",\n        \"profileId\": \"78d3364e-e14c-46c5-95e7-3ee5bbffae4d\",\n        \"id\": \"ce053cf9-b80e-4d34-9c90-679e1f4ce094\",\n        \"createdAt\": \"2023-11-05T23:57:24.254Z\",\n        \"updatedAt\": \"2023-11-05T23:57:24.254Z\"\n    }\n}"
+										}
+									]
+								},
+								{
 									"name": "Sign Up  - Company Type",
 									"event": [
 										{
@@ -7644,7 +7789,7 @@
 										},
 										"method": "GET",
 										"header": [],
-										"url": "{{Base_Url}}/company"
+										"url": "{{Base_Url}}/company/me"
 									},
 									"response": [
 										{
