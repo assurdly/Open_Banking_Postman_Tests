@@ -9918,7 +9918,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{accesstoken}}"
+												"token": "{{accesstoken2FA}}"
 											}
 										},
 										"method": "PUT",
@@ -10210,7 +10210,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{accesstoken}}"
+												"token": "{{accesstoken2FA}}"
 											}
 										},
 										"method": "PUT",
@@ -10347,7 +10347,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{accesstoken}}"
+												"token": "{{accesstoken2FA}}"
 											}
 										},
 										"method": "PUT",
@@ -10504,14 +10504,14 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{accesstoken}}"
+												"token": "{{accesstoken2FA}}"
 											}
 										},
 										"method": "POST",
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"email\": \"eunice301@mailinator.com\",\n    \"firstName\": \"Uniq\",\n    \"lastName\": \"Okok\",\n    \"roleId\": \"15a6745c-f485-4857-9f9b-2e66ac4bce9c\"\n}",
+											"raw": "{\n    \"email\": \"{{$randomFirstName}}@mailinator.com\",\n    \"firstName\": \"Uniq\",\n    \"lastName\": \"Okok\",\n    \"roleId\": \"{{roleId}}\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
