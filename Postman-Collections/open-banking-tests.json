@@ -22336,13 +22336,13 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{accesstoken}}"
+												"token": "{{accesstoken_AP}}"
 											}
 										},
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{Base_Url}}/users?page=1&limit=20&filter[email]=eunice25@mailinator.com",
+											"raw": "{{Base_Url}}/users?page=1&limit=20",
 											"host": [
 												"{{Base_Url}}"
 											],
@@ -22385,7 +22385,8 @@
 												},
 												{
 													"key": "filter[email]",
-													"value": "eunice25@mailinator.com"
+													"value": "eunice25@mailinator.com",
+													"disabled": true
 												},
 												{
 													"key": "filter[role]",
