@@ -14520,7 +14520,51 @@
 									"id": "fd2a3404-4657-4b57-bed1-246aa4b72927"
 								}
 							],
-							"id": "97aa6036-aeb6-4233-9c4c-14142dbe6747"
+							"id": "97aa6036-aeb6-4233-9c4c-14142dbe6747",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "f3d9848f-b84e-441f-9bbd-3a66ec9a3871",
+										"type": "text/javascript",
+										"exec": [
+											"// Get the current request object",
+											"var request = pm.request;",
+											"",
+											"// Get the name of the folder containing this request",
+											"var folderName = pm.info.parentName; // This returns the folder name",
+											"",
+											"// Define the folder to skip",
+											"var folderToSkip = \"2FA\"; // Change this to the actual folder name you want to skip",
+											"",
+											"// Check if the current folder is the one to skip",
+											"if (folderName === folderToSkip) {",
+											"    console.log(\"Skipping requests in folder:\", folderToSkip);",
+											"    postman.setNextRequest(null); // This will skip the current request",
+											"} else {",
+											"    console.log(\"Executing request in folder:\", folderName);",
+											"",
+											"    // Add your other pre-request script logic here",
+											"    // ...",
+											"",
+											"    // Update the request URL or perform other actions if needed",
+											"    // request.url = \"new URL\";",
+											"}",
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "dee6fe80-9d9d-4784-bd69-b8b7f8964de3",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							]
 						}
 					],
 					"id": "011de4f9-9c83-47e2-bdf0-eab603d54026"
