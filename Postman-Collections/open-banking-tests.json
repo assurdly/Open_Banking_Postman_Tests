@@ -6660,6 +6660,272 @@
 									]
 								},
 								{
+									"name": "Forgot Password Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "53041fe6-69ee-49ad-bd66-d90a8adb4815",
+												"exec": [
+													"pm.test(\"Status code is 201\", function () {\r",
+													"    pm.response.to.have.status(201);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status code response is Created\", function () {\r",
+													"    pm.response.to.have.status('Created');\r",
+													"});\r",
+													"\r",
+													"var jsonData = pm.response.json();\r",
+													"pm.environment.set(\"reset_token\", jsonData.data);\r",
+													"\r",
+													"pm.test(\"Response body property\", function () {\r",
+													"    pm.expect(jsonData).to.be.an('object');\r",
+													"    pm.expect(jsonData.status).to.be.a('string');\r",
+													"    pm.expect(jsonData.message).to.be.a('string');\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status is success\", function () {\r",
+													"    pm.expect(jsonData.status).to.eql('success');\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Message is Reset password email sent to test@test.com\", function () {\r",
+													"    pm.expect(jsonData.message).to.include('An email with instructions to reset your password has been sent to');\r",
+													"});\r",
+													"\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "c92ed7cf-82c6-4950-9751-42733af89f45",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"{{email}}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{Base_Url}}/auth/password/forgot"
+									},
+									"response": [
+										{
+											"id": "6247e733-1795-4f99-a1c3-5241c71755f2",
+											"name": "success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"email\": \"test@test.com\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{base_url}}/auth/password/forgot"
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "X-Powered-By",
+													"value": "Express"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "125"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"7d-IcpCem+kyvOCbWNdCKQenxxrDi0\""
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 06 Nov 2023 00:35:34 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=5"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"status\": \"success\",\n    \"message\": \"Reset password email sent to test@test.com\",\n    \"data\": \"19cb098fb02d2a9ae4256abc1ac970824cb105c6\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Reset Password Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "f5d27694-2e0c-47a9-9cf9-00edafdb9657",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status code response is OK\", function () {\r",
+													"    pm.response.to.have.status('OK');\r",
+													"});\r",
+													"\r",
+													"var jsonData = pm.response.json();\r",
+													"\r",
+													"pm.test(\"Response body property\", function () {\r",
+													"    pm.expect(jsonData).to.be.an('object');\r",
+													"    pm.expect(jsonData.status).to.be.a('string');\r",
+													"    pm.expect(jsonData.message).to.be.a('string');\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status is success\", function () {\r",
+													"    pm.expect(jsonData.status).to.eql('success');\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Message is present\", function () {\r",
+													"    pm.expect(jsonData.message).to.eql('Your password has been successfully reset. Please proceed to login.');\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "adbd1a04-d1da-492a-b2c5-382a828c2479",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{accesstoken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"password\": \"Password1##\",\r\n    \"confirmPassword\": \"Password1##\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{Base_Url}}/auth/password/reset/:resetToken",
+											"host": [
+												"{{Base_Url}}"
+											],
+											"path": [
+												"auth",
+												"password",
+												"reset",
+												":resetToken"
+											],
+											"variable": [
+												{
+													"id": "70eb4ece-7a53-442b-a15e-645e65443c1b",
+													"key": "resetToken",
+													"value": "{{reset_token}}"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "64f3e29f-82b6-4bc6-b8d1-5d7d13d1400d",
+											"name": "success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"password\": \"Password123@\",\r\n    \"confirmPassword\": \"Password123@\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{base_url}}/auth/password/reset/:resetToken",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"auth",
+														"password",
+														"reset",
+														":resetToken"
+													],
+													"variable": [
+														{
+															"key": "resetToken",
+															"value": "2643605d88ed0aaf92e642dff9324568a2e9248c"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "X-Powered-By",
+													"value": "Express"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "100"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"64-c3/uRIyp85K08xdAC5KGPS8hMww\""
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 06 Nov 2023 08:12:35 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=5"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"status\": \"success\",\n    \"message\": \"Your password has been successfully reset. Please proceed to login.\"\n}"
+										}
+									]
+								},
+								{
 									"name": "Reset Password - Used token",
 									"event": [
 										{
@@ -6878,7 +7144,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"email\": \"{{email}}\",\n    \"password\": \"Password1##\",\n    \"code\": \"258377\"\n}",
+											"raw": "{\n    \"email\": \"{{email}}\",\n    \"password\": \"Password1#\",\n    \"code\": \"258377\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
