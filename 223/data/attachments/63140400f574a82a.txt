@@ -1,0 +1,1 @@
+{"status":"success","message":"An email with instructions to reset your password has been sent to idella-upton@test.com","data":"8a10869d84c09f660293cd3a72a400768c9b8a62"}
