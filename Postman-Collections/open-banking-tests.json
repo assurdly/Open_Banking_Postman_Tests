@@ -4153,7 +4153,7 @@
 													"    pm.expect(jsonData.timestamp).to.be.a('string');\r",
 													"    pm.expect(jsonData.status).to.be.a('number');\r",
 													"    pm.expect(jsonData.success).to.be.a('boolean');\r",
-													"    pm.expect(jsonData.message).to.be.an('array');\r",
+													"    pm.expect(jsonData.message).to.be.an('string');\r",
 													"    pm.expect(jsonData.stack).to.be.an('string');\r",
 													"});\r",
 													"\r",
@@ -4170,7 +4170,7 @@
 													"});\r",
 													"\r",
 													"pm.test(\"Message is present\", function () {\r",
-													"    pm.expect(jsonData.message[0]).to.eql(\"lastName should not be empty\");\r",
+													"    pm.expect(jsonData.data.lastName).to.eql(\"lastName is required.\");\r",
 													"});"
 												],
 												"type": "text/javascript"
@@ -4276,7 +4276,7 @@
 													"    pm.expect(jsonData.timestamp).to.be.a('string');\r",
 													"    pm.expect(jsonData.status).to.be.a('number');\r",
 													"    pm.expect(jsonData.success).to.be.a('boolean');\r",
-													"    pm.expect(jsonData.message).to.be.an('array');\r",
+													"    pm.expect(jsonData.message).to.be.an('string');\r",
 													"    pm.expect(jsonData.stack).to.be.an('string');\r",
 													"});\r",
 													"\r",
@@ -4293,7 +4293,7 @@
 													"});\r",
 													"\r",
 													"pm.test(\"Message is present\", function () {\r",
-													"    pm.expect(jsonData.message[0]).to.eql(\"firstName should not be empty\");\r",
+													"    pm.expect(jsonData.data.firstName).to.eql(\"firstName value must contain only alphabets.\");\r",
 													"});"
 												],
 												"type": "text/javascript"
@@ -4399,7 +4399,7 @@
 													"    pm.expect(jsonData.timestamp).to.be.a('string');\r",
 													"    pm.expect(jsonData.status).to.be.a('number');\r",
 													"    pm.expect(jsonData.success).to.be.a('boolean');\r",
-													"    pm.expect(jsonData.message).to.be.an('array');\r",
+													"    pm.expect(jsonData.message).to.be.an('string');\r",
 													"    pm.expect(jsonData.stack).to.be.an('string');\r",
 													"});\r",
 													"\r",
@@ -4416,7 +4416,7 @@
 													"});\r",
 													"\r",
 													"pm.test(\"Message is present\", function () {\r",
-													"    pm.expect(jsonData.message[0]).to.eql(\"firstName should not be empty\");\r",
+													"    pm.expect(jsonData.data.lastName).to.eql(\"lastName value must contain only alphabets.\");\r",
 													"});"
 												],
 												"type": "text/javascript"
@@ -4522,7 +4522,7 @@
 													"    pm.expect(jsonData.timestamp).to.be.a('string');\r",
 													"    pm.expect(jsonData.status).to.be.a('number');\r",
 													"    pm.expect(jsonData.success).to.be.a('boolean');\r",
-													"    pm.expect(jsonData.message).to.be.an('array');\r",
+													"    pm.expect(jsonData.message).to.be.an('string');\r",
 													"    pm.expect(jsonData.stack).to.be.an('string');\r",
 													"});\r",
 													"\r",
@@ -4539,7 +4539,7 @@
 													"});\r",
 													"\r",
 													"pm.test(\"Message is present\", function () {\r",
-													"    pm.expect(jsonData.message[0]).to.eql(\"firstName should not be empty\");\r",
+													"    pm.expect(jsonData.data.firstName).to.eql(\"firstName value should have at least 2 characters.\");\r",
 													"});"
 												],
 												"type": "text/javascript"
@@ -4567,6 +4567,129 @@
 									"response": [
 										{
 											"id": "ea83db8a-2fc3-4c1f-a504-9c5f40c8503e",
+											"name": "success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"email\": \"test@test.com\",\r\n    \"password\": \"Password1#\",\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Doe\",\r\n    \"country\": \"NGN\",\r\n    \"companyName\": \"NexusInc.\",\r\n    \"companyType\": \"BANK\",\r\n    \"companyRole\": \"SOFTWARE_ENGINEER\",\r\n    \"phone\": \"08123456789\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{base_url}}/auth/signup"
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "X-Powered-By",
+													"value": "Express"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "290"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"122-0P2tqtdlFL3zj8z0eKVQh8ZISc0\""
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 05 Nov 2023 23:57:24 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=5"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": {\n        \"email\": \"test@test.com\",\n        \"companyId\": \"8d66b6f4-6578-4af8-becb-795cb6671e2a\",\n        \"profileId\": \"78d3364e-e14c-46c5-95e7-3ee5bbffae4d\",\n        \"id\": \"ce053cf9-b80e-4d34-9c90-679e1f4ce094\",\n        \"createdAt\": \"2023-11-05T23:57:24.254Z\",\n        \"updatedAt\": \"2023-11-05T23:57:24.254Z\"\n    }\n}"
+										}
+									]
+								},
+								{
+									"name": "Sign Up - Invalid first-name(numbers) Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "311539f5-c239-46da-9b69-bd7fe8666890",
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {\r",
+													"    pm.response.to.have.status(400);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status code response is Bad Request\", function () {\r",
+													"    pm.response.to.have.status('Bad Request');\r",
+													"});\r",
+													"\r",
+													"\r",
+													"var jsonData = pm.response.json();\r",
+													"\r",
+													"pm.test(\"Response body properties\", function () {\r",
+													"    pm.expect(jsonData).to.be.an('object');\r",
+													"    pm.expect(jsonData.timestamp).to.be.a('string');\r",
+													"    pm.expect(jsonData.status).to.be.a('number');\r",
+													"    pm.expect(jsonData.success).to.be.a('boolean');\r",
+													"    pm.expect(jsonData.message).to.be.an('string');\r",
+													"    pm.expect(jsonData.stack).to.be.an('string');\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Time stamp is not empty\", function () {\r",
+													"    pm.expect(jsonData.timestamp).to.not.be.empty;\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Status is 400\", function () {\r",
+													"    pm.expect(jsonData.status).to.eql(400);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Success is false\", function () {\r",
+													"    pm.expect(jsonData.success).to.eql(false);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Message is present\", function () {\r",
+													"    pm.expect(jsonData.data.firstName).to.eql(\"firstName value must contain only alphabets.\");\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "018733f4-0430-470c-9b52-dd6688e93c25",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"{{$randomAlphaNumeric}}@mailinator.com\",\r\n    \"password\": \"Password1#\",\r\n    \"confirmPassword\": \"Password1#\",\r\n    \"firstName\": \"1254\",\r\n    \"lastName\": \"Doe\",\r\n    \"country\": \"NGN\",\r\n    \"companyName\": \"NexusInc.\",\r\n    \"companyType\": \"BANK\",\r\n    \"companyRole\": \"SOFTWARE_ENGINEER\",\r\n    \"phone\": \"08123456789\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{Base_Url}}/auth/signup"
+									},
+									"response": [
+										{
+											"id": "a5ca8049-d8d4-432e-a741-e09c354c8a33",
 											"name": "success",
 											"originalRequest": {
 												"method": "POST",
