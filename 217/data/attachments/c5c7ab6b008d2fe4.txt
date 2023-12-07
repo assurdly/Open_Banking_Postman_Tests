@@ -1,0 +1,1 @@
+{"status":"success","message":"An email with instructions to reset your password has been sent to osborne-howe@test.com","data":"dd6350db3d5cd0895693d15764b061287263f052"}
