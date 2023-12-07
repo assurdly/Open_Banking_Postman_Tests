@@ -1,1 +1,0 @@
-{"status":"success","message":"An email with instructions to reset your password has been sent to info@randombank.com","data":"c559c93dde3a470b9fad4c7eae81a3eab5bb87cb"}
