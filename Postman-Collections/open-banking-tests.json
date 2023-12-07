@@ -6368,7 +6368,7 @@
 													"    pm.expect(jsonData.timestamp).to.be.a('string');\r",
 													"    pm.expect(jsonData.status).to.be.a('number');\r",
 													"    pm.expect(jsonData.success).to.be.a('boolean');\r",
-													"    pm.expect(jsonData.message).to.be.an('array');\r",
+													"    pm.expect(jsonData.message).to.be.an('string');\r",
 													"    pm.expect(jsonData.stack).to.be.an('string');\r",
 													"});\r",
 													"\r",
@@ -6385,10 +6385,7 @@
 													"});\r",
 													"\r",
 													"pm.test(\"Message is present\", function () {\r",
-													"    pm.expect(jsonData.message).to.eql(\"password value must contain at least 1 number, 1 special character, 1 uppercase and 1 lowercase letter and be at least 8 characters in length.\",\r",
-													"        \"password value is empty.\",\r",
-													"        \"confirmPassword value must contain at least 1 number, 1 special character, 1 uppercase and 1 lowercase letter and be at least 8 characters in length.\",\r",
-													"        \"confirmPassword value is empty.\");\r",
+													"    pm.expect(jsonData.data.password).to.eql(\"password is required.\");\r",
 													"});"
 												],
 												"type": "text/javascript"
@@ -6562,7 +6559,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"password\": \"Password1#\",\r\n    \"confirmPassword\": \"Password1#\"\r\n}",
+											"raw": "{\r\n    \"password\": \"Password1##\",\r\n    \"confirmPassword\": \"Password1##\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
