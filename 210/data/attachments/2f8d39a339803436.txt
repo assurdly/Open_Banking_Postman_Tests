@@ -1,0 +1,1 @@
+{"status":"success","message":"An email with instructions to reset your password has been sent to marlin-morar@test.com","data":"0735bf5a9b966d71b54f354e67f9dd145d044c81"}
