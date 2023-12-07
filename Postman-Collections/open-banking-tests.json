@@ -8870,7 +8870,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{accesstoken}}"
+												"token": "{{accesstoken2FA}}"
 											}
 										},
 										"method": "DELETE",
@@ -9141,7 +9141,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{accesstoken}}"
+												"token": "{{accesstoken2FA}}"
 											}
 										},
 										"method": "GET",
@@ -9351,7 +9351,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{accesstoken}}"
+												"token": "{{accesstoken2FA}}"
 											}
 										},
 										"method": "GET",
@@ -9489,7 +9489,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{accesstoken}}"
+												"token": "{{accesstoken2FA}}"
 											}
 										},
 										"method": "GET",
@@ -9762,7 +9762,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{accesstoken}}"
+												"token": "{{accesstoken2FA}}"
 											}
 										},
 										"method": "PUT",
