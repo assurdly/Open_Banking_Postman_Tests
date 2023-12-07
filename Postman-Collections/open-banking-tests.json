@@ -4922,7 +4922,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"Password1#\"\r\n}",
+											"raw": "{\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"Password1##\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -11095,7 +11095,7 @@
 													"    pm.expect(jsonData.timestamp).to.be.a('string');\r",
 													"    pm.expect(jsonData.status).to.be.a('number');\r",
 													"    pm.expect(jsonData.success).to.be.a('boolean');\r",
-													"    pm.expect(jsonData.message).to.be.an('array');\r",
+													"    pm.expect(jsonData.message).to.be.an('string');\r",
 													"});\r",
 													"\r",
 													"pm.test(\"Status is 400\", function () {\r",
@@ -11107,7 +11107,7 @@
 													"});\r",
 													"\r",
 													"pm.test(\"Message is present\", function () {\r",
-													"    pm.expect(jsonData.message[0]).to.eql(\"lastName should not be empty\");\r",
+													"    pm.expect(jsonData.data.lastName).to.eql(\"lastName value must contain only alphabets.\");\r",
 													"});"
 												],
 												"type": "text/javascript"
@@ -11341,7 +11341,7 @@
 													"    pm.expect(jsonData.timestamp).to.be.a('string');\r",
 													"    pm.expect(jsonData.status).to.be.a('number');\r",
 													"    pm.expect(jsonData.success).to.be.a('boolean');\r",
-													"    pm.expect(jsonData.message).to.be.an('array');\r",
+													"    pm.expect(jsonData.message).to.be.an('string');\r",
 													"});\r",
 													"\r",
 													"pm.test(\"Status is 400\", function () {\r",
@@ -11353,8 +11353,7 @@
 													"});\r",
 													"\r",
 													"pm.test(\"Message is present\", function () {\r",
-													"    pm.expect(jsonData.message[0]).to.eql(\"email must be an email\",\r",
-													"        \"email should not be empty\");\r",
+													"    pm.expect(jsonData.data.email).to.eql(\"email is required.\");\r",
 													"});"
 												],
 												"type": "text/javascript"
