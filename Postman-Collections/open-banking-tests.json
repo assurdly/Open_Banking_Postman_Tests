@@ -14791,31 +14791,33 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "f3d9848f-b84e-441f-9bbd-3a66ec9a3871",
+										"id": "cb42459a-b4be-4f53-9cd3-7eec9f1662bd",
 										"type": "text/javascript",
 										"exec": [
-											"// Get the current request object",
-											"var request = pm.request;",
+											"// // Get the current request object",
+											"// var request = pm.request;",
 											"",
-											"// Get the name of the folder containing this request",
-											"var folderName = pm.info.parentName; // This returns the folder name",
+											"// // Get the name of the folder containing this request",
+											"// var folderName = pm.info.parentName; // This returns the folder name",
 											"",
-											"// Define the folder to skip",
-											"var folderToSkip = \"2FA\"; // Change this to the actual folder name you want to skip",
+											"// // Define the folder to skip",
+											"// var folderToSkip = \"2FA\"; // Change this to the actual folder name you want to skip",
 											"",
-											"// Check if the current folder is the one to skip",
-											"if (folderName === folderToSkip) {",
-											"    console.log(\"Skipping requests in folder:\", folderToSkip);",
-											"    postman.setNextRequest(null); // This will skip the current request",
-											"} else {",
-											"    console.log(\"Executing request in folder:\", folderName);",
+											"// // Check if the current folder is the one to skip",
+											"// if (folderName === folderToSkip) {",
+											"//     console.log(\"Skipping requests in folder:\", folderToSkip);",
+											"//     postman.setNextRequest(null); // This will skip the current request",
+											"// } else {",
+											"//     console.log(\"Executing request in folder:\", folderName);",
 											"",
-											"    // Add your other pre-request script logic here",
-											"    // ...",
+											"//     // Add your other pre-request script logic here",
+											"//     // ...",
 											"",
-											"    // Update the request URL or perform other actions if needed",
-											"    // request.url = \"new URL\";",
-											"}",
+											"//     // Update the request URL or perform other actions if needed",
+											"//     // request.url = \"new URL\";",
+											"// }",
+											"",
+											"",
 											""
 										]
 									}
@@ -14823,7 +14825,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "dee6fe80-9d9d-4784-bd69-b8b7f8964de3",
+										"id": "94245cf6-039f-4520-8aa7-11f8770f39ac",
 										"type": "text/javascript",
 										"exec": [
 											""
