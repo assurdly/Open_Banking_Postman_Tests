@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully fetched collection","data":{"id":"4cabe6fa-a24b-4f60-b0f7-10cba7e0a0a3","name":"Transactions","slug":"transactions","description":"transactions","createdAt":"2023-11-21T11:36:07.330Z","updatedAt":"2023-11-21T11:36:07.330Z","deletedAt":null}}

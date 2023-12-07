@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully fetched APIs","data":[],"_meta":{"totalNumberOfRecords":0,"totalNumberOfPages":0,"pageNumber":1,"pageSize":20}}

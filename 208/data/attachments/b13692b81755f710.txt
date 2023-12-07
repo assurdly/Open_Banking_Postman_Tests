@@ -1,1 +1,0 @@
-{"status":"success","message":"An email with instructions to reset your password has been sent to collin-bruen@test.com","data":"168b36a74a70b2b2424259027806710af88e3fc2"}
