@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully created collection","data":{"name":"generating","slug":"generating","description":"System settings","deletedAt":null,"id":"4bc5e493-0487-4960-8bae-b90db76abaac","createdAt":"2023-12-08T01:34:49.991Z","updatedAt":"2023-12-08T01:34:49.991Z"}}

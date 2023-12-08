@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully fetched APIs","data":[{"id":"bf3bdba7-9a3f-4b1a-9019-b987a17beb89","name":"Iowa","enabled":false,"host":"httpbin.org","protocol":"https","port":443,"path":"/json","url":"https://httpbin.org:443/json","route":{"paths":["/South"],"methods":["GET"]}}],"_meta":{"totalNumberOfRecords":1,"totalNumberOfPages":1,"pageNumber":1,"pageSize":20}}
