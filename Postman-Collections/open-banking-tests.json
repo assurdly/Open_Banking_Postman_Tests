@@ -8662,7 +8662,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"description\": \"Gate keepership\",\n    \"status\": \"active\"\n}",
+											"raw": "{\n    \"name\": \"{{$randomWord}}\",\n    \"description\": \"Gate keepership\",\n    \"status\": \"active\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -8681,7 +8681,7 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "0b0e485e-c851-4fbd-83f9-d59dc4e037c0"
+													"value": "{{createdRole}}"
 												}
 											]
 										}
@@ -9783,7 +9783,7 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "5f581591-92fd-479f-80bd-1f9c8c60859d"
+													"value": "{{createdRole}}"
 												}
 											]
 										}
@@ -10925,7 +10925,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"email\": \"{{$randomFirstName}}@mailinator.com\",\n    \"firstName\": \"Uniq\",\n    \"lastName\": \"Okok\",\n    \"roleId\": \"{{roleId}}\"\n}",
+											"raw": "{\n    \"email\": \"{{$randomFirstName}}@mailinator.com\",\n    \"firstName\": \"Uniq\",\n    \"lastName\": \"Okok\",\n    \"roleId\": \"{{createdRole}}\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
