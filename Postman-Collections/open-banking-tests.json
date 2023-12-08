@@ -7902,7 +7902,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"{{$randomWord}}\",\n    \"description\": \"Gate keeping\",\n    \"status\": \"active\"\n}",
+											"raw": "{\n    \"name\": \"{{$randomWord}}\",\n    \"description\": \"Gate keeping\",\n    \"status\": \"active\",\n    \"permissions\": [\"0d505d83-f10d-4f1b-9c80-3706c0b77f17\"]\n\n}\n",
 											"options": {
 												"raw": {
 													"language": "json"
