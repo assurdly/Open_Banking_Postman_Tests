@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully created collection","data":{"name":"turn-key","slug":"turn-key","description":"System settings","deletedAt":null,"id":"a89f83e3-d7cb-4f6e-bcb3-2333af34ddd3","createdAt":"2023-12-08T01:24:40.701Z","updatedAt":"2023-12-08T01:24:40.701Z"}}

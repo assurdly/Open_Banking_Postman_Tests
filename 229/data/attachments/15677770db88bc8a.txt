@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully fetched API","data":{"id":"1320a190-34b8-4a92-8827-1dd7655aca16","name":"of","enabled":false,"host":"httpbin.org","protocol":"https","port":443,"path":"/json","url":"https://httpbin.org:443/json","route":{"paths":["/account2"],"methods":["GET"]}}}
