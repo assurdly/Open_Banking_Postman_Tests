@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully created collection","data":{"name":"HDD","slug":"hdd","description":"System settings","deletedAt":null,"id":"974571cd-fe35-4d31-a325-829e9c10b94f","createdAt":"2023-12-08T03:04:13.632Z","updatedAt":"2023-12-08T03:04:13.632Z"}}

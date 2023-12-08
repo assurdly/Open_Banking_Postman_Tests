@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully fetched company details","data":{"id":"dce52d01-6fb6-40d4-9e24-41c9dd8d9989","name":"Random Bank PLC","rcNumber":null,"isVerified":false,"kybData":{},"type":"BANK","createdAt":"2023-11-10T15:55:55.142Z","updatedAt":"2023-11-10T15:55:55.142Z","deletedAt":null}}
