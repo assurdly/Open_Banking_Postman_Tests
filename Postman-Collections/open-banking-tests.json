@@ -7862,6 +7862,8 @@
 											"script": {
 												"id": "20d34766-e70d-4eed-b95c-ca2e7b3e5c77",
 												"exec": [
+													"var jsonData = pm.response.json();\r",
+													"pm.environment.set(\"createdRole\", jsonData.data.id)\r",
 													"pm.test(\"Status code is 201\", function () {\r",
 													"    pm.response.to.have.status(201);\r",
 													"});\r",
