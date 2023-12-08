@@ -10925,7 +10925,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"email\": \"{{$randomFirstName}}@mailinator.com\",\n    \"firstName\": \"Uniq\",\n    \"lastName\": \"Okok\",\n    \"roleId\": \"{{createdRole}}\"\n}",
+											"raw": "{\n    \"email\": \"{{$randomFirstName}}@mailinator.com\",\n    \"firstName\": \"Uniq\",\n    \"lastName\": \"Okok\",\n    \"roleId\": \"{{roleId}}\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
