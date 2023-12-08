@@ -5367,7 +5367,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"Password1##\"\r\n}",
+											"raw": "{\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"Password1#\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -7793,7 +7793,7 @@
 													"});\r",
 													"\r",
 													"pm.test(\"Message is present\", function () {\r",
-													"    pm.expect(jsonData.message).to.eql('Invalid credentials.');\r",
+													"    pm.expect(jsonData.message).to.eql('Invalid 2FA code.');\r",
 													"});"
 												],
 												"type": "text/javascript"
