@@ -6969,7 +6969,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"password\": \"Password1#\",\r\n    \"confirmPassword\": \"Password1#\"\r\n}",
+											"raw": "{\r\n    \"password\": \"Password1#0\",\r\n    \"confirmPassword\": \"Password1#0\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -6989,7 +6989,6 @@
 											],
 											"variable": [
 												{
-													"id": "70eb4ece-7a53-442b-a15e-645e65443c1b",
 													"key": "resetToken",
 													"value": "{{reset_token}}"
 												}
