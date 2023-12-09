@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully fetched company details","data":{"id":"e53c3f59-9cc0-4130-90e4-dbee9fcfb4fb","name":"NexusInc.","rcNumber":null,"isVerified":false,"isActive":false,"kybData":{"taxIdentificationNumber":"1535f54345534"},"type":"BANK","createdAt":"2023-12-09T23:12:10.867Z","updatedAt":"2023-12-09T23:12:15.000Z","deletedAt":null}}
