@@ -10868,6 +10868,75 @@
 								}
 							],
 							"id": "0a1b3711-b680-44e6-8814-d5381a595d39"
+						},
+						{
+							"name": "New Folder",
+							"item": [
+								{
+									"name": "Get Stats",
+									"id": "79b7048b-ac0e-443e-9dc5-1586712a8353",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": "{{Base_url}}/roles/stats"
+									},
+									"response": [
+										{
+											"id": "6a7f93a1-83d7-43cb-a844-9163071c00a9",
+											"name": "Get Stats",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{Base_url}}/roles/stats"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "X-Powered-By",
+													"value": "Express"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "137"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"89-c+dE0hSB0nvSsgiVEwoTnRXJ6lo\""
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 10 Dec 2023 17:17:34 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=5"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"status\": \"success\",\n    \"message\": \"Successfully fetched role stats\",\n    \"data\": [\n        {\n            \"count\": \"1\",\n            \"value\": \"active\"\n        },\n        {\n            \"count\": \"0\",\n            \"value\": \"inactive\"\n        }\n    ]\n}"
+										}
+									]
+								}
+							],
+							"id": "1c2e4248-2cf3-48a3-a9b1-7dec4090d308"
 						}
 					],
 					"id": "95c17cc3-e0d0-4ebe-a1e4-a1c25477ba26"
@@ -10925,7 +10994,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"email\": \"{{$randomFirstName}}@mailinator.com\",\n    \"firstName\": \"Uniq\",\n    \"lastName\": \"Okok\",\n    \"roleId\": \"{{roleId}}\"\n}",
+											"raw": "{\n    \"email\": \"{{$randomFirstName}}@mailinator.com\",\n    \"firstName\": \"Uniq\",\n    \"lastName\": \"Okok\",\n    \"roleId\": \"{{createdRole}}\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -13421,6 +13490,69 @@
 								}
 							],
 							"id": "9f9ce655-fe36-4e4d-b222-f553a103df8a"
+						},
+						{
+							"name": "Get Stats Copy",
+							"id": "44c2e085-bde1-45a1-b382-4b65e0bc9a39",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{Base_url}}/users/stats"
+							},
+							"response": [
+								{
+									"id": "818dbfca-6da3-40d7-8428-ee6109f715b2",
+									"name": "Get Stats",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{Base_url}}/users/stats"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "171"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"ab-TDoSatDnpSHO+cmUwoN08pdA8xM\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 10 Dec 2023 17:16:23 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Successfully fetched users stats\",\n    \"data\": [\n        {\n            \"count\": \"1\",\n            \"value\": \"active\"\n        },\n        {\n            \"count\": \"1\",\n            \"value\": \"inactive\"\n        },\n        {\n            \"count\": \"18\",\n            \"value\": \"pending\"\n        }\n    ]\n}"
+								}
+							]
 						}
 					],
 					"id": "1a3a93e1-909c-4d20-8e4f-146cd486a7ee"
