@@ -10870,7 +10870,7 @@
 							"id": "0a1b3711-b680-44e6-8814-d5381a595d39"
 						},
 						{
-							"name": "New Folder",
+							"name": "Role Stats",
 							"item": [
 								{
 									"name": "Get Stats",
@@ -13492,67 +13492,73 @@
 							"id": "9f9ce655-fe36-4e4d-b222-f553a103df8a"
 						},
 						{
-							"name": "Get Stats Copy",
-							"id": "44c2e085-bde1-45a1-b382-4b65e0bc9a39",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": "{{Base_url}}/users/stats"
-							},
-							"response": [
+							"name": "User Stats",
+							"item": [
 								{
-									"id": "818dbfca-6da3-40d7-8428-ee6109f715b2",
 									"name": "Get Stats",
-									"originalRequest": {
+									"id": "44c2e085-bde1-45a1-b382-4b65e0bc9a39",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
 										"method": "GET",
 										"header": [],
 										"url": "{{Base_url}}/users/stats"
 									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
+									"response": [
 										{
-											"key": "X-Powered-By",
-											"value": "Express"
-										},
-										{
-											"key": "Access-Control-Allow-Origin",
-											"value": "*"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json; charset=utf-8"
-										},
-										{
-											"key": "Content-Length",
-											"value": "171"
-										},
-										{
-											"key": "ETag",
-											"value": "W/\"ab-TDoSatDnpSHO+cmUwoN08pdA8xM\""
-										},
-										{
-											"key": "Date",
-											"value": "Sun, 10 Dec 2023 17:16:23 GMT"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=5"
+											"id": "818dbfca-6da3-40d7-8428-ee6109f715b2",
+											"name": "Get Stats",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{Base_url}}/users/stats"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "X-Powered-By",
+													"value": "Express"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "171"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"ab-TDoSatDnpSHO+cmUwoN08pdA8xM\""
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 10 Dec 2023 17:16:23 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=5"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"status\": \"success\",\n    \"message\": \"Successfully fetched users stats\",\n    \"data\": [\n        {\n            \"count\": \"1\",\n            \"value\": \"active\"\n        },\n        {\n            \"count\": \"1\",\n            \"value\": \"inactive\"\n        },\n        {\n            \"count\": \"18\",\n            \"value\": \"pending\"\n        }\n    ]\n}"
 										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Successfully fetched users stats\",\n    \"data\": [\n        {\n            \"count\": \"1\",\n            \"value\": \"active\"\n        },\n        {\n            \"count\": \"1\",\n            \"value\": \"inactive\"\n        },\n        {\n            \"count\": \"18\",\n            \"value\": \"pending\"\n        }\n    ]\n}"
+									]
 								}
-							]
+							],
+							"id": "556ef43d-0ae0-4653-8eb2-552e09c36452"
 						}
 					],
 					"id": "1a3a93e1-909c-4d20-8e4f-146cd486a7ee"
