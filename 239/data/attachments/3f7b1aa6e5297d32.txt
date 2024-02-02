@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully fetched company details","data":{"id":"9a15f0d6-c225-492b-a147-315c53bb8843","name":"Azeez Wunmi","rcNumber":null,"isVerified":true,"kybStatus":"approved","status":"active","type":"individual","subtype":null,"tier":null,"createdAt":"2024-01-30T11:20:43.696Z","primaryUser":{},"kybData":{}}}

@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully created role","data":{"id":"dc2a689d-2531-4dbb-aefc-55a90f3751c5","name":"Concrete","slug":"concrete","description":"Gate keeping","status":"active","createdAt":"2024-02-02T06:17:38.717Z"}}

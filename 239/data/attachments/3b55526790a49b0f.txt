@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully fetched API","data":{"id":"ba51c420-8e4d-4cc2-8d4f-10352ee85022","name":"Get Customer Cards","enabled":true,"downstream":{"path":"~/cards$","method":"GET"},"upstream":{"url":"https://666ab640-8d6a-491b-be32-e06642d051cf.mock.pstmn.io:443/cards","method":null,"headers":[],"querystring":[],"body":[]}}}

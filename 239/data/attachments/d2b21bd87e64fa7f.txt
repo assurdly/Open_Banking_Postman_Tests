@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully fetched API logs stats","data":{"totalCount":25,"avgRequestLatency":250.84,"avgGatewayLatency":11.6,"avgProxyLatency":239,"avgCountPerSecond":1,"successCount":21,"failedCount":4}}

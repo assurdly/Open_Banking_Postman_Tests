@@ -1,0 +1,5 @@
+{
+    "oldPassword": "ea901e57-b052-4441-87c2-5a9381455679",
+    "newPassword": "ea901e57-b052-4441-87c2-5a9381455679",
+    "confirmPassword": "ea901e57-b052-4441-87c2-5a9381455679"
+}

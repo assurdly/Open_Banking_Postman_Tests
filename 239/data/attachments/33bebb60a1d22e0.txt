@@ -1,0 +1,6 @@
+{
+    "email": "Bruce@mailinator.com",
+    "firstName": "Destin",
+    "lastName": "Osinski",
+    "roleId": "dc2a689d-2531-4dbb-aefc-55a90f3751c5"
+}

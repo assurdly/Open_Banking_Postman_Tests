@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully updated profile","data":{"id":"76e6adf0-1c68-441a-80ae-55e8e5a8c83d","firstName":"Eunice","lastName":"Dean","companyRole":null,"phone":"08123333388","country":null,"createdAt":"2024-01-30T11:20:44.307Z"}}

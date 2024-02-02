@@ -1,0 +1,5 @@
+{
+    "email": "fern-kutch@test.com",
+    "password": "Password1#",
+    "code": "920617"
+}

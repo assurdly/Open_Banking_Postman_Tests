@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully updated role","data":{"id":"a72adca3-6e48-45f5-92af-f4043575818e","name":"program","slug":"program","description":"Gate keepership","status":"active","createdAt":"2024-02-02T06:17:58.390Z"}}

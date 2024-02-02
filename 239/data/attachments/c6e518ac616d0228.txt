@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully updated role","data":{"id":"c6ba6008-9959-4b51-8bf0-753476362a2f","name":"dynamic","slug":"dynamic","description":"Super Admin","status":"inactive","createdAt":"2024-02-02T06:17:38.596Z"}}

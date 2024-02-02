@@ -1,0 +1,10 @@
+{
+    "X-Powered-By": "Express",
+    "Access-Control-Allow-Origin": "*",
+    "Content-Type": "application/json; charset=utf-8",
+    "Content-Length": "132",
+    "ETag": "W/\"84-Hs9dN3OqJsK4lJ48JgJxicZSK5Q\"",
+    "Date": "Fri, 02 Feb 2024 06:18:07 GMT",
+    "Connection": "keep-alive",
+    "Keep-Alive": "timeout=5"
+}
