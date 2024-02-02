@@ -1,0 +1,13 @@
+{
+    "name": "Officer",
+    "enabled": false,
+    "url": "https://httpbin.org:443/json",
+    "route": {
+        "paths": [
+            "/Pre-emptive"
+        ],
+        "methods": [
+            "GET"
+        ]
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "name": "Eino",
+    "enabled": true,
+    "url": "https://httpbin.org/json",
+    "route": {
+        "paths": ["/Investor"],
+        "methods": ["GET"]
+    }
+}

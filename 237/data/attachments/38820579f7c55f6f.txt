@@ -1,0 +1,1 @@
+{"message":"Cannot POST /cards/:card_id?action=capture"}

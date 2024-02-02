@@ -1,0 +1,5 @@
+{
+    "name": "Central",
+    "description": "Gate keepership",
+    "status": "active"
+}

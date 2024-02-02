@@ -1,0 +1,6 @@
+{
+    "email": "eunice3@mailinator.com",
+    "firstName": "Eunice",
+    "lastName": "Okokon",
+    "roleId": "hdkbfhbskdjks"
+}
