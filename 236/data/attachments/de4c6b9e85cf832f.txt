@@ -1,0 +1,9 @@
+{
+    "name": "Nicolette",
+    "enabled": true,
+    "url": "https://httpbin.org/json",
+    "route": {
+        "paths": ["/payment"],
+        "methods": ["GET"]
+    }
+}

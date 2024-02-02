@@ -1,0 +1,12 @@
+{
+    "email": "Chaz-Becker@test.com",
+    "password": "Password1#",
+    "confirmPassword": "Password1#",
+    "firstName": "John",
+    "lastName": "Doe",
+    "country": "NGN",
+    "companyName": "NexusInc.",
+    "companyType": "Workshop",
+    "companyRole": "SOFTWARE_ENGINEER",
+    "phone": "08123456789"
+}

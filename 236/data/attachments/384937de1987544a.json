@@ -1,0 +1,12 @@
+{
+    "X-Powered-By": "Express",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Expose-Headers": "x-encryption-key,x-encryption-iv",
+    "X-Request-ID": "c6d12098-d492-49de-a2ea-9b5c309a6cd7",
+    "Content-Type": "application/json; charset=utf-8",
+    "Content-Length": "40",
+    "ETag": "W/\"28-lPOn+ckRqptzWiD4Okq1q1wMCTY\"",
+    "Date": "Fri, 02 Feb 2024 05:09:47 GMT",
+    "Connection": "keep-alive",
+    "Keep-Alive": "timeout=5"
+}

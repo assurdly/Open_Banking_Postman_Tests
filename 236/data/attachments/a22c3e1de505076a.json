@@ -1,0 +1,10 @@
+{
+    "x-mock-response-name": "success",
+    "User-Agent": "PostmanRuntime/7.36.1",
+    "Accept": "*/*",
+    "Cache-Control": "no-cache",
+    "Postman-Token": "d9ccd939-af7f-4c50-b4ad-5668adeb1028",
+    "Host": "3.134.253.153:4000",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive"
+}

@@ -1,0 +1,16 @@
+{
+    "Date": "Fri, 02 Feb 2024 05:09:49 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Content-Length": "61",
+    "Connection": "keep-alive",
+    "x-srv-trace": "v=1;t=bfb3a7a3a2f250cc",
+    "x-srv-span": "v=1;s=700f2688b725028e",
+    "Access-Control-Allow-Origin": "*",
+    "X-RateLimit-Limit": "120",
+    "X-RateLimit-Remaining": "119",
+    "X-RateLimit-Reset": "1706850648",
+    "X-Powered-By": "Express",
+    "X-Request-ID": "6a2d0294-bf7f-4334-9000-499172ab7564",
+    "ETag": "W/\"1d-KboRygvV74iPkhRi/++D78c/bmI\"",
+    "Vary": "Accept-Encoding"
+}

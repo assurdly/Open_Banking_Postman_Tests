@@ -1,0 +1,13 @@
+{
+    "name": "invoice",
+    "enabled": false,
+    "url": "https://httpbin.org:443/json",
+    "route": {
+        "paths": [
+            "/Metal"
+        ],
+        "methods": [
+            "GET"
+        ]
+    }
+}
