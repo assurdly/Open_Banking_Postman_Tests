@@ -1,0 +1,5 @@
+{
+    "name": "Secretary",
+    "description": "Book keeping",
+    "status": "active"
+}

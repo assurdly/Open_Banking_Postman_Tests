@@ -1,0 +1,9 @@
+{
+    "name": "Kenneth",
+    "enabled": true,
+    "url": "https://httpbin.org/json",
+    "route": {
+        "paths": ["/neural"],
+        "methods": ["GET"]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "X-Powered-By": "Express",
+    "set-cookie": "_csrf=nKU-BCtqhQSUw_mqVAbmooiu; Path=/; SameSite=Lax",
+    "Content-Type": "text/html; charset=utf-8",
+    "Content-Length": "2206",
+    "ETag": "W/\"89e-1AVeG7eck++GuNJrXjWfOEp03Hg\"",
+    "Date": "Fri, 02 Feb 2024 04:53:48 GMT",
+    "Connection": "keep-alive",
+    "Keep-Alive": "timeout=5"
+}

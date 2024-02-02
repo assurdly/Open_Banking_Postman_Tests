@@ -1,0 +1,7 @@
+{
+    "grant_types": ["authorization_code","refresh_token"],
+    "redirect_uris": ["http://3.15.13.197:9010/callback"],
+    "response_types": ["code"],
+    "scope": "account statement card bvn sync",
+    "client_name": "Demo API Consumer"
+}
