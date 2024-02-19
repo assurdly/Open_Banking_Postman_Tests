@@ -1,0 +1,6 @@
+{
+    "email": "Rosendo@mailinator.com",
+    "firstName": "Baby",
+    "lastName": "Kuhic",
+    "roleId": "07999632-f6e2-40b1-82ed-147467bd019c"
+}

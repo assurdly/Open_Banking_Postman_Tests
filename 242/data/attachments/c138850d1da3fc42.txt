@@ -1,0 +1,13 @@
+{
+    "email": "z@mailinator.com",
+    "password": "Password1#",
+    "confirmPassword": "Password1#",
+    "firstName": "John",
+    "lastName": "D",
+    "country": "NGN",
+    "companyName": "NexusInc.",
+    "companyType": "business",
+    "companySubtype": "Telecommunications",
+    "companyRole": "SOFTWARE_ENGINEER",
+    "phone": "08123456789"
+}

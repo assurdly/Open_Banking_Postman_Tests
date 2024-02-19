@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully updated role","data":{"id":"6e79366a-c617-4f72-9e01-123761bcd839","name":"Bedfordshire","slug":"bedfordshire","description":"Gate keepership","status":"active","createdAt":"2024-02-19T05:29:45.488Z"}}

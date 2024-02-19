@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully created collection","data":{"id":"25a9077f-8681-45da-9ed9-6d832feee462","name":"connect","slug":"connect","description":"System settings","createdAt":"2024-02-19T05:29:38.319Z"}}

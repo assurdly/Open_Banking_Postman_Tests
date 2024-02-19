@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully created role","data":{"id":"fe52b872-89bf-4fc0-afa2-c3f1c60a1d51","name":"THX","slug":"thx","description":"Product","status":"active","createdAt":"2024-02-19T05:29:45.554Z"}}

@@ -1,0 +1,4 @@
+{
+    "password": "Password1#0",
+    "confirmPassword": "Password1#0"
+}

@@ -1,0 +1,7 @@
+{
+    "email": "eunice17@mailinator.com",
+    "firstName": "Unique",
+    "lastName": "Okokon",
+    "roleId": "fe52b872-89bf-4fc0-afa2-c3f1c60a1d51",
+    "status": "active"
+}

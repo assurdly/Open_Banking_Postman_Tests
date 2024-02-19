@@ -1,0 +1,4 @@
+{
+    "name": "connect",
+    "description": "System settings"
+}

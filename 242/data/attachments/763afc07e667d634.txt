@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully updated role","data":{"id":"2c6548a8-550f-41b7-9b66-280e09be6eb8","name":"Mauritius","slug":"mauritius","description":"Super Admin","status":"inactive","createdAt":"2024-02-19T05:29:33.550Z"}}

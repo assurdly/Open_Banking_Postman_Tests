@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully fetched API","data":{"id":"c193754b-fe37-4e34-bdb9-3a4ee5edabdf","name":"Get Customer Cards","enabled":true,"collectionId":"0f61df37-b704-4ab2-8215-ae53dcc00ce7","downstream":{"url":"http://dev.gateway.openbanking.ng:8000/cards","path":"~/cards$","method":"GET","request":{},"response":[{}]},"upstream":null}}

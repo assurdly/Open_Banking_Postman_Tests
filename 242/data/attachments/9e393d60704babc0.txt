@@ -1,0 +1,9 @@
+{
+    "removedKybRequirements": [
+        {
+            "name": "test",
+            "label": "Tax Identification Number",
+            "type": "string"
+        }
+    ]
+}

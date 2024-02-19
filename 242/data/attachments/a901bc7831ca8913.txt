@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully created role","data":{"id":"07999632-f6e2-40b1-82ed-147467bd019c","name":"withdrawal","slug":"withdrawal","description":"Gate keeping","status":"active","createdAt":"2024-02-19T05:29:33.622Z"}}

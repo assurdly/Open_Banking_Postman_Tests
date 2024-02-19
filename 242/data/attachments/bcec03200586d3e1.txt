@@ -1,0 +1,1 @@
+{"message":"Cannot POST /collections/:id/apis"}
