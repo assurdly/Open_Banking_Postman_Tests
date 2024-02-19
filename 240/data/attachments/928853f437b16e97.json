@@ -1,0 +1,9 @@
+{
+    "Date": "Mon, 19 Feb 2024 04:23:11 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "X-Response-Latency": "2",
+    "Server": "kong/3.5.0",
+    "X-Request-Id": "a8ea014a1b618d0add658849573c6b2a"
+}

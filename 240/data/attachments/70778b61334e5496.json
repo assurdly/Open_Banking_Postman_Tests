@@ -1,0 +1,12 @@
+{
+    "X-TwoFA-Code": "",
+    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM5NjRhZjY1LTI0NWUtNDlmOC1iZGU1LTE0Yjg0OTQ1MzQ2ZCIsImlhdCI6MTcwODMxNjU4NSwiZXhwIjoxNzA4MzE3NDg1fQ.wSqc1PVmKFn9gnX7EpDWwLoQIxLZXBkA6P_YSCpDkGQ",
+    "User-Agent": "PostmanRuntime/7.36.3",
+    "Accept": "*/*",
+    "Cache-Control": "no-cache",
+    "Postman-Token": "a72c1207-dadf-4f28-a4b3-2652738d1c32",
+    "Host": "3.134.253.153:4000",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive",
+    "Content-Length": "0"
+}

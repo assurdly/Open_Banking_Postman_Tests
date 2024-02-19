@@ -1,0 +1,5 @@
+{
+    "name": "Awesome",
+    "description": "Gate keepership",
+    "status": "active"
+}
