@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully updated role","data":{"id":"1cd82f7e-31fa-4ebb-800d-a7b287a3c1a3","name":"Ball","slug":"ball","description":"Super Admin","status":"inactive","createdAt":"2024-02-19T04:46:54.182Z"}}

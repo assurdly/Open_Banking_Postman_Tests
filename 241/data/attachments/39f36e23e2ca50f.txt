@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully updated profile","data":{"id":"457b37f5-da0e-4f3b-adcb-ec55c369b945","firstName":"Adew","lastName":"Wunmi","companyRole":"","phone":null,"country":null,"createdAt":"2024-02-06T12:26:18.668Z"}}

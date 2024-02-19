@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully created role","data":{"id":"4605224f-6082-41fe-a0ec-1d71e889d183","name":"Fantastic","slug":"fantastic","description":"Legacy","status":"active","createdAt":"2024-02-19T04:47:06.329Z"}}

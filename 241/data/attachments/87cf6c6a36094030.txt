@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully updated role","data":{"id":"11f073eb-d88a-4bcf-809f-2df0b8351e88","name":"mesh","slug":"mesh","description":"Gate keepership","status":"active","createdAt":"2024-02-19T04:47:06.260Z"}}

@@ -1,0 +1,1 @@
+{"message":"Validation Error.","data":{"newPassword":"newPassword is not strong enough","confirmPassword":"confirmPassword is not strong enough"}}
