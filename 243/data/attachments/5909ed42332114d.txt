@@ -1,0 +1,13 @@
+{
+    "name": "get-transaction1",
+    "enabled": false,
+    "url": "https://httpbin.org:443/json",
+    "route": {
+        "paths": [
+            "/transaction1"
+        ],
+        "methods": [
+            ""
+        ]
+    }
+}

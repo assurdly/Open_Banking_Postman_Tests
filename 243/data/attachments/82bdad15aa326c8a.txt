@@ -1,0 +1,6 @@
+{
+    "name": "Personal",
+    "description": "Forward",
+    "status": "active",
+    "permissions": ["01d67109-6a2d-4f8f-9e26-3283fea09d33", "0a2e5dd5-ac77-4a58-acf9-33f432cf6c4d"]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Cotton",
+    "enabled": true,
+    "downstream": {
+        "paths": "/efficient",
+        "methods": "GET",
+        "url": "test"
+    },
+    "upstream": {
+        "host": "666ab640-8d6a-491b-be32-e06642d051cf.mock.pstmn.io",
+        "protocol": "https",
+        "port": 443,
+        "path": "/cards",
+        "url": "https://666ab640-8d6a-491b-be32-e06642d051cf.mock.pstmn.io:443/cards"
+    }
+}
+

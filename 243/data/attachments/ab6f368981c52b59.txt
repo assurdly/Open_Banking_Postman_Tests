@@ -1,0 +1,6 @@
+{
+    "email": "{{createdUserByApEmail}}",
+    "firstName": "Lina",
+    "lastName": "Toy",
+    "roleId": "{{createdRoleTwo}}"
+}

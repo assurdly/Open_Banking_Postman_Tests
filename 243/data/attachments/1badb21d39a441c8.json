@@ -1,0 +1,11 @@
+{
+    "Date": "Wed, 28 Feb 2024 14:05:40 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Content-Length": "131",
+    "Connection": "keep-alive",
+    "x-srv-trace": "v=1;t=725cb48963eca66a",
+    "x-srv-span": "v=1;s=496fbdb3786cd166",
+    "Access-Control-Allow-Origin": "*",
+    "ETag": "W/\"83-c9IflyBQz+0NELVBQbv/jd9om7U\"",
+    "Vary": "Accept-Encoding"
+}

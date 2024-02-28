@@ -1,0 +1,4 @@
+{
+    "name": "Tactics",
+    "description": "System settings"
+}
