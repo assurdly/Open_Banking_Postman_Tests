@@ -1,1 +1,0 @@
-{"status":"success","message":"An email with instructions to reset your password has been sent to rosario-weissnat@test.com","data":"0c3f33733ac1f057ea1fca2fdeb65fceedcbe0c7"}

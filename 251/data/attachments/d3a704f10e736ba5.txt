@@ -1,0 +1,4 @@
+{
+    "name": "COM",
+    "description": "System settings"
+}

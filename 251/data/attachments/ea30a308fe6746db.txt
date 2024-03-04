@@ -1,0 +1,5 @@
+{
+    "name": "Keyboard",
+    "description": "Gate keepership",
+    "status": "active"
+}

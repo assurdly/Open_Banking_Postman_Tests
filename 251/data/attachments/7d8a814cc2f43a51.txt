@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully updated collection","data":{"id":"5881fd6b-1c6b-4547-ba9f-4d6d29eb2128","name":"COM","slug":"com","description":"System settings","createdAt":"2024-03-04T05:38:40.518Z"}}

@@ -1,0 +1,13 @@
+{
+    "email": "Rusty-Sporer@test.com",
+    "password": "Password!123",
+    "confirmPassword": "Password!123",
+    "firstName": "Brian",
+    "lastName": "Toy",
+    "country": "NGN",
+    "companyName": "NexusInc.",
+    "companyType": "licensed-entity",
+    "companySubtype": "Others",
+    "companyRole": "SOFTWARE_ENGINEER",
+    "phone": "08123456789"
+}

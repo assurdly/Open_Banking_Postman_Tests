@@ -1,0 +1,6 @@
+{
+    "bill_reference": "310007877416",
+    "currency": "NGN",
+    "account_number": "12343344",
+    "bill_amount": 24000
+}

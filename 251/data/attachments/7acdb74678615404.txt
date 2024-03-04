@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully updated role","data":{"id":"534dfd78-89a4-44da-ad6e-ab4873a4316a","name":"Multi-lateral","slug":"multi-lateral","description":"Super Test","status":"inactive","createdAt":"2024-03-04T05:38:30.960Z"}}

@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully fetched company details","data":{"id":"ee91c1e5-b670-4f10-9142-5071efb46188","name":"Azeez Individ","rcNumber":null,"isVerified":true,"kybStatus":"approved","status":"active","type":"individual","subtype":null,"tier":"0","createdAt":"2024-02-28T15:03:26.881Z","primaryUser":{},"kybData":{}}}

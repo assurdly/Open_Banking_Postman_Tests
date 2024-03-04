@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully created role","data":{"id":"0fa9d020-887a-4e94-ad8c-cb1e2d34f9b3","name":"Dynamic","slug":"dynamic","description":"District","status":"active","createdAt":"2024-03-04T05:38:30.834Z"}}

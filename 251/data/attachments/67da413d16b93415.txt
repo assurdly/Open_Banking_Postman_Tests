@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully fetched role","data":[{"id":"0cd7b5aa-2c72-4dac-a56b-8eefe7c3a57f","name":"view team member","slug":"view-team-member","description":"","createdAt":"2024-02-28T11:22:38.489Z"}]}
