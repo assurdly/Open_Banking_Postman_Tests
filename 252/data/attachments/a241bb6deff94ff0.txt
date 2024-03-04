@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully created role","data":{"id":"1156bf07-d702-4897-929f-a41221cd184a","name":"PCI","slug":"pci","description":"Central","status":"active","createdAt":"2024-03-04T06:03:36.612Z"}}

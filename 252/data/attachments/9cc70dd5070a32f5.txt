@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully updated role","data":{"id":"628aa64a-db60-47ec-9301-30a8979ba04d","name":"Computer","slug":"computer","description":"Gate keepership","status":"active","createdAt":"2024-03-04T06:03:36.840Z"}}

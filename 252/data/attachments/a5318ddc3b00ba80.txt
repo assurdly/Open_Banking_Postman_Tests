@@ -1,0 +1,4 @@
+{
+    "name": "payment",
+    "description": "System settings"
+}

@@ -1,0 +1,5 @@
+{
+    "name": "Soft",
+    "description": "Gate keepership",
+    "status": "active"
+}

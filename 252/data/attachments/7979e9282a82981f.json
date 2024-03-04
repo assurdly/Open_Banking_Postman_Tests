@@ -1,0 +1,9 @@
+{
+    "Date": "Mon, 04 Mar 2024 06:03:46 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Connection": "keep-alive",
+    "Content-Length": "103",
+    "X-Response-Latency": "0",
+    "Server": "kong/3.5.0",
+    "X-Request-Id": "0126e4538f4bb92ee2258a4b19d45832"
+}

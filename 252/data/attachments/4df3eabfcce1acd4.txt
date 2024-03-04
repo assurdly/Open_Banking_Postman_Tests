@@ -1,0 +1,13 @@
+{
+    "email": "Fabian-Grant@test.com",
+    "password": "Password!123",
+    "confirmPassword": "Password!123",
+    "firstName": "Fern",
+    "lastName": "Trantow",
+    "country": "NGN",
+    "companyName": "NexusInc.",
+    "companyType": "licensed-entity",
+    "companySubtype": "Others",
+    "companyRole": "SOFTWARE_ENGINEER",
+    "phone": "08123456789"
+}

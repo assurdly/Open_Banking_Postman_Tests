@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully fetched company details","data":{"id":"93706ed1-6fe9-4e63-b125-667d5494b91e","name":"Random Bank PLC","rcNumber":null,"isVerified":false,"kybStatus":"approved","status":"active","type":"api-provider","subtype":"","tier":null,"createdAt":"2024-02-28T11:22:38.738Z","primaryUser":{},"kybData":{}}}

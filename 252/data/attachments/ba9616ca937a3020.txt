@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully updated collection","data":{"id":"26bcc2cb-a422-4a19-836b-9d5bede6d413","name":"payment","slug":"payment","description":"System settings","createdAt":"2024-03-04T06:03:24.875Z"}}

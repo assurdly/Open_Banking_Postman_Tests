@@ -1,1 +1,0 @@
-{"status":"success","message":"An email with instructions to reset your password has been sent to patricia-cole@test.com","data":"6537bb97e9eb71844049f4a4e47cd9c19cbb632d"}

@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully created role","data":{"id":"06e1f3b2-f736-48bb-a969-fdef3b09e80e","name":"Cheese","slug":"cheese","description":"Customer","status":"active","createdAt":"2024-03-04T06:03:15.735Z"}}
