@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully updated collection","data":{"id":"4788981b-6058-4410-9e19-d16ec1e9f04a","name":"Centralized","slug":"centralized","description":"System settings","createdAt":"2024-03-04T03:49:58.707Z"}}

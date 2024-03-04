@@ -1,0 +1,5 @@
+{
+    "name": "Vanuatu",
+    "description": "Gate keepership",
+    "status": "active"
+}

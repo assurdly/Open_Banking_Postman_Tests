@@ -1,0 +1,9 @@
+{
+    "newKybRequirements": [
+        {
+            "name": "taxIdentificationNumber2",
+            "label": "Tax Identification Number",
+            "type": "string"
+        }
+    ]
+}

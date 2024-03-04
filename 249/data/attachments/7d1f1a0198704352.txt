@@ -1,0 +1,13 @@
+{
+    "name": "get-transaction1",
+    "enabled": false,
+    "url": "",
+    "route": {
+        "paths": [
+            "/transaction1"
+        ],
+        "methods": [
+            "GET"
+        ]
+    }
+}
