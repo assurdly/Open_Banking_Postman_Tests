@@ -1,0 +1,4 @@
+{
+    "name": "Rue",
+    "description": "System settings"
+}

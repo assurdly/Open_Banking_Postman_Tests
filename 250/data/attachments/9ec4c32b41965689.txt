@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully created role","data":{"id":"5e9f87dc-5bb1-4eef-b4ac-5a8ffcdc1d37","name":"Liaison","slug":"liaison","description":"Principal","status":"active","createdAt":"2024-03-04T05:00:33.171Z"}}

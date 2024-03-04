@@ -1,0 +1,6 @@
+{
+    "name": "Liaison",
+    "description": "Principal",
+    "status": "active",
+    "permissions": ["0cd7b5aa-2c72-4dac-a56b-8eefe7c3a57f"]
+}

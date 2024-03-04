@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully created role","data":{"id":"86533567-6ea0-4590-bc9d-e4238858db30","name":"Zimbabwe","slug":"zimbabwe","description":"Legacy","status":"active","createdAt":"2024-03-04T05:00:48.339Z"}}

@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully updated collection","data":{"id":"ae4410d3-537d-4400-8f5a-4d70934fadbf","name":"Rue","slug":"rue","description":"System settings","createdAt":"2024-03-04T05:00:39.679Z"}}

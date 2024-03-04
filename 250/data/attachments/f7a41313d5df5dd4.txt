@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully created role","data":{"id":"1e1d476b-d4c2-41f3-a283-a1328e2eae0c","name":"Small","slug":"small","description":"Global","status":"active","createdAt":"2024-03-04T05:00:33.085Z"}}

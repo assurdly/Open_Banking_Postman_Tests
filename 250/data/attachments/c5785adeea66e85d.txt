@@ -1,0 +1,13 @@
+{
+    "email": "Raegan-Jakubowski@test.com",
+    "password": "Password!123",
+    "confirmPassword": "Password!123",
+    "firstName": "Zoe",
+    "lastName": "Shanahan",
+    "country": "NGN",
+    "companyName": "NexusInc.",
+    "companyType": "licensed-entity",
+    "companySubtype": "Others",
+    "companyRole": "SOFTWARE_ENGINEER",
+    "phone": "08123456789"
+}

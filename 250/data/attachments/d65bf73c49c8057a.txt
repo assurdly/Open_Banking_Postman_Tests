@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully created role","data":{"id":"fee9040e-e70b-4ccb-91a3-92622a733131","name":"Incredible","slug":"incredible","description":"Customer","status":"active","createdAt":"2024-03-04T05:00:48.490Z"}}

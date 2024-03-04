@@ -1,0 +1,4 @@
+{
+    "email": "Nakia@mailinator.com",
+    "roleId": "fee9040e-e70b-4ccb-91a3-92622a733131"
+}
