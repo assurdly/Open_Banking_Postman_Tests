@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully created role","data":{"id":"9f5a2890-b518-435a-b467-a70a7bbc66c2","name":"strategic","slug":"strategic","description":"Investor","status":"active","createdAt":"2024-03-11T14:09:01.645Z"}}

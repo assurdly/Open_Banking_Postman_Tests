@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully created collection","data":{"id":"cbcd8167-e7d5-4e61-afea-505b37efb06d","name":"backing","slug":"backing","description":"System settings","createdAt":"2024-03-11T14:09:17.041Z"}}

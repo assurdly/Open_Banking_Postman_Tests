@@ -1,0 +1,6 @@
+{
+    "name": "strategic",
+    "description": "Gate keeping",
+    "status": "active",
+    "permissions": ["0d505d83-f10d-4f1b-9c80-3706c0b77f17"]
+}

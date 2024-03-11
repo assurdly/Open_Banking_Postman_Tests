@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully created role","data":{"id":"7b2e0b86-12d4-4f12-8dde-31268d7f3bd6","name":"Louisiana","slug":"louisiana","description":"Customer","status":"active","createdAt":"2024-03-11T14:09:30.718Z"}}

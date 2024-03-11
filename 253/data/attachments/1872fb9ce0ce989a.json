@@ -1,0 +1,10 @@
+{
+    "Date": "Mon, 11 Mar 2024 14:09:40 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Connection": "keep-alive",
+    "Content-Length": "126",
+    "X-Upstream-Latency": "2",
+    "X-Proxy-Latency": "51",
+    "Via": "kong/3.5.0",
+    "X-Request-Id": "b26b02219b23732b60c7887d481ec978"
+}

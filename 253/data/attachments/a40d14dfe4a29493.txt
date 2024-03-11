@@ -1,0 +1,9 @@
+{
+    "name": "Get Accounts",
+    "enabled": true,
+    "url": "https://httpbin.org/json",
+    "route": {
+        "paths": [""],
+        "methods": ["GET"]
+    }
+}
