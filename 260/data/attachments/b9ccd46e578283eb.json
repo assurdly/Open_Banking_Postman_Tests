@@ -1,0 +1,10 @@
+{
+    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJjY2Q3MDg1LTAzMTMtNDAwOS1iMmVlLTUyNDA4MDJhMmUxZCIsImNvdW50IjowLCJpYXQiOjE3MTA4NTQzNDcsImV4cCI6MTcxMDg1NTI0N30.0--xnpzS0iScIIpo7TLsOJhhsisLJLUs6BtSUvSkRvA",
+    "User-Agent": "PostmanRuntime/7.37.1",
+    "Accept": "*/*",
+    "Cache-Control": "no-cache",
+    "Postman-Token": "c5a2ae1f-6bb6-485c-81c2-f2683da732b2",
+    "Host": "api.admin.gateway.openbanking.ng",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive"
+}

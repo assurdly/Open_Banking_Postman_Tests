@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully fetched role stats","data":[{"count":"6","value":"active"},{"count":"6","value":"inactive"}]}

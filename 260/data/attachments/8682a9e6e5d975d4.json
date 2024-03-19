@@ -1,0 +1,13 @@
+{
+    "x-twofa-code": "",
+    "Content-Type": "application/json",
+    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJjY2Q3MDg1LTAzMTMtNDAwOS1iMmVlLTUyNDA4MDJhMmUxZCIsImNvdW50IjowLCJpYXQiOjE3MTA4NTQzNDcsImV4cCI6MTcxMDg1NTI0N30.0--xnpzS0iScIIpo7TLsOJhhsisLJLUs6BtSUvSkRvA",
+    "User-Agent": "PostmanRuntime/7.37.1",
+    "Accept": "*/*",
+    "Cache-Control": "no-cache",
+    "Postman-Token": "7ff1a322-abfd-42a4-bd0a-7215ab04c6b5",
+    "Host": "api.admin.gateway.openbanking.ng",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive",
+    "Content-Length": "30"
+}

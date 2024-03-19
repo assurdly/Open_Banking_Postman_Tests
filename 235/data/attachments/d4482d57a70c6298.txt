@@ -1,5 +1,0 @@
-{
-    "name": "Wooden",
-    "description": "Gate keepership",
-    "status": "active"
-}

@@ -1,4 +1,0 @@
-{
-    "password": "Password1#1",
-    "confirmPassword": "Password1#"
-}

@@ -1,0 +1,1 @@
+{"message":"You do not have permission to view company details."}

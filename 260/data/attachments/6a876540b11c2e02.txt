@@ -1,0 +1,11 @@
+{
+    "email": "Magdalena-Parisian@test.com",
+    "password": "Password!123",
+    "confirmPassword": "Password!123",
+    "firstName": "Assunta",
+    "lastName": "Barrows",
+    "country": "NGN",
+    "companyType": "individual",
+    "phone": "08123456789",
+    "bvn": "22222222222"
+}

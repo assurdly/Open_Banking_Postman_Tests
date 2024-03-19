@@ -1,4 +1,0 @@
-{
-    "description": "Super Admin",
-    "status": "inactive"
-}

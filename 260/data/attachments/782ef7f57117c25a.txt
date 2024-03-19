@@ -1,0 +1,13 @@
+{
+    "email": "Lois-Graham@test.com",
+    "password": "Password!123",
+    "confirmPassword": "Password!123",
+    "firstName": "Tremaine",
+    "lastName": "Hahn",
+    "country": "NGN",
+    "companyName": "NexusInc.",
+    "companyType": "business",
+    "companySubtype": "Telecommunications",
+    "companyRole": "SOFTWARE_ENGINEER",
+    "phone": "08123456789"
+}

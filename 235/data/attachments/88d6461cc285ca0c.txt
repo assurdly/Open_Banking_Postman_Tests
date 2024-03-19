@@ -1,5 +1,0 @@
-{
-    "amount": "1000",
-    "currency": "NGN",
-    "card_token": "a826c48111504ff7b67817"
-}

@@ -1,1 +1,0 @@
-{"message":"Cannot GET /direct-debits/banks?limit=1000&page=1"}

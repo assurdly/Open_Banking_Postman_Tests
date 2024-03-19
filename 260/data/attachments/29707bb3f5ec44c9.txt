@@ -1,0 +1,1 @@
+{"message":"New password cannot be the same as old password."}

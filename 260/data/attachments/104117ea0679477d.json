@@ -1,0 +1,12 @@
+{
+    "Content-Type": "application/json",
+    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJjY2Q3MDg1LTAzMTMtNDAwOS1iMmVlLTUyNDA4MDJhMmUxZCIsImNvdW50IjowLCJpYXQiOjE3MTA4NTQzNDcsImV4cCI6MTcxMDg1NTI0N30.0--xnpzS0iScIIpo7TLsOJhhsisLJLUs6BtSUvSkRvA",
+    "User-Agent": "PostmanRuntime/7.37.1",
+    "Accept": "*/*",
+    "Cache-Control": "no-cache",
+    "Postman-Token": "b26413a1-5f7e-4a7b-a60b-41a53c81e4ca",
+    "Host": "api.admin.gateway.openbanking.ng",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive",
+    "Content-Length": "146"
+}

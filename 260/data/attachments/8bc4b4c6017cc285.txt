@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully updated collection","data":{"id":"e63f7655-e091-4b59-b56e-90f559f37bda","name":"navigating","slug":"navigating","description":"System settings","createdAt":"2024-03-19T13:19:25.442Z"}}

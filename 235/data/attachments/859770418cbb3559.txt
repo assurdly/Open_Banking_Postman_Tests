@@ -1,4 +1,0 @@
-{
-    "email": "info@randombank.com",
-    "password": "Password1#"
-}

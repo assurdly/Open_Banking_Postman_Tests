@@ -1,1 +1,0 @@
-{"message":"Validation Error.","data":{"code":"code is required.","email":"email must be an email"}}

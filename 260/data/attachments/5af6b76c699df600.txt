@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully updated role","data":{"id":"89757dc9-b7b5-4438-ae1a-9481f072dea1","name":"Towels","slug":"towels","description":"Super Test","status":"inactive","createdAt":"2024-03-19T13:19:11.183Z"}}

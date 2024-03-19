@@ -1,1 +1,0 @@
-{"message":"Validation Error.","data":{"companyType":"companyType must be one of the following values: individual, licensed-entity, business"}}
