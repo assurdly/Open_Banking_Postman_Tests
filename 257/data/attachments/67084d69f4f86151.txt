@@ -1,0 +1,4 @@
+{
+    "name": "Supervisor",
+    "description": "System settings"
+}

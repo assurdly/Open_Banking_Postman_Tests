@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully updated profile","data":{"id":"5e1d7e28-8716-47ce-be88-65b2c68f722f","firstName":"John","lastName":"Doe","companyRole":"SOFTWARE_ENGINEER","phone":"08123456789","country":"NGN","userId":"47d9ea7f-bea2-4f23-ad36-b00615f4414e","createdAt":"2023-12-09T23:11:38.609Z","updatedAt":"2023-12-09T23:11:38.609Z","deletedAt":null}}

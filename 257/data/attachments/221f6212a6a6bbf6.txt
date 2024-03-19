@@ -1,0 +1,1 @@
+{"message":"Validation Error.","data":{"permissions":"All permissions's elements must be unique"}}

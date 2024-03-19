@@ -1,0 +1,5 @@
+{
+    "name": "Account",
+    "description": "Gate keepership",
+    "status": "active"
+}

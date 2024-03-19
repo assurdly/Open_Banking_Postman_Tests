@@ -1,0 +1,13 @@
+{
+    "X-TwoFA-Code": "123456",
+    "Content-Type": "application/json",
+    "Authorization": "Bearer [object Object]",
+    "User-Agent": "PostmanRuntime/7.37.1",
+    "Accept": "*/*",
+    "Cache-Control": "no-cache",
+    "Postman-Token": "c6669507-627e-4309-ac69-541ef001c879",
+    "Host": "3.141.49.202:4000",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive",
+    "Content-Length": "24"
+}

@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully created collection","data":{"id":"4e9269fa-8481-40ca-a606-1397a49e5d8d","name":"Supervisor","slug":"supervisor","description":"System settings","createdAt":"2024-03-19T12:32:09.965Z"}}

@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully created role","data":{"id":"f294e0fa-bd3d-4ec7-9880-212d513c75ec","name":"invoice","slug":"invoice","description":"Dynamic","status":"active","createdAt":"2024-03-19T12:31:55.873Z"}}

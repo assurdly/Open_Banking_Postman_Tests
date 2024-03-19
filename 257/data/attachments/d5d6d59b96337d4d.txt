@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully updated role","data":{"id":"10c32574-cc14-474b-9118-8066c3018d20","name":"indigo","slug":"indigo","description":"Super Test","status":"inactive","createdAt":"2024-03-19T12:31:56.219Z"}}

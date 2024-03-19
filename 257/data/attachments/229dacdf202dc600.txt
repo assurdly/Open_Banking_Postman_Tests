@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully created role","data":{"id":"a6e2e7e4-4ca7-40ef-b454-eea12ae23305","name":"Oklahoma","slug":"oklahoma","description":"Principal","status":"active","createdAt":"2024-03-19T12:32:23.090Z"}}

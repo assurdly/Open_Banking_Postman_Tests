@@ -1,0 +1,13 @@
+{
+    "email": "abdullah-roob@test.com",
+    "password": "Password1#",
+    "confirmPassword": "Password1#",
+    "firstName": "John",
+    "lastName": "Doe",
+    "country": "NGN",
+    "companyName": "NexusInc.",
+    "companyType": "business",
+    "companySubtype": "Telecommunications",
+    "companyRole": "SOFTWARE_ENGINEER",
+    "phone": "08123456789"
+}
