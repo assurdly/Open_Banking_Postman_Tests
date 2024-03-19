@@ -1,0 +1,4 @@
+{
+    "name": "Granite",
+    "description": "System settings"
+}

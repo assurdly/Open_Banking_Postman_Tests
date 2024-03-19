@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully updated user","data":{"status":"inactive","profile":{"firstName":"Unique","lastName":"Okokon"}}}

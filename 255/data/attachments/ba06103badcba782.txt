@@ -1,0 +1,4 @@
+{
+    "upstream": "local function transform_request_body()\n  -- Read the request body\n  kong.service.request.enable_buffering()  -- Enable buffering to read body\n  local data, err = kong.request.get_body()\n  if err then\n      kong.log.err(err)\n      return\n  end\n\n  -- Perform the transformation\n  local transformed_data = {\n      [1] = data\n  }\n\n  -- Set the transformed body\n  local ok, err = kong.service.request.set_body(transformed_data)\n  if err then\n      kong.log.err(err)\n      return\n  end\nend\n\nreturn transform_request_body\n",
+    "downstream": "local cjson = require 'cjson.safe'\n\nlocal function transform_response_body()\n  local body = kong.response.get_raw_body()\n  body = cjson.decode(body)\n  if body then\n    body = cjson.encode({\n      [1] = body\n    })\n    kong.response.set_raw_body(body)\n  end\nend\n\nreturn transform_response_body"
+}

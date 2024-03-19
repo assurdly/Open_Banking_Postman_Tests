@@ -1,1 +1,0 @@
-{"status":"success","message":"An email with instructions to reset your password has been sent to arch-purdy@test.com","data":"2b2eb17317c97541fb7c85109747452d5d600ff7"}

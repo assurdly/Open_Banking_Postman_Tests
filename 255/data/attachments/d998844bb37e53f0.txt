@@ -1,0 +1,4 @@
+{
+    "email": "randombank@assurdly.com",
+    "password": "Password12@@"
+}

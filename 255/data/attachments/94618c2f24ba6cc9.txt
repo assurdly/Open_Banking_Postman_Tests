@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully created collection","data":{"id":"f7af8727-aa7d-450c-9370-22a6c2385e17","name":"Granite","slug":"granite","description":"System settings","createdAt":"2024-03-19T11:24:24.003Z"}}

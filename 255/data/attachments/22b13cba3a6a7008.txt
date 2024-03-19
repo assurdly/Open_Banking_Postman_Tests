@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully updated profile","data":{"id":"bddb05c3-98eb-4de4-b3ae-6c8d20ea0b91","firstName":"Wayne","lastName":"Rooney","companyRole":null,"phone":"09055755991","country":null,"createdAt":"2024-03-15T12:10:26.253Z"}}

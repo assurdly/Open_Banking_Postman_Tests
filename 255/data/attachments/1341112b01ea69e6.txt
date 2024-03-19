@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully created role","data":{"id":"4efcdea4-86c0-4da4-bdde-3c96a2232f0c","name":"Computer","slug":"computer","description":"National","status":"active","createdAt":"2024-03-19T11:24:11.457Z"}}
