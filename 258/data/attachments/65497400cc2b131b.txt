@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully created role","data":{"id":"36cb5355-e4f1-4d1e-afb8-eba60e825dbb","name":"Shilling","slug":"shilling","description":"Direct","status":"active","createdAt":"2024-03-19T12:47:58.696Z"}}
