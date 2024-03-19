@@ -1,0 +1,5 @@
+{
+    "name": "Auto",
+    "description": "Gate keepership",
+    "status": "active"
+}

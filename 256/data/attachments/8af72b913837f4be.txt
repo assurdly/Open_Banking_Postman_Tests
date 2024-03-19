@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully created collection","data":{"id":"e10045be-f07c-43a2-b6f2-725640171b93","name":"Locks","slug":"locks","description":"System settings","createdAt":"2024-03-19T12:09:56.407Z"}}

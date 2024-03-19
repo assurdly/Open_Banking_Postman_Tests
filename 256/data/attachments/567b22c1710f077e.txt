@@ -1,0 +1,22 @@
+{
+    "collectionId": "81375976-9398-46ea-894d-6f276483889f",
+    "name": "Fix Customer Cards",
+    "enabled": true,
+    "tiers": ["7"],
+    "downstream": {
+        "path": "~/fix-cards$",
+        "method": "PATCH"
+    },
+    "upstream": {
+        "url": "https://666ab640-8d6a-491b-be32-e06642d051cf.mock.pstmn.io:443/cards",
+        "method": "POST",
+        "headers": [
+            {
+                "key": "Authorization",
+                "value": "Basic username:password"
+            }
+        ],
+        "querystring": [],
+        "body": []
+    }
+}

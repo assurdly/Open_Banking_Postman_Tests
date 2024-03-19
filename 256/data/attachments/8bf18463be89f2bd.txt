@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully created role","data":{"id":"3ab18da1-2bcc-42ac-aaf9-0f410660c241","name":"Savings","slug":"savings","description":"Internal","status":"active","createdAt":"2024-03-19T12:10:12.683Z"}}

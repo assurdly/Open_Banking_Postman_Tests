@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully updated role","data":{"id":"bb98c6bc-6307-4d5f-8bca-18c7003f44f1","name":"e-markets","slug":"e-markets","description":"Super Test","status":"inactive","createdAt":"2024-03-19T12:09:40.418Z"}}

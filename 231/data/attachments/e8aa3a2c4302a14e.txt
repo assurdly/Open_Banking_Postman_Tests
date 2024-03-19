@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully fetched APIs","data":[{"id":"461d97bd-1990-402c-8e15-0488120f7b91","name":"Fresh","enabled":false,"host":"httpbin.org","protocol":"https","port":443,"path":"/json","url":"https://httpbin.org:443/json","route":{"paths":["/Rustic"],"methods":["GET"]}}],"_meta":{"totalNumberOfRecords":1,"totalNumberOfPages":1,"pageNumber":1,"pageSize":20}}

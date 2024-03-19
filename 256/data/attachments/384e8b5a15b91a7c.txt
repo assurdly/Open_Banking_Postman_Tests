@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully fetched role","data":[{"id":"00c0c4db-d677-4522-a78b-d3a6727f2917","name":"view consent","slug":"view-consent","description":"","createdAt":"2024-03-15T07:36:59.329Z"}]}

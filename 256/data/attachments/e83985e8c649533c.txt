@@ -1,0 +1,6 @@
+{
+    "name": "Savings",
+    "description": "Internal",
+    "status": "active",
+    "permissions": ["00c0c4db-d677-4522-a78b-d3a6727f2917"]
+}

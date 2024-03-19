@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully created role","data":{"id":"54ffa7ed-8d03-4f83-8d01-1b3c352c0044","name":"Bermuda","slug":"bermuda","description":"Internal","status":"active","createdAt":"2024-03-19T12:09:40.109Z"}}

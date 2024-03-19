@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully created role","data":{"id":"bb98c6bc-6307-4d5f-8bca-18c7003f44f1","name":"e-markets","slug":"e-markets","description":"Corporate","status":"active","createdAt":"2024-03-19T12:09:40.418Z"}}

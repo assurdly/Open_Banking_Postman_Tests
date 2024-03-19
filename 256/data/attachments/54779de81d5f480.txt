@@ -1,0 +1,4 @@
+{
+    "name": "Locks",
+    "description": "System settings"
+}

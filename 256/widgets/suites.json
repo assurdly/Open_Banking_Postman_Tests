@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"b180d18c714bdd08a2518cc628cfe665","name":"Open Banking Gateway API - AC","statistic":{"failed":17,"broken":4,"skipped":0,"passed":126,"unknown":0,"total":147}},{"uid":"9f757d34744a6be6e06bca72676008e0","name":"Open Banking Gateway API - AP","statistic":{"failed":0,"broken":0,"skipped":0,"passed":125,"unknown":0,"total":125}}]}
