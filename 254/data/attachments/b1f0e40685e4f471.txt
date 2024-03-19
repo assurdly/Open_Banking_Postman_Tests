@@ -1,0 +1,6 @@
+{
+    "email": "Jessy@mailinator.com",
+    "firstName": "Josue",
+    "lastName": "Orn",
+    "roleId": "{{createdRoleTwo}}"
+}

@@ -1,0 +1,4 @@
+{
+    "name": "Gorgeous",
+    "description": "System settings"
+}

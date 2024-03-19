@@ -1,0 +1,6 @@
+{
+    "firstName": "Wandy",
+    "lastName": "Wush",
+    "password": "Pas#1",
+    "confirmPassword": "Pas#1"
+}

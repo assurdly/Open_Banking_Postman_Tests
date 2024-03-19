@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully created API","data":{"id":"1320a190-34b8-4a92-8827-1dd7655aca16","name":"non-volatile","enabled":true,"host":"httpbin.org","protocol":"https","port":443,"path":"/json","url":"https://httpbin.org:443/json","route":{"paths":["/Forint"],"methods":["GET"]}}}

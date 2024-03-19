@@ -1,0 +1,13 @@
+{
+    "email": "Trace-Sipes@test.com",
+    "password": "Password!123",
+    "confirmPassword": "Password!123",
+    "firstName": "Jared",
+    "lastName": "Schamberger",
+    "country": "NGN",
+    "companyName": "NexusInc.",
+    "companyType": "business",
+    "companySubtype": "Telecommunications",
+    "companyRole": "SOFTWARE_ENGINEER",
+    "phone": "08123456789"
+}

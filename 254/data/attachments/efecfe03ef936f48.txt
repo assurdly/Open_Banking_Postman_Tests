@@ -1,0 +1,13 @@
+{
+    "email": "AshleeYost@mailinator.com",
+    "password": "Password!123",
+    "confirmPassword": "Password!123",
+    "firstName": "Jordon",
+    "lastName": "Ullrich",
+    "country": "NGN",
+    "companyName": "Advanced Analytics",
+    "companyType": "licensed-entity",
+    "companySubtype": "Others",
+    "companyRole": "SOFTWARE_ENGINEER",
+    "phone": "08123456789"
+}
