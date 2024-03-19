@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully created collection","data":{"id":"0358629c-75be-46ac-9a4a-761f6175a2ba","name":"initiatives","slug":"initiatives","description":"System settings","createdAt":"2024-03-19T13:03:38.813Z"}}

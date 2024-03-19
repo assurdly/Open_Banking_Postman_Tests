@@ -1,0 +1,12 @@
+{
+    "x-twofa-code": "796288",
+    "Content-Type": "application/json",
+    "User-Agent": "PostmanRuntime/7.37.1",
+    "Accept": "*/*",
+    "Cache-Control": "no-cache",
+    "Postman-Token": "a36190ee-3718-45ca-be73-99ad5efd31d5",
+    "Host": "api.admin.gateway.openbanking.ng",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive",
+    "Content-Length": "557"
+}

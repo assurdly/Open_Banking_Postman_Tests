@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully created role","data":{"id":"5ea8d5f6-9b1e-4f69-b8db-b63e27a25e58","name":"National","slug":"national","description":"Legacy","status":"active","createdAt":"2024-03-19T13:03:24.773Z"}}

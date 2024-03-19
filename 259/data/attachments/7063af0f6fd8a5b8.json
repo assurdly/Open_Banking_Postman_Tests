@@ -1,0 +1,11 @@
+{
+    "x-api-key": "JgPFqygerAoSuxMVtNIM771YJFmaYfKy",
+    "Content-Type": "application/json",
+    "User-Agent": "PostmanRuntime/7.37.1",
+    "Accept": "*/*",
+    "Cache-Control": "no-cache",
+    "Postman-Token": "9489bdfc-9fe9-4040-8acd-894e96683ecf",
+    "Host": "dev.gateway.openbanking.ng:8000",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive"
+}

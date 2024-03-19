@@ -1,0 +1,1 @@
+{"status":"success","message":"API Key retrieved successfully","data":{"key":"5Wlrzl436hjpYrCqLDJxxAOXLB5jTtN5","environment":"development"}}

@@ -1,0 +1,9 @@
+{
+    "name": "Get Accounts",
+    "enabled": true,
+    "url": "",
+    "route": {
+        "paths": ["/accounts"],
+        "methods": ["GET"]
+    }
+}

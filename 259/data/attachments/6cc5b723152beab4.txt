@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully updated role","data":{"id":"7dc2977f-13d1-4ec7-8c26-22383a614c9a","name":"reboot","slug":"reboot","description":"Super Test","status":"inactive","createdAt":"2024-03-19T13:03:25.046Z"}}

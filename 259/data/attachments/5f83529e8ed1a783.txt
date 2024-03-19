@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully created role","data":{"id":"3fc101f5-c3f0-47eb-94a6-6b87638bc2a7","name":"methodical","slug":"methodical","description":"Central","status":"active","createdAt":"2024-03-19T13:03:51.942Z"}}

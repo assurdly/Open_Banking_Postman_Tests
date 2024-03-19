@@ -1,0 +1,10 @@
+{
+    "x-twofa-code": "",
+    "User-Agent": "PostmanRuntime/7.37.1",
+    "Accept": "*/*",
+    "Cache-Control": "no-cache",
+    "Postman-Token": "abeba1d8-3f2c-4336-a24c-11b47fa18039",
+    "Host": "api.admin.gateway.openbanking.ng",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive"
+}
